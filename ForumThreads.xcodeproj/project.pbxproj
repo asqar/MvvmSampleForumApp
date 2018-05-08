@@ -15,6 +15,9 @@
 		138A19C520A18BD40049AF9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 138A19C320A18BD40049AF9E /* LaunchScreen.storyboard */; };
 		138A19D020A18BD40049AF9E /* ForumThreadsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A19CF20A18BD40049AF9E /* ForumThreadsTests.swift */; };
 		138A19DB20A18BD40049AF9E /* ForumThreadsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A19DA20A18BD40049AF9E /* ForumThreadsUITests.swift */; };
+		1DE0EBC55ABEBC68521109B8 /* Pods_ForumThreads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01EE585944DDD2F6E72AFBB /* Pods_ForumThreads.framework */; };
+		48A599A066CB6E5BA347CF14 /* Pods_ForumThreadsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14CC460C79F78F3E73B39247 /* Pods_ForumThreadsUITests.framework */; };
+		99BBF307B8816944745EF007 /* Pods_ForumThreadsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60DAF5CAD75B3C972FEB72D /* Pods_ForumThreadsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042670740683835DC4354AFB /* Pods-ForumThreadsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForumThreadsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ForumThreadsUITests/Pods-ForumThreadsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		138A19B520A18BD10049AF9E /* ForumThreads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForumThreads.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		138A19B820A18BD10049AF9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		138A19BA20A18BD10049AF9E /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 		138A19D620A18BD40049AF9E /* ForumThreadsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForumThreadsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		138A19DA20A18BD40049AF9E /* ForumThreadsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumThreadsUITests.swift; sourceTree = "<group>"; };
 		138A19DC20A18BD40049AF9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14CC460C79F78F3E73B39247 /* Pods_ForumThreadsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForumThreadsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57F288382FA9CB015662EA0E /* Pods-ForumThreadsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForumThreadsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ForumThreadsTests/Pods-ForumThreadsTests.release.xcconfig"; sourceTree = "<group>"; };
+		62741B4A14E20551279CF6EB /* Pods-ForumThreadsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForumThreadsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ForumThreadsUITests/Pods-ForumThreadsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6A25A90306EB1AAA707C16E1 /* Pods-ForumThreads.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForumThreads.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ForumThreads/Pods-ForumThreads.debug.xcconfig"; sourceTree = "<group>"; };
+		8443C11BD4EDA320D934CEDD /* Pods-ForumThreads.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForumThreads.release.xcconfig"; path = "Pods/Target Support Files/Pods-ForumThreads/Pods-ForumThreads.release.xcconfig"; sourceTree = "<group>"; };
+		C01EE585944DDD2F6E72AFBB /* Pods_ForumThreads.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForumThreads.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C60DAF5CAD75B3C972FEB72D /* Pods_ForumThreadsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForumThreadsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E82A3D7EF2ADD56255C83349 /* Pods-ForumThreadsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForumThreadsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ForumThreadsTests/Pods-ForumThreadsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DE0EBC55ABEBC68521109B8 /* Pods_ForumThreads.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99BBF307B8816944745EF007 /* Pods_ForumThreadsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48A599A066CB6E5BA347CF14 /* Pods_ForumThreadsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0184E83FF0FA9260B256E6E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6A25A90306EB1AAA707C16E1 /* Pods-ForumThreads.debug.xcconfig */,
+				8443C11BD4EDA320D934CEDD /* Pods-ForumThreads.release.xcconfig */,
+				E82A3D7EF2ADD56255C83349 /* Pods-ForumThreadsTests.debug.xcconfig */,
+				57F288382FA9CB015662EA0E /* Pods-ForumThreadsTests.release.xcconfig */,
+				042670740683835DC4354AFB /* Pods-ForumThreadsUITests.debug.xcconfig */,
+				62741B4A14E20551279CF6EB /* Pods-ForumThreadsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		138A19AC20A18BD10049AF9E = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +111,8 @@
 				138A19CE20A18BD40049AF9E /* ForumThreadsTests */,
 				138A19D920A18BD40049AF9E /* ForumThreadsUITests */,
 				138A19B620A18BD10049AF9E /* Products */,
+				0184E83FF0FA9260B256E6E6 /* Pods */,
+				E8344362FA8CD01D2E5DC97F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +158,16 @@
 			path = ForumThreadsUITests;
 			sourceTree = "<group>";
 		};
+		E8344362FA8CD01D2E5DC97F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C01EE585944DDD2F6E72AFBB /* Pods_ForumThreads.framework */,
+				C60DAF5CAD75B3C972FEB72D /* Pods_ForumThreadsTests.framework */,
+				14CC460C79F78F3E73B39247 /* Pods_ForumThreadsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 138A19DF20A18BD40049AF9E /* Build configuration list for PBXNativeTarget "ForumThreads" */;
 			buildPhases = (
+				0EAD14B474C13F18F3D6BA48 /* [CP] Check Pods Manifest.lock */,
 				138A19B120A18BD10049AF9E /* Sources */,
 				138A19B220A18BD10049AF9E /* Frameworks */,
 				138A19B320A18BD10049AF9E /* Resources */,
+				0C7BF081AA7E63AC458427EB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,9 +194,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 138A19E220A18BD40049AF9E /* Build configuration list for PBXNativeTarget "ForumThreadsTests" */;
 			buildPhases = (
+				7D96C1C82D1D2ACBC2B9274E /* [CP] Check Pods Manifest.lock */,
 				138A19C720A18BD40049AF9E /* Sources */,
 				138A19C820A18BD40049AF9E /* Frameworks */,
 				138A19C920A18BD40049AF9E /* Resources */,
+				FF6B7B2951F2AC4F03DF5427 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,6 +214,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 138A19E520A18BD40049AF9E /* Build configuration list for PBXNativeTarget "ForumThreadsUITests" */;
 			buildPhases = (
+				6F1A301F78A5EAD24B098865 /* [CP] Check Pods Manifest.lock */,
 				138A19D220A18BD40049AF9E /* Sources */,
 				138A19D320A18BD40049AF9E /* Frameworks */,
 				138A19D420A18BD40049AF9E /* Resources */,
@@ -253,6 +298,167 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C7BF081AA7E63AC458427EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ForumThreads/Pods-ForumThreads-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/KVNProgress/KVNProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RBQFetchedResultsController/RBQFetchedResultsController.framework",
+				"${BUILT_PRODUCTS_DIR}/RBQSafeRealmObject/RBQSafeRealmObject.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveViewModel/ReactiveViewModel.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmUtilities/RealmUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SAMKeychain/SAMKeychain.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVPullToRefresh/SVPullToRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/SafeRealmObject/SafeRealmObject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftFetchedResultsController/SwiftFetchedResultsController.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/TableKit/TableKit.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVNProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RBQFetchedResultsController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RBQSafeRealmObject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveViewModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAMKeychain.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVPullToRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SafeRealmObject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftFetchedResultsController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TableKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ForumThreads/Pods-ForumThreads-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0EAD14B474C13F18F3D6BA48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ForumThreads-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F1A301F78A5EAD24B098865 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ForumThreadsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D96C1C82D1D2ACBC2B9274E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ForumThreadsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF6B7B2951F2AC4F03DF5427 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ForumThreadsTests/Pods-ForumThreadsTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/KVNProgress/KVNProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RBQFetchedResultsController/RBQFetchedResultsController.framework",
+				"${BUILT_PRODUCTS_DIR}/RBQSafeRealmObject/RBQSafeRealmObject.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveViewModel/ReactiveViewModel.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmUtilities/RealmUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SAMKeychain/SAMKeychain.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SafeRealmObject/SafeRealmObject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftFetchedResultsController/SwiftFetchedResultsController.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVNProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RBQFetchedResultsController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RBQSafeRealmObject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveViewModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAMKeychain.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SafeRealmObject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftFetchedResultsController.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ForumThreadsTests/Pods-ForumThreadsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		138A19B120A18BD10049AF9E /* Sources */ = {
@@ -432,15 +638,13 @@
 		};
 		138A19E020A18BD40049AF9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A25A90306EB1AAA707C16E1 /* Pods-ForumThreads.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAU6Z76Q9H;
 				INFOPLIST_FILE = ForumThreads/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kz.bakirov.ForumThreads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -450,15 +654,13 @@
 		};
 		138A19E120A18BD40049AF9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8443C11BD4EDA320D934CEDD /* Pods-ForumThreads.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAU6Z76Q9H;
 				INFOPLIST_FILE = ForumThreads/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kz.bakirov.ForumThreads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -468,17 +670,14 @@
 		};
 		138A19E320A18BD40049AF9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E82A3D7EF2ADD56255C83349 /* Pods-ForumThreadsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAU6Z76Q9H;
 				INFOPLIST_FILE = ForumThreadsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kz.bakirov.ForumThreadsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -489,17 +688,14 @@
 		};
 		138A19E420A18BD40049AF9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57F288382FA9CB015662EA0E /* Pods-ForumThreadsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAU6Z76Q9H;
 				INFOPLIST_FILE = ForumThreadsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kz.bakirov.ForumThreadsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -510,16 +706,13 @@
 		};
 		138A19E620A18BD40049AF9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 042670740683835DC4354AFB /* Pods-ForumThreadsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAU6Z76Q9H;
 				INFOPLIST_FILE = ForumThreadsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kz.bakirov.ForumThreadsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -530,16 +723,13 @@
 		};
 		138A19E720A18BD40049AF9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62741B4A14E20551279CF6EB /* Pods-ForumThreadsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAU6Z76Q9H;
 				INFOPLIST_FILE = ForumThreadsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kz.bakirov.ForumThreadsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
