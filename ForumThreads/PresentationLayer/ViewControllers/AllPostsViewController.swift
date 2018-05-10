@@ -9,7 +9,7 @@
 import UIKit
 
 class AllPostsViewController : BaseTableViewController<RlmPost, AllPostsViewModel> {
-
+    
     override func viewDidLoad() {
         self.viewModel = AllPostsViewModel()
         super.viewDidLoad()
@@ -18,6 +18,12 @@ class AllPostsViewController : BaseTableViewController<RlmPost, AllPostsViewMode
     
     override var cellIdentifier : String {
         return "PostCell"
+    }
+    
+    override func setViewModelOwner(owner: UITableViewCell, viewModel: BaseViewModel!) {
+        let cell = owner as! PostCell
+        let vm = viewModel as! PostViewModel
+        cell.setViewModel(viewModel: vm)
     }
 
     override func showSpinner() {

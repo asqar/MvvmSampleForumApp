@@ -56,12 +56,21 @@ class SearchResultViewModel : FetchedResultsViewModel<RlmPost> {
         return String(format:"text=%@", encodedStr)
     }
 
-    override func processDownloadedResults(results:[RlmPost]) {
+    override func processDownloadedResults(results: [Any]) {
+        
         self.realm().beginWrite()
         var orderIndex:Int = self.numberOfItemsInSection(section: 0) + 1
-        for _:RlmPost in results {
+        
+        let newItems = results.map { (i : Any) -> RlmPost in
+            let post = i as! Post
+            let item = post.mapToRealmObject()
+            item.searchAttempt = self.searchAttempt
+            return item
+        }
+        self.realm().add(newItems)
+        
+        for _:Any in results {
 //            item.orderIndex = orderIndex
-//            item.searchAttempt = self.searchAttempt
             orderIndex += 1
         }
         do {

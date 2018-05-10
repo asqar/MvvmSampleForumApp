@@ -69,19 +69,19 @@ class SearchViewModel : BaseViewModel, FetchedResultsControllerDelegate {
         return fetchRequest
     }
 
-    func controllerWillChangeContent<T>(_ controller: FetchedResultsController<T>) where T : Object {
+    func controllerWillChangeContent<RealmType>(_ controller: FetchedResultsController<RealmType>) where RealmType : Object {
         
     }
     
-    func controller<T>(_ controller: FetchedResultsController<T>, didChangeObject anObject: SafeObject<T>, atIndexPath indexPath: IndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) where T : Object {
+    func controller<RealmType>(_ controller: FetchedResultsController<RealmType>, didChangeObject anObject: SafeObject<RealmType>, atIndexPath indexPath: IndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) where RealmType : Object {
         
     }
     
-    func controllerDidChangeContent<T>(_ controller: FetchedResultsController<T>) where T : Object {
+    func controllerDidChangeContent<RealmType>(_ controller: FetchedResultsController<RealmType>) where RealmType : Object {
         
     }
     
-    func controllerDidChangeSection<T>(_ controller: FetchedResultsController<T>, section: FetchResultsSectionInfo<T>, sectionIndex: UInt, changeType: NSFetchedResultsChangeType) where T : Object {
+    func controllerDidChangeSection<RealmType>(_ controller: FetchedResultsController<RealmType>, section: FetchResultsSectionInfo<RealmType>, sectionIndex: UInt, changeType: NSFetchedResultsChangeType) where RealmType : Object {
         
     }
 }

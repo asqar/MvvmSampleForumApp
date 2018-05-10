@@ -9,11 +9,13 @@
 import ReactiveViewModel
 import RealmSwift
 
-protocol IBaseViewModel {
-    
+protocol ViewModelHelper {
+    associatedtype OwnerType : Any
+    associatedtype ViewModelType : BaseViewModel
+    func setViewModelOwner(owner : OwnerType, viewModel : ViewModelType!)
 }
 
-class BaseViewModel : RVMViewModel, IBaseViewModel {
+class BaseViewModel : RVMViewModel {
 
     func realm() -> Realm {
         return try! Realm()

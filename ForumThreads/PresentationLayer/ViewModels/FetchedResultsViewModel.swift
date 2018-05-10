@@ -18,7 +18,7 @@ import ObjectMapper
 
 protocol FetchedResultsViewModelProtocol : FetchedResultsControllerDelegate {
     
-    associatedtype RealmType: Object
+    associatedtype ViewModelType : BaseViewModel
     
     var title : String! { get }
     var updatedContentSignal:RACSignal! { get }
@@ -35,7 +35,8 @@ protocol FetchedResultsViewModelProtocol : FetchedResultsControllerDelegate {
 }
 
 class FetchedResultsViewModel<EntityType:Object> : BaseViewModel, FetchedResultsControllerDelegate, FetchedResultsViewModelProtocol {
-    typealias RealmType = EntityType
+    
+    typealias ViewModelType = FetchedResultsViewModel
     
     private(set) var updatedContentSignal:RACSignal!
     private(set) var startLoadingSignal:RACSignal!
@@ -102,22 +103,12 @@ class FetchedResultsViewModel<EntityType:Object> : BaseViewModel, FetchedResults
         return nil
     }
 
-    func processDownloadedResults(results:[EntityType]) {
-        for _ in results
-        {
-            
-        }
-    }
+    func processDownloadedResults(results:[Any]) {}
     
     func completion<ResultType : BaseMappable>() -> ((Result<[ResultType]>) -> Void) {
         func completionCallback(result : Result<[ResultType]>) -> Void {
             if result.isSuccess {
-                
-                for _ in result.value! {
-//                    EntityType.
-                }
-                
-//                self.processDownloadedResults(results: result.value!)
+                self.processDownloadedResults(results: result.value!)
                 
                 self._fetchedResultsController = nil
                 (self.updatedContentSignal as! RACSubject).sendNext({ (x:Any!) in })
@@ -147,19 +138,19 @@ class FetchedResultsViewModel<EntityType:Object> : BaseViewModel, FetchedResults
 
     // MARK: - Fetched results controller
 
-    func controllerWillChangeContent<T>(_ controller: FetchedResultsController<T>) where T : Object {
+    func controllerWillChangeContent<RealmType>(_ controller: FetchedResultsController<RealmType>) where RealmType : Object {
         
     }
     
-    func controller<T>(_ controller: FetchedResultsController<T>, didChangeObject anObject: SafeObject<T>, atIndexPath indexPath: IndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) where T : Object {
+    func controller<RealmType>(_ controller: FetchedResultsController<RealmType>, didChangeObject anObject: SafeObject<RealmType>, atIndexPath indexPath: IndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) where RealmType : Object {
         
     }
     
-    func controllerDidChangeSection<T>(_ controller: FetchedResultsController<T>, section: FetchResultsSectionInfo<T>, sectionIndex: UInt, changeType: NSFetchedResultsChangeType) where T : Object {
+    func controllerDidChangeSection<RealmType>(_ controller: FetchedResultsController<RealmType>, section: FetchResultsSectionInfo<RealmType>, sectionIndex: UInt, changeType: NSFetchedResultsChangeType) where RealmType : Object {
         
     }
     
-    func controllerDidChangeContent<T>(_ controller: FetchedResultsController<T>) where T : Object {
+    func controllerDidChangeContent<RealmType>(_ controller: FetchedResultsController<RealmType>) where RealmType : Object {
         (self.updatedContentSignal as! RACSubject).sendNext({ (x:Any!) in
             
         })

@@ -12,12 +12,12 @@ import SVPullToRefresh
 import ReactiveCocoa
 import RealmSwift
 
-class BaseCollectionViewController<T : Object, VM: FetchedResultsViewModelProtocol> : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class BaseCollectionViewController<RealmType : Object, VM: FetchedResultsViewModelProtocol> : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var collectionView: UICollectionView?
     @IBOutlet weak var pullToRefreshView: SVPullToRefreshView?
     
-    var viewModel:VM = FetchedResultsViewModel<T>() as! VM
+    var viewModel:VM = FetchedResultsViewModel<RealmType>() as! VM
     
     deinit {
         self.collectionView?.delegate = nil;

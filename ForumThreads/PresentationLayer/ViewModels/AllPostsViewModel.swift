@@ -34,12 +34,21 @@ class AllPostsViewModel : FetchedResultsViewModel<RlmPost> {
         NetworkService().fetchPosts(completion: self.completion())
     }
     
-//    override func processDownloadedResults<T>(results: [T]) where T : Post {
-//        for result in results {
-//            let realmObject Post.mapToRealmObject(result)
-//            
-//        }
-//    }
+    override func processDownloadedResults(results: [Any]) {
+        
+        self.realm().beginWrite()
+        
+        let newItems = results.map { (i : Any) -> RlmPost in
+            return (i as! Post).mapToRealmObject()
+        }
+        self.realm().add(newItems, update: true)
+
+        do {
+            try self.realm().commitWrite()
+        } catch let error {
+            print(error)
+        }
+    }
 
     override func objectAtIndexPath(indexPath:IndexPath!) -> PostViewModel! {
         let post:RlmPost = self.fetchedResultsController.objectAtIndexPath(indexPath)!

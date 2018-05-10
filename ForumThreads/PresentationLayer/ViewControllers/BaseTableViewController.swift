@@ -12,7 +12,13 @@ import SVPullToRefresh
 import ReactiveCocoa
 import RealmSwift
 
-class BaseTableViewController<T : Object, VM: FetchedResultsViewModelProtocol> : UITableViewController {
+class BaseTableViewController<RealmType : Object, VM: FetchedResultsViewModelProtocol> : UITableViewController, ViewModelHelper {
+    
+    typealias OwnerType = UITableViewCell
+    typealias ViewModelType = BaseViewModel
+    func setViewModelOwner(owner: UITableViewCell, viewModel: BaseViewModel!) {
+        
+    }
     
     @IBOutlet weak var pullToRefreshView: SVPullToRefreshView?
     
@@ -92,8 +98,8 @@ class BaseTableViewController<T : Object, VM: FetchedResultsViewModelProtocol> :
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for: indexPath) as! BaseTableViewCell
-        cell.setViewModel(viewModel: self.viewModel.objectAtIndexPath(indexPath: indexPath) as BaseViewModel?)
+        let cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for: indexPath)
+        self.setViewModelOwner(owner: cell, viewModel: self.viewModel.objectAtIndexPath(indexPath: indexPath) as BaseViewModel?)
         return cell
     }
     
