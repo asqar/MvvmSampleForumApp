@@ -7,11 +7,25 @@
 //
 
 import Foundation
+import ObjectMapper
+import ObjectMapper_Realm
 
-class RlmAlbum : RlmEntity {
+class RlmAlbum : RlmEntity, Mappable {
     
     @objc dynamic var userId:Int = 0
     @objc dynamic var title: String!
     
     @objc dynamic var user:RlmUser!
+    
+    // MARK: - Mapping directly from JSON
+    
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        userId <- map["userId"]
+        id <- map["id"]
+        title <- map["title"]
+    }
 }

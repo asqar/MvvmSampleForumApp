@@ -8,8 +8,10 @@
 
 import Foundation
 import RealmSwift
+import ObjectMapper
+import ObjectMapper_Realm
 
-class RlmComment : RlmEntity {
+class RlmComment : RlmEntity, Mappable {
     
     @objc dynamic var postId: Int = 0
     @objc dynamic var name: String!
@@ -17,4 +19,18 @@ class RlmComment : RlmEntity {
     @objc dynamic var body: String!
     
     @objc dynamic var post:RlmPost!
+    
+    // MARK: - Mapping directly from JSON
+    
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        postId <- map["postId"]
+        id <- map["id"]
+        name <- map["name"]
+        email <- map["email"]
+        body <- map["body"]
+    }
 }

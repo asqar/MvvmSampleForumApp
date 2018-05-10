@@ -45,7 +45,7 @@
 		138A1A5720A1AC590049AF9E /* RlmPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A4D20A1AC590049AF9E /* RlmPost.swift */; };
 		138A1A5820A1AC590049AF9E /* RlmComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A4E20A1AC590049AF9E /* RlmComment.swift */; };
 		138A1A5920A1AC590049AF9E /* RlmEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A4F20A1AC590049AF9E /* RlmEntity.swift */; };
-		138A1A6520A1AC620049AF9E /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A5C20A1AC620049AF9E /* Networking.swift */; };
+		138A1A6520A1AC620049AF9E /* Networking+BaseMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A5C20A1AC620049AF9E /* Networking+BaseMappable.swift */; };
 		138A1A6720A1AC620049AF9E /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A5F20A1AC620049AF9E /* ApiRequest.swift */; };
 		138A1A6920A1AC620049AF9E /* ApiRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A6120A1AC620049AF9E /* ApiRoutes.swift */; };
 		138A1A6A20A1AC620049AF9E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A6220A1AC620049AF9E /* NetworkError.swift */; };
@@ -92,6 +92,7 @@
 		13E1622220A37FBC0061E30C /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1622120A37FBC0061E30C /* BaseTableViewController.swift */; };
 		13E1622420A380950061E30C /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1622320A380950061E30C /* BaseTableViewCell.swift */; };
 		13E1622620A439A10061E30C /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1622520A439A10061E30C /* PostCell.swift */; };
+		13E1622820A48D730061E30C /* Networking+Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1622720A48D730061E30C /* Networking+Mappable.swift */; };
 		1DE0EBC55ABEBC68521109B8 /* Pods_ForumThreads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01EE585944DDD2F6E72AFBB /* Pods_ForumThreads.framework */; };
 		48A599A066CB6E5BA347CF14 /* Pods_ForumThreadsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14CC460C79F78F3E73B39247 /* Pods_ForumThreadsUITests.framework */; };
 		99BBF307B8816944745EF007 /* Pods_ForumThreadsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60DAF5CAD75B3C972FEB72D /* Pods_ForumThreadsTests.framework */; };
@@ -160,7 +161,7 @@
 		138A1A4D20A1AC590049AF9E /* RlmPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RlmPost.swift; sourceTree = "<group>"; };
 		138A1A4E20A1AC590049AF9E /* RlmComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RlmComment.swift; sourceTree = "<group>"; };
 		138A1A4F20A1AC590049AF9E /* RlmEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RlmEntity.swift; sourceTree = "<group>"; };
-		138A1A5C20A1AC620049AF9E /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		138A1A5C20A1AC620049AF9E /* Networking+BaseMappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Networking+BaseMappable.swift"; sourceTree = "<group>"; };
 		138A1A5F20A1AC620049AF9E /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		138A1A6120A1AC620049AF9E /* ApiRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRoutes.swift; sourceTree = "<group>"; };
 		138A1A6220A1AC620049AF9E /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -207,6 +208,7 @@
 		13E1622120A37FBC0061E30C /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		13E1622320A380950061E30C /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		13E1622520A439A10061E30C /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		13E1622720A48D730061E30C /* Networking+Mappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Networking+Mappable.swift"; sourceTree = "<group>"; };
 		14CC460C79F78F3E73B39247 /* Pods_ForumThreadsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForumThreadsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F288382FA9CB015662EA0E /* Pods-ForumThreadsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForumThreadsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ForumThreadsTests/Pods-ForumThreadsTests.release.xcconfig"; sourceTree = "<group>"; };
 		62741B4A14E20551279CF6EB /* Pods-ForumThreadsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForumThreadsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ForumThreadsUITests/Pods-ForumThreadsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -416,7 +418,8 @@
 			children = (
 				138A1A5E20A1AC620049AF9E /* API */,
 				138A1A6220A1AC620049AF9E /* NetworkError.swift */,
-				138A1A5C20A1AC620049AF9E /* Networking.swift */,
+				138A1A5C20A1AC620049AF9E /* Networking+BaseMappable.swift */,
+				13E1622720A48D730061E30C /* Networking+Mappable.swift */,
 			);
 			path = NetworkingLayer;
 			sourceTree = "<group>";
@@ -816,6 +819,7 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
 				"${BUILT_PRODUCTS_DIR}/KVNProgress/KVNProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RBQFetchedResultsController/RBQFetchedResultsController.framework",
 				"${BUILT_PRODUCTS_DIR}/RBQSafeRealmObject/RBQSafeRealmObject.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
@@ -839,6 +843,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVNProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RBQFetchedResultsController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RBQSafeRealmObject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
@@ -983,6 +988,7 @@
 				138A1A8620A1E52D0049AF9E /* SearchAttemptViewModel.swift in Sources */,
 				138A1AA720A2F2FA0049AF9E /* Todo.swift in Sources */,
 				138A1A2120A1AC2C0049AF9E /* ConfiguratorProtocol.swift in Sources */,
+				13E1622820A48D730061E30C /* Networking+Mappable.swift in Sources */,
 				138A1A2F20A1AC330049AF9E /* LocalDataStore.swift in Sources */,
 				138A1A9020A1E5820049AF9E /* SearchAttemptCell.swift in Sources */,
 				138A1A3B20A1AC420049AF9E /* UIStoryboard+Instantiate.swift in Sources */,
@@ -1003,7 +1009,7 @@
 				138A1A3620A1AC3C0049AF9E /* Cache.swift in Sources */,
 				138A1AB520A30F890049AF9E /* RlmUser.swift in Sources */,
 				138A1A5920A1AC590049AF9E /* RlmEntity.swift in Sources */,
-				138A1A6520A1AC620049AF9E /* Networking.swift in Sources */,
+				138A1A6520A1AC620049AF9E /* Networking+BaseMappable.swift in Sources */,
 				138A1A6720A1AC620049AF9E /* ApiRequest.swift in Sources */,
 				138A1A8A20A1E52D0049AF9E /* SearchResultViewController.swift in Sources */,
 				138A1A5020A1AC590049AF9E /* Comment+Network.swift in Sources */,
@@ -1278,7 +1284,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAU6Z76Q9H;
 				INFOPLIST_FILE = "$(SRCROOT)/ForumThreads/SupportingFiles/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kz.bakirov.ForumThreads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1294,7 +1303,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAU6Z76Q9H;
 				INFOPLIST_FILE = "$(SRCROOT)/ForumThreads/SupportingFiles/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kz.bakirov.ForumThreads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1311,7 +1323,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAU6Z76Q9H;
 				INFOPLIST_FILE = ForumThreadsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kz.bakirov.ForumThreadsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1329,7 +1345,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAU6Z76Q9H;
 				INFOPLIST_FILE = ForumThreadsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kz.bakirov.ForumThreadsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1346,7 +1366,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAU6Z76Q9H;
 				INFOPLIST_FILE = ForumThreadsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kz.bakirov.ForumThreadsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1363,7 +1387,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAU6Z76Q9H;
 				INFOPLIST_FILE = ForumThreadsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kz.bakirov.ForumThreadsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

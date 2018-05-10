@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import ObjectMapper
+import ObjectMapper_Realm
 
-class RlmUser : RlmEntity {
+class RlmUser : RlmEntity, Mappable {
 
     @objc dynamic var name: String!
     @objc dynamic var username: String!
@@ -19,4 +21,20 @@ class RlmUser : RlmEntity {
     var address: Address!
     var company: Company!
     
+    // MARK: - Mapping directly from JSON
+    
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        id <- map["id"]
+        name <- map["name"]
+        username <- map["username"]
+        email <- map["email"]
+        address <- map["address"]
+        phone <- map["phone"]
+        website <- map["website"]
+        company <- map["company"]
+    }
 }

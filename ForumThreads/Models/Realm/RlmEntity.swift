@@ -15,14 +15,4 @@ class RlmEntity : Object {
     override class func primaryKey() -> String? {
         return "id"
     }
-
-    // MARK - for Realm+JSON
-
-    class func deserializeOne(d: NSDictionary!, in: Realm!) -> AnyObject {
-        return RlmEntity()
-    }
-    
-    class func deserializeMany(a: Any?, in: Realm!) -> [AnyObject] {
-        return []
-    }
 }

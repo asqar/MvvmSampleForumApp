@@ -7,12 +7,27 @@
 //
 
 import Foundation
+import ObjectMapper
+import ObjectMapper_Realm
 
-class RlmTodo : RlmEntity {
+class RlmTodo : RlmEntity, Mappable {
     
     @objc dynamic var userId: Int = 0
     @objc dynamic var title: String!
     @objc dynamic var completed: Bool = false
  
     @objc dynamic var user:RlmUser!
+    
+    // MARK: - Mapping directly from JSON
+    
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        userId <- map["userId"]
+        id <- map["id"]
+        title <- map["title"]
+        completed <- map["completed"]
+    }
 }

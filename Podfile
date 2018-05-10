@@ -14,6 +14,7 @@ pod 'SVPullToRefresh'
 #pod 'RBQFetchedResultsController', :git => 'https://github.com/asqar/RBQFetchedResultsController.git'
 pod 'SwiftFetchedResultsController', :git => 'https://github.com/asqar/RBQFetchedResultsController.git'
 #pod 'Realm+JSON', :git => 'https://github.com/asqar/Realm-JSON.git'
+pod 'ObjectMapper+Realm'
 
 def shared_pods
 

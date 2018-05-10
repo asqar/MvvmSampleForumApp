@@ -8,15 +8,29 @@
 
 import Foundation
 import RealmSwift
+import ObjectMapper
+import ObjectMapper_Realm
 
-class RlmPost : RlmEntity {
+class RlmPost : RlmEntity, Mappable {
     
     @objc dynamic var userId:Int = 0
     @objc dynamic var title: String!
     @objc dynamic var body: String!
-    
     @objc dynamic var searchAttempt:RlmSearchAttempt!
     
     @objc dynamic var user:RlmUser!
+    
+    // MARK: - Mapping directly from JSON
+    
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        userId <- map["userId"]
+        id <- map["id"]
+        title <- map["title"]
+        body <- map["body"]
+    }
 }
 

@@ -12,7 +12,10 @@ import ObjectMapper
 
 
 struct Networking {
-    
+}
+
+extension Networking
+{
     static func fetchSingleItem<ResultType : BaseMappable>(_ request: URLRequestConvertible, completion: @escaping (Result<ResultType>) -> Void) {
         
         requestJSON(request) { (result: Result<ResultType>) in
