@@ -9,9 +9,9 @@
 import Foundation
 
 class PhotoImageViewModel : ImageViewModel {
-    private var _photo:Photo
+    private var _photo:PhotoDto
     
-    init(photo:Photo!) {
+    init(photo:PhotoDto!) {
         self._photo = photo
         super.init()
         self.caption = photo.title

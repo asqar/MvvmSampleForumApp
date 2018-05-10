@@ -18,8 +18,8 @@ class RlmUser : RlmEntity, Mappable {
     @objc dynamic var phone: String!
     @objc dynamic var website: String!
     
-    var address: Address!
-    var company: Company!
+    var address: AddressDto!
+    var company: CompanyDto!
     
     // MARK: - Mapping directly from JSON
     

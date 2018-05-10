@@ -1,5 +1,5 @@
 //
-//  SearchAttempt.swift
+//  AlbumDto.swift
 //  ForumThreads
 //
 //  Created by aSqar on 09.05.2018.
@@ -8,8 +8,11 @@
 
 import Foundation
 
-struct SearchAttempt {
-    var searchTerm:String!
-    var dateSearched:Date!
-    var isSuccessful:Bool = false
+struct AlbumDto {
+    
+    var userId: Int = 0
+    var id: Int = 0
+    var title: String!
+    
+    init() { }
 }

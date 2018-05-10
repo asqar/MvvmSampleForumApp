@@ -9,9 +9,9 @@
 import Foundation
 
 class PostViewModel : BaseViewModel {
-    private(set) var post:Post
+    private(set) var post:PostDto
     
-    init(post:Post!) {
+    init(post:PostDto!) {
         self.post = post
         super.init()
     }

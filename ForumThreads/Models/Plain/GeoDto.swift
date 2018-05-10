@@ -1,5 +1,5 @@
 //
-//  Address.swift
+//  GeoDto.swift
 //  ForumThreads
 //
 //  Created by aSqar on 09.05.2018.
@@ -8,12 +8,9 @@
 
 import Foundation
 
-struct Address {
-    var street: String!
-    var suite: String!
-    var city: String!
-    var zipcode: String!
-    var geo: Geo!
+struct GeoDto {
+    var lat: Float = 0
+    var lng: Float = 0
     
     init() { }
 }

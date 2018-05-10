@@ -34,11 +34,11 @@ extension ApiRoutes {
     }
     
     enum Level3_getMultiple {
-        case postsOf(user: User)
-        case commentsOf(post: Post)
-        case albumsOf(user: User)
-        case photosOf(album: Album)
-        case todosOf(user: User)
+        case postsOf(user: UserDto)
+        case commentsOf(post: PostDto)
+        case albumsOf(user: UserDto)
+        case photosOf(album: AlbumDto)
+        case todosOf(user: UserDto)
     }
 }
 

@@ -13,7 +13,7 @@ class SearchAttemptViewModel : BaseViewModel {
     var queryString:String!
     var dateString:String!
 
-    init(searchAttempt:SearchAttempt!) {
+    init(searchAttempt:SearchAttemptDto!) {
         super.init()
 
         let dateFormatter:DateFormatter! = DateFormatter()

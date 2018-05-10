@@ -9,10 +9,10 @@
 import Foundation
 import RealmSwift
 
-extension SearchAttempt: RealmMappableProtocol {
+extension SearchAttemptDto: RealmMappableProtocol {
     
-    static func mapFromRealmObject(_ object: RlmSearchAttempt) -> SearchAttempt {
-        var model = SearchAttempt()
+    static func mapFromRealmObject(_ object: RlmSearchAttempt) -> SearchAttemptDto {
+        var model = SearchAttemptDto()
         
         model.searchTerm = object.searchTerm
         model.dateSearched = object.dateSearched

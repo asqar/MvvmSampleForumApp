@@ -10,10 +10,10 @@ import Foundation
 import RealmSwift
 
 
-extension Photo: RealmMappableProtocol {
+extension PhotoDto: RealmMappableProtocol {
     
-    static func mapFromRealmObject(_ object: RlmPhoto) -> Photo {
-        var model = Photo()
+    static func mapFromRealmObject(_ object: RlmPhoto) -> PhotoDto {
+        var model = PhotoDto()
         
         model.albumId = object.albumId
         model.id = object.id

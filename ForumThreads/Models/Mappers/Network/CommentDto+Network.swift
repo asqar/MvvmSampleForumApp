@@ -1,5 +1,5 @@
 //
-//  Post+Network.swift
+//  Comment+Network.swift
 //  ForumThreads
 //
 //  Created by aSqar on 08.05.2018.
@@ -8,16 +8,17 @@
 
 import ObjectMapper
 
-extension Post: StaticMappable {
+extension CommentDto: StaticMappable {
     
     static func objectForMapping(map: Map) -> BaseMappable? {
-        return Cache.default.load(byPK: map.JSON["id"]) as Post
+        return Cache.default.load(byPK: map.JSON["id"]) as CommentDto
     }
     
     mutating func mapping(map: Map) {
-        userId <- map["userId"]
+        postId <- map["postId"]
         id <- map["id"]
-        title <- map["title"]
+        name <- map["name"]
+        email <- map["email"]
         body <- map["body"]
     }
     

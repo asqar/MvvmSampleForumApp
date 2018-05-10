@@ -1,5 +1,5 @@
 //
-//  Comment.swift
+//  PhotoDto.swift
 //  ForumThreads
 //
 //  Created by aSqar on 08.05.2018.
@@ -8,14 +8,13 @@
 
 import Foundation
 
-struct Comment {
+struct PhotoDto {
     
-    var postId: Int = 0
+    var albumId: Int = 0
     var id: Int = 0
-    var name: String!
-    var email: String!
-    var body: String!
+    var title: String!
+    var url: String!
+    var thumbnailUrl: String!
     
     init() { }
-    
 }

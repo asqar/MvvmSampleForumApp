@@ -1,5 +1,5 @@
 //
-//  Company.swift
+//  CompanyDto.swift
 //  ForumThreads
 //
 //  Created by aSqar on 09.05.2018.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Company {
+struct CompanyDto {
     var name: String!
     var catchPhrase: String!
     var bs: String!

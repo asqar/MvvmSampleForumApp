@@ -62,7 +62,7 @@ class SearchResultViewModel : FetchedResultsViewModel<RlmPost> {
         var orderIndex:Int = self.numberOfItemsInSection(section: 0) + 1
         
         let newItems = results.map { (i : Any) -> RlmPost in
-            let post = i as! Post
+            let post = i as! PostDto
             let item = post.mapToRealmObject()
             item.searchAttempt = self.searchAttempt
             return item
@@ -82,6 +82,6 @@ class SearchResultViewModel : FetchedResultsViewModel<RlmPost> {
 
     override func objectAtIndexPath(indexPath:IndexPath!) -> BaseViewModel! {
         let post = self.fetchedResultsController.objectAtIndexPath(indexPath)
-        return PostViewModel(post: Post.mapFromRealmObject(post!))
+        return PostViewModel(post: PostDto.mapFromRealmObject(post!))
     }
 }

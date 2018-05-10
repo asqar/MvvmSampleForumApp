@@ -1,5 +1,5 @@
 //
-//  Todo.swift
+//  AddressDto.swift
 //  ForumThreads
 //
 //  Created by aSqar on 09.05.2018.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct Todo {
-    
-    var userId: Int = 0
-    var id: Int = 0
-    var title: String!
-    var completed: Bool = false
+struct AddressDto {
+    var street: String!
+    var suite: String!
+    var city: String!
+    var zipcode: String!
+    var geo: GeoDto!
     
     init() { }
 }

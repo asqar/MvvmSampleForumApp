@@ -10,10 +10,10 @@ import Foundation
 import RealmSwift
 
 
-extension Comment: RealmMappableProtocol {
+extension CommentDto: RealmMappableProtocol {
     
-    static func mapFromRealmObject(_ object: RlmComment) -> Comment {
-        var model = Comment()
+    static func mapFromRealmObject(_ object: RlmComment) -> CommentDto {
+        var model = CommentDto()
         
         model.postId = object.postId
         model.id = object.id

@@ -10,10 +10,10 @@ import Foundation
 import RealmSwift
 
 
-extension User: RealmMappableProtocol {
+extension UserDto: RealmMappableProtocol {
     
-    static func mapFromRealmObject(_ object: RlmUser) -> User {
-        var model = User()
+    static func mapFromRealmObject(_ object: RlmUser) -> UserDto {
+        var model = UserDto()
         
         model.id = object.id
         model.name = object.name

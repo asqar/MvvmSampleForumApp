@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  UserDto.swift
 //  ForumThreads
 //
 //  Created by aSqar on 09.05.2018.
@@ -8,16 +8,16 @@
 
 import Foundation
 
-struct User {
+struct UserDto {
     
     var id: Int = 0
     var name: String!
     var username: String!
     var email: String!
-    var address: Address!
+    var address: AddressDto!
     var phone: String!
     var website: String!
-    var company: Company!
+    var company: CompanyDto!
     
     init() { }
 }

@@ -1,5 +1,5 @@
 //
-//  Todo+Network.swift
+//  Photo+Network.swift
 //  ForumThreads
 //
 //  Created by aSqar on 09.05.2018.
@@ -7,19 +7,18 @@
 //
 
 import ObjectMapper
+import Foundation
 
-extension Todo : StaticMappable {
-    
+extension PhotoDto: StaticMappable {
     static func objectForMapping(map: Map) -> BaseMappable? {
-        return Cache.default.load(byPK: map.JSON["id"]) as Todo
+        return Cache.default.load(byPK: map.JSON["id"]) as PhotoDto
     }
     
     mutating func mapping(map: Map) {
-        userId <- map["userId"]
+        albumId <- map["albumId"]
         id <- map["id"]
         title <- map["title"]
-        completed <- map["completed"]
+        url <- map["url"]
+        thumbnailUrl <- map["thumbnailUrl"]
     }
-    
 }
-

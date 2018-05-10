@@ -1,5 +1,5 @@
 //
-//  Album+Realm.swift
+//  Todo+Realm.swift
 //  ForumThreads
 //
 //  Created by aSqar on 09.05.2018.
@@ -10,24 +10,26 @@ import Foundation
 import RealmSwift
 
 
-extension Album: RealmMappableProtocol {
+extension TodoDto: RealmMappableProtocol {
     
-    static func mapFromRealmObject(_ object: RlmAlbum) -> Album {
-        var model = Album()
+    static func mapFromRealmObject(_ object: RlmTodo) -> TodoDto {
+        var model = TodoDto()
         
         model.userId = object.userId
         model.id = object.id
         model.title = object.title
+        model.completed = object.completed
         
         return model
     }
     
-    func mapToRealmObject() -> RlmAlbum {
-        let model = RlmAlbum()
+    func mapToRealmObject() -> RlmTodo {
+        let model = RlmTodo()
         
         model.userId = userId
         model.id = id
         model.title = title
+        model.completed = completed
         
         return model
     }

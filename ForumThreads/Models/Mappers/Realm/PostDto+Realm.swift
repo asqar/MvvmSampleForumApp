@@ -9,10 +9,10 @@
 import Foundation
 import RealmSwift
 
-extension Post: RealmMappableProtocol {
+extension PostDto: RealmMappableProtocol {
     
-    static func mapFromRealmObject(_ object: RlmPost) -> Post {
-        var model = Post()
+    static func mapFromRealmObject(_ object: RlmPost) -> PostDto {
+        var model = PostDto()
         
         model.userId = object.userId
         model.id = object.id
@@ -20,7 +20,7 @@ extension Post: RealmMappableProtocol {
         model.body = object.body
         
         if object.user != nil {
-            model.user = User.mapFromRealmObject(object.user)
+            model.user = UserDto.mapFromRealmObject(object.user)
         }
         
         return model

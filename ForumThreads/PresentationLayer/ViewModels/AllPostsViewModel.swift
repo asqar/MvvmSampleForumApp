@@ -39,7 +39,7 @@ class AllPostsViewModel : FetchedResultsViewModel<RlmPost> {
         self.realm().beginWrite()
         
         let newItems = results.map { (i : Any) -> RlmPost in
-            return (i as! Post).mapToRealmObject()
+            return (i as! PostDto).mapToRealmObject()
         }
         self.realm().add(newItems, update: true)
 
@@ -50,7 +50,7 @@ class AllPostsViewModel : FetchedResultsViewModel<RlmPost> {
         }
         
         for i in results {
-            var item = i as! Post
+            var item = i as! PostDto
             if item.user == nil
             {
                 NetworkService().fetchUser(id: item.userId, completion: { (resultUser) in
@@ -66,10 +66,10 @@ class AllPostsViewModel : FetchedResultsViewModel<RlmPost> {
 
     override func objectAtIndexPath(indexPath:IndexPath!) -> PostViewModel! {
         let post:RlmPost = self.fetchedResultsController.objectAtIndexPath(indexPath)!
-        return PostViewModel(post: Post.mapFromRealmObject(post))
+        return PostViewModel(post: PostDto.mapFromRealmObject(post))
     }
     
-    func assignPostAuthor(user: User, post: Post)
+    func assignPostAuthor(user: UserDto, post: PostDto)
     {
         let realmUser = user.mapToRealmObject()
         let realmPost = post.mapToRealmObject()

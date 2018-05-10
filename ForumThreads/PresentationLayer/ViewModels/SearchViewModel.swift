@@ -55,7 +55,7 @@ class SearchViewModel : BaseViewModel, FetchedResultsControllerDelegate {
 
     func objectAtIndexPath(indexPath:IndexPath!) -> SearchAttemptViewModel! {
         let search = self.fetchedResultsController.objectAtIndexPath(indexPath)
-        return SearchAttemptViewModel(searchAttempt: SearchAttempt.mapFromRealmObject(search!))
+        return SearchAttemptViewModel(searchAttempt: SearchAttemptDto.mapFromRealmObject(search!))
     }
 
     // MARK: - Fetched results controller

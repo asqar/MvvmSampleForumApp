@@ -1,5 +1,5 @@
 //
-//  Geo.swift
+//  TodoDto.swift
 //  ForumThreads
 //
 //  Created by aSqar on 09.05.2018.
@@ -8,9 +8,12 @@
 
 import Foundation
 
-struct Geo {
-    var lat: Float = 0
-    var lng: Float = 0
+struct TodoDto {
+    
+    var userId: Int = 0
+    var id: Int = 0
+    var title: String!
+    var completed: Bool = false
     
     init() { }
 }

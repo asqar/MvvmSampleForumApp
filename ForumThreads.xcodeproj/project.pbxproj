@@ -35,13 +35,13 @@
 		138A1A3620A1AC3C0049AF9E /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A3320A1AC3C0049AF9E /* Cache.swift */; };
 		138A1A3A20A1AC420049AF9E /* UIViewController+LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A3820A1AC420049AF9E /* UIViewController+LoadingView.swift */; };
 		138A1A3B20A1AC420049AF9E /* UIStoryboard+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A3920A1AC420049AF9E /* UIStoryboard+Instantiate.swift */; };
-		138A1A5020A1AC590049AF9E /* Comment+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A4220A1AC590049AF9E /* Comment+Network.swift */; };
-		138A1A5120A1AC590049AF9E /* Post+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A4320A1AC590049AF9E /* Post+Network.swift */; };
+		138A1A5020A1AC590049AF9E /* CommentDto+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A4220A1AC590049AF9E /* CommentDto+Network.swift */; };
+		138A1A5120A1AC590049AF9E /* PostDto+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A4320A1AC590049AF9E /* PostDto+Network.swift */; };
 		138A1A5220A1AC590049AF9E /* RealmMappableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A4520A1AC590049AF9E /* RealmMappableProtocol.swift */; };
-		138A1A5320A1AC590049AF9E /* Post+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A4720A1AC590049AF9E /* Post+Realm.swift */; };
-		138A1A5420A1AC590049AF9E /* Comment+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A4820A1AC590049AF9E /* Comment+Realm.swift */; };
-		138A1A5520A1AC590049AF9E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A4A20A1AC590049AF9E /* Comment.swift */; };
-		138A1A5620A1AC590049AF9E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A4B20A1AC590049AF9E /* Post.swift */; };
+		138A1A5320A1AC590049AF9E /* PostDto+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A4720A1AC590049AF9E /* PostDto+Realm.swift */; };
+		138A1A5420A1AC590049AF9E /* CommentDto+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A4820A1AC590049AF9E /* CommentDto+Realm.swift */; };
+		138A1A5520A1AC590049AF9E /* CommentDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A4A20A1AC590049AF9E /* CommentDto.swift */; };
+		138A1A5620A1AC590049AF9E /* PostDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A4B20A1AC590049AF9E /* PostDto.swift */; };
 		138A1A5720A1AC590049AF9E /* RlmPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A4D20A1AC590049AF9E /* RlmPost.swift */; };
 		138A1A5820A1AC590049AF9E /* RlmComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A4E20A1AC590049AF9E /* RlmComment.swift */; };
 		138A1A5920A1AC590049AF9E /* RlmEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A4F20A1AC590049AF9E /* RlmEntity.swift */; };
@@ -65,28 +65,28 @@
 		138A1A9120A1E5820049AF9E /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A8F20A1E5820049AF9E /* ImageCell.swift */; };
 		138A1A9320A1E6540049AF9E /* RlmSearchAttempt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A9220A1E6530049AF9E /* RlmSearchAttempt.swift */; };
 		138A1A9920A1E9D50049AF9E /* RlmPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A9820A1E9D40049AF9E /* RlmPhoto.swift */; };
-		138A1A9D20A1EAD30049AF9E /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A9C20A1EAD30049AF9E /* Photo.swift */; };
-		138A1A9F20A2E5280049AF9E /* Photo+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A9E20A2E5280049AF9E /* Photo+Network.swift */; };
+		138A1A9D20A1EAD30049AF9E /* PhotoDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A9C20A1EAD30049AF9E /* PhotoDto.swift */; };
+		138A1A9F20A2E5280049AF9E /* PhotoDto+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A9E20A2E5280049AF9E /* PhotoDto+Network.swift */; };
 		138A1AA120A2EABF0049AF9E /* FetchedResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AA020A2EABF0049AF9E /* FetchedResultsViewModel.swift */; };
-		138A1AA320A2F2E80049AF9E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AA220A2F2E80049AF9E /* Album.swift */; };
-		138A1AA520A2F2F20049AF9E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AA420A2F2F20049AF9E /* User.swift */; };
-		138A1AA720A2F2FA0049AF9E /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AA620A2F2FA0049AF9E /* Todo.swift */; };
-		138A1AA920A2F3700049AF9E /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AA820A2F3700049AF9E /* Address.swift */; };
-		138A1AAB20A2F3840049AF9E /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AAA20A2F3840049AF9E /* Geo.swift */; };
-		138A1AAD20A2F3920049AF9E /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AAC20A2F3920049AF9E /* Company.swift */; };
-		138A1AAF20A309140049AF9E /* Album+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AAE20A309140049AF9E /* Album+Network.swift */; };
-		138A1AB120A309240049AF9E /* User+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AB020A309240049AF9E /* User+Network.swift */; };
-		138A1AB320A309350049AF9E /* Todo+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AB220A309350049AF9E /* Todo+Network.swift */; };
+		138A1AA320A2F2E80049AF9E /* AlbumDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AA220A2F2E80049AF9E /* AlbumDto.swift */; };
+		138A1AA520A2F2F20049AF9E /* UserDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AA420A2F2F20049AF9E /* UserDto.swift */; };
+		138A1AA720A2F2FA0049AF9E /* TodoDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AA620A2F2FA0049AF9E /* TodoDto.swift */; };
+		138A1AA920A2F3700049AF9E /* AddressDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AA820A2F3700049AF9E /* AddressDto.swift */; };
+		138A1AAB20A2F3840049AF9E /* GeoDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AAA20A2F3840049AF9E /* GeoDto.swift */; };
+		138A1AAD20A2F3920049AF9E /* CompanyDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AAC20A2F3920049AF9E /* CompanyDto.swift */; };
+		138A1AAF20A309140049AF9E /* AlbumDto+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AAE20A309140049AF9E /* AlbumDto+Network.swift */; };
+		138A1AB120A309240049AF9E /* UserDto+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AB020A309240049AF9E /* UserDto+Network.swift */; };
+		138A1AB320A309350049AF9E /* TodoDto+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AB220A309350049AF9E /* TodoDto+Network.swift */; };
 		138A1AB520A30F890049AF9E /* RlmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AB420A30F890049AF9E /* RlmUser.swift */; };
 		138A1AB720A30F9C0049AF9E /* RlmTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AB620A30F9C0049AF9E /* RlmTodo.swift */; };
 		138A1AB920A30FA60049AF9E /* RlmAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1AB820A30FA60049AF9E /* RlmAlbum.swift */; };
-		13E1620E20A321550061E30C /* Album+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1620D20A321550061E30C /* Album+Realm.swift */; };
-		13E1621020A321640061E30C /* User+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1620F20A321640061E30C /* User+Realm.swift */; };
-		13E1621220A321700061E30C /* Photo+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1621120A321700061E30C /* Photo+Realm.swift */; };
-		13E1621420A3217E0061E30C /* Todo+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1621320A3217E0061E30C /* Todo+Realm.swift */; };
-		13E1621620A330490061E30C /* SearchAttempt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1621520A330490061E30C /* SearchAttempt.swift */; };
+		13E1620E20A321550061E30C /* AlbumDto+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1620D20A321550061E30C /* AlbumDto+Realm.swift */; };
+		13E1621020A321640061E30C /* UserDto+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1620F20A321640061E30C /* UserDto+Realm.swift */; };
+		13E1621220A321700061E30C /* PhotoDto+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1621120A321700061E30C /* PhotoDto+Realm.swift */; };
+		13E1621420A3217E0061E30C /* TodoDto+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1621320A3217E0061E30C /* TodoDto+Realm.swift */; };
+		13E1621620A330490061E30C /* SearchAttemptDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1621520A330490061E30C /* SearchAttemptDto.swift */; };
 		13E1621A20A368360061E30C /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1621920A368360061E30C /* BaseCollectionViewCell.swift */; };
-		13E1621C20A36D000061E30C /* SearchAttempt+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1621B20A36D000061E30C /* SearchAttempt+Realm.swift */; };
+		13E1621C20A36D000061E30C /* SearchAttemptDto+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1621B20A36D000061E30C /* SearchAttemptDto+Realm.swift */; };
 		13E1621E20A3771C0061E30C /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1621D20A3771C0061E30C /* SideMenuViewController.swift */; };
 		13E1622020A3776A0061E30C /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1621F20A3776A0061E30C /* SideMenu.swift */; };
 		13E1622220A37FBC0061E30C /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1622120A37FBC0061E30C /* BaseTableViewController.swift */; };
@@ -151,13 +151,13 @@
 		138A1A3320A1AC3C0049AF9E /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		138A1A3820A1AC420049AF9E /* UIViewController+LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+LoadingView.swift"; sourceTree = "<group>"; };
 		138A1A3920A1AC420049AF9E /* UIStoryboard+Instantiate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Instantiate.swift"; sourceTree = "<group>"; };
-		138A1A4220A1AC590049AF9E /* Comment+Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comment+Network.swift"; sourceTree = "<group>"; };
-		138A1A4320A1AC590049AF9E /* Post+Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Post+Network.swift"; sourceTree = "<group>"; };
+		138A1A4220A1AC590049AF9E /* CommentDto+Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CommentDto+Network.swift"; sourceTree = "<group>"; };
+		138A1A4320A1AC590049AF9E /* PostDto+Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PostDto+Network.swift"; sourceTree = "<group>"; };
 		138A1A4520A1AC590049AF9E /* RealmMappableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmMappableProtocol.swift; sourceTree = "<group>"; };
-		138A1A4720A1AC590049AF9E /* Post+Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Post+Realm.swift"; sourceTree = "<group>"; };
-		138A1A4820A1AC590049AF9E /* Comment+Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comment+Realm.swift"; sourceTree = "<group>"; };
-		138A1A4A20A1AC590049AF9E /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
-		138A1A4B20A1AC590049AF9E /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		138A1A4720A1AC590049AF9E /* PostDto+Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PostDto+Realm.swift"; sourceTree = "<group>"; };
+		138A1A4820A1AC590049AF9E /* CommentDto+Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CommentDto+Realm.swift"; sourceTree = "<group>"; };
+		138A1A4A20A1AC590049AF9E /* CommentDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentDto.swift; sourceTree = "<group>"; };
+		138A1A4B20A1AC590049AF9E /* PostDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDto.swift; sourceTree = "<group>"; };
 		138A1A4D20A1AC590049AF9E /* RlmPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RlmPost.swift; sourceTree = "<group>"; };
 		138A1A4E20A1AC590049AF9E /* RlmComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RlmComment.swift; sourceTree = "<group>"; };
 		138A1A4F20A1AC590049AF9E /* RlmEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RlmEntity.swift; sourceTree = "<group>"; };
@@ -181,28 +181,28 @@
 		138A1A8F20A1E5820049AF9E /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		138A1A9220A1E6530049AF9E /* RlmSearchAttempt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RlmSearchAttempt.swift; sourceTree = "<group>"; };
 		138A1A9820A1E9D40049AF9E /* RlmPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RlmPhoto.swift; sourceTree = "<group>"; };
-		138A1A9C20A1EAD30049AF9E /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
-		138A1A9E20A2E5280049AF9E /* Photo+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+Network.swift"; sourceTree = "<group>"; };
+		138A1A9C20A1EAD30049AF9E /* PhotoDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDto.swift; sourceTree = "<group>"; };
+		138A1A9E20A2E5280049AF9E /* PhotoDto+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoDto+Network.swift"; sourceTree = "<group>"; };
 		138A1AA020A2EABF0049AF9E /* FetchedResultsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsViewModel.swift; sourceTree = "<group>"; };
-		138A1AA220A2F2E80049AF9E /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
-		138A1AA420A2F2F20049AF9E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		138A1AA620A2F2FA0049AF9E /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
-		138A1AA820A2F3700049AF9E /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
-		138A1AAA20A2F3840049AF9E /* Geo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geo.swift; sourceTree = "<group>"; };
-		138A1AAC20A2F3920049AF9E /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
-		138A1AAE20A309140049AF9E /* Album+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Album+Network.swift"; sourceTree = "<group>"; };
-		138A1AB020A309240049AF9E /* User+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Network.swift"; sourceTree = "<group>"; };
-		138A1AB220A309350049AF9E /* Todo+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+Network.swift"; sourceTree = "<group>"; };
+		138A1AA220A2F2E80049AF9E /* AlbumDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDto.swift; sourceTree = "<group>"; };
+		138A1AA420A2F2F20049AF9E /* UserDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDto.swift; sourceTree = "<group>"; };
+		138A1AA620A2F2FA0049AF9E /* TodoDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDto.swift; sourceTree = "<group>"; };
+		138A1AA820A2F3700049AF9E /* AddressDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDto.swift; sourceTree = "<group>"; };
+		138A1AAA20A2F3840049AF9E /* GeoDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoDto.swift; sourceTree = "<group>"; };
+		138A1AAC20A2F3920049AF9E /* CompanyDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDto.swift; sourceTree = "<group>"; };
+		138A1AAE20A309140049AF9E /* AlbumDto+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlbumDto+Network.swift"; sourceTree = "<group>"; };
+		138A1AB020A309240049AF9E /* UserDto+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDto+Network.swift"; sourceTree = "<group>"; };
+		138A1AB220A309350049AF9E /* TodoDto+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoDto+Network.swift"; sourceTree = "<group>"; };
 		138A1AB420A30F890049AF9E /* RlmUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RlmUser.swift; sourceTree = "<group>"; };
 		138A1AB620A30F9C0049AF9E /* RlmTodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RlmTodo.swift; sourceTree = "<group>"; };
 		138A1AB820A30FA60049AF9E /* RlmAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RlmAlbum.swift; sourceTree = "<group>"; };
-		13E1620D20A321550061E30C /* Album+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Album+Realm.swift"; sourceTree = "<group>"; };
-		13E1620F20A321640061E30C /* User+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Realm.swift"; sourceTree = "<group>"; };
-		13E1621120A321700061E30C /* Photo+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+Realm.swift"; sourceTree = "<group>"; };
-		13E1621320A3217E0061E30C /* Todo+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+Realm.swift"; sourceTree = "<group>"; };
-		13E1621520A330490061E30C /* SearchAttempt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAttempt.swift; sourceTree = "<group>"; };
+		13E1620D20A321550061E30C /* AlbumDto+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlbumDto+Realm.swift"; sourceTree = "<group>"; };
+		13E1620F20A321640061E30C /* UserDto+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDto+Realm.swift"; sourceTree = "<group>"; };
+		13E1621120A321700061E30C /* PhotoDto+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoDto+Realm.swift"; sourceTree = "<group>"; };
+		13E1621320A3217E0061E30C /* TodoDto+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoDto+Realm.swift"; sourceTree = "<group>"; };
+		13E1621520A330490061E30C /* SearchAttemptDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAttemptDto.swift; sourceTree = "<group>"; };
 		13E1621920A368360061E30C /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
-		13E1621B20A36D000061E30C /* SearchAttempt+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchAttempt+Realm.swift"; sourceTree = "<group>"; };
+		13E1621B20A36D000061E30C /* SearchAttemptDto+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchAttemptDto+Realm.swift"; sourceTree = "<group>"; };
 		13E1621D20A3771C0061E30C /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		13E1621F20A3776A0061E30C /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		13E1622120A37FBC0061E30C /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
@@ -520,12 +520,12 @@
 		138A1A4120A1AC590049AF9E /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				138A1A4220A1AC590049AF9E /* Comment+Network.swift */,
-				138A1A4320A1AC590049AF9E /* Post+Network.swift */,
-				138A1A9E20A2E5280049AF9E /* Photo+Network.swift */,
-				138A1AAE20A309140049AF9E /* Album+Network.swift */,
-				138A1AB020A309240049AF9E /* User+Network.swift */,
-				138A1AB220A309350049AF9E /* Todo+Network.swift */,
+				138A1A4220A1AC590049AF9E /* CommentDto+Network.swift */,
+				138A1A4320A1AC590049AF9E /* PostDto+Network.swift */,
+				138A1A9E20A2E5280049AF9E /* PhotoDto+Network.swift */,
+				138A1AAE20A309140049AF9E /* AlbumDto+Network.swift */,
+				138A1AB020A309240049AF9E /* UserDto+Network.swift */,
+				138A1AB220A309350049AF9E /* TodoDto+Network.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -541,13 +541,13 @@
 		138A1A4620A1AC590049AF9E /* Realm */ = {
 			isa = PBXGroup;
 			children = (
-				138A1A4720A1AC590049AF9E /* Post+Realm.swift */,
-				138A1A4820A1AC590049AF9E /* Comment+Realm.swift */,
-				13E1620D20A321550061E30C /* Album+Realm.swift */,
-				13E1620F20A321640061E30C /* User+Realm.swift */,
-				13E1621120A321700061E30C /* Photo+Realm.swift */,
-				13E1621320A3217E0061E30C /* Todo+Realm.swift */,
-				13E1621B20A36D000061E30C /* SearchAttempt+Realm.swift */,
+				138A1A4720A1AC590049AF9E /* PostDto+Realm.swift */,
+				138A1A4820A1AC590049AF9E /* CommentDto+Realm.swift */,
+				13E1620D20A321550061E30C /* AlbumDto+Realm.swift */,
+				13E1620F20A321640061E30C /* UserDto+Realm.swift */,
+				13E1621120A321700061E30C /* PhotoDto+Realm.swift */,
+				13E1621320A3217E0061E30C /* TodoDto+Realm.swift */,
+				13E1621B20A36D000061E30C /* SearchAttemptDto+Realm.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -555,16 +555,16 @@
 		138A1A4920A1AC590049AF9E /* Plain */ = {
 			isa = PBXGroup;
 			children = (
-				138A1A4A20A1AC590049AF9E /* Comment.swift */,
-				138A1A4B20A1AC590049AF9E /* Post.swift */,
-				138A1A9C20A1EAD30049AF9E /* Photo.swift */,
-				138A1AA220A2F2E80049AF9E /* Album.swift */,
-				138A1AA420A2F2F20049AF9E /* User.swift */,
-				138A1AA620A2F2FA0049AF9E /* Todo.swift */,
-				138A1AA820A2F3700049AF9E /* Address.swift */,
-				138A1AAA20A2F3840049AF9E /* Geo.swift */,
-				138A1AAC20A2F3920049AF9E /* Company.swift */,
-				13E1621520A330490061E30C /* SearchAttempt.swift */,
+				138A1A4A20A1AC590049AF9E /* CommentDto.swift */,
+				138A1A4B20A1AC590049AF9E /* PostDto.swift */,
+				138A1A9C20A1EAD30049AF9E /* PhotoDto.swift */,
+				138A1AA220A2F2E80049AF9E /* AlbumDto.swift */,
+				138A1AA420A2F2F20049AF9E /* UserDto.swift */,
+				138A1AA620A2F2FA0049AF9E /* TodoDto.swift */,
+				138A1AA820A2F3700049AF9E /* AddressDto.swift */,
+				138A1AAA20A2F3840049AF9E /* GeoDto.swift */,
+				138A1AAC20A2F3920049AF9E /* CompanyDto.swift */,
+				13E1621520A330490061E30C /* SearchAttemptDto.swift */,
 			);
 			path = Plain;
 			sourceTree = "<group>";
@@ -986,48 +986,48 @@
 			buildActionMask = 2147483647;
 			files = (
 				138A1A8620A1E52D0049AF9E /* SearchAttemptViewModel.swift in Sources */,
-				138A1AA720A2F2FA0049AF9E /* Todo.swift in Sources */,
+				138A1AA720A2F2FA0049AF9E /* TodoDto.swift in Sources */,
 				138A1A2120A1AC2C0049AF9E /* ConfiguratorProtocol.swift in Sources */,
 				13E1622820A48D730061E30C /* Networking+Mappable.swift in Sources */,
 				138A1A2F20A1AC330049AF9E /* LocalDataStore.swift in Sources */,
 				138A1A9020A1E5820049AF9E /* SearchAttemptCell.swift in Sources */,
 				138A1A3B20A1AC420049AF9E /* UIStoryboard+Instantiate.swift in Sources */,
-				13E1621220A321700061E30C /* Photo+Realm.swift in Sources */,
+				13E1621220A321700061E30C /* PhotoDto+Realm.swift in Sources */,
 				138A1A5820A1AC590049AF9E /* RlmComment.swift in Sources */,
-				138A1A5120A1AC590049AF9E /* Post+Network.swift in Sources */,
-				138A1AA920A2F3700049AF9E /* Address.swift in Sources */,
-				138A1A5320A1AC590049AF9E /* Post+Realm.swift in Sources */,
+				138A1A5120A1AC590049AF9E /* PostDto+Network.swift in Sources */,
+				138A1AA920A2F3700049AF9E /* AddressDto.swift in Sources */,
+				138A1A5320A1AC590049AF9E /* PostDto+Realm.swift in Sources */,
 				138A1A9120A1E5820049AF9E /* ImageCell.swift in Sources */,
-				13E1621C20A36D000061E30C /* SearchAttempt+Realm.swift in Sources */,
+				13E1621C20A36D000061E30C /* SearchAttemptDto+Realm.swift in Sources */,
 				138A1A9920A1E9D50049AF9E /* RlmPhoto.swift in Sources */,
 				13E1622020A3776A0061E30C /* SideMenu.swift in Sources */,
 				138A1AB920A30FA60049AF9E /* RlmAlbum.swift in Sources */,
 				13E1621E20A3771C0061E30C /* SideMenuViewController.swift in Sources */,
 				13E1621A20A368360061E30C /* BaseCollectionViewCell.swift in Sources */,
 				138A1A2320A1AC2C0049AF9E /* ExternalServerEnvironment.swift in Sources */,
-				138A1A5420A1AC590049AF9E /* Comment+Realm.swift in Sources */,
+				138A1A5420A1AC590049AF9E /* CommentDto+Realm.swift in Sources */,
 				138A1A3620A1AC3C0049AF9E /* Cache.swift in Sources */,
 				138A1AB520A30F890049AF9E /* RlmUser.swift in Sources */,
 				138A1A5920A1AC590049AF9E /* RlmEntity.swift in Sources */,
 				138A1A6520A1AC620049AF9E /* Networking+BaseMappable.swift in Sources */,
 				138A1A6720A1AC620049AF9E /* ApiRequest.swift in Sources */,
 				138A1A8A20A1E52D0049AF9E /* SearchResultViewController.swift in Sources */,
-				138A1A5020A1AC590049AF9E /* Comment+Network.swift in Sources */,
+				138A1A5020A1AC590049AF9E /* CommentDto+Network.swift in Sources */,
 				13E1622420A380950061E30C /* BaseTableViewCell.swift in Sources */,
 				138A1A8B20A1E52D0049AF9E /* AllPostsViewController.swift in Sources */,
 				138A1A6920A1AC620049AF9E /* ApiRoutes.swift in Sources */,
 				13E1622620A439A10061E30C /* PostCell.swift in Sources */,
-				13E1621020A321640061E30C /* User+Realm.swift in Sources */,
+				13E1621020A321640061E30C /* UserDto+Realm.swift in Sources */,
 				138A1AB720A30F9C0049AF9E /* RlmTodo.swift in Sources */,
-				138A1AB320A309350049AF9E /* Todo+Network.swift in Sources */,
+				138A1AB320A309350049AF9E /* TodoDto+Network.swift in Sources */,
 				138A1A1D20A1AC2C0049AF9E /* UserDefaults.swift in Sources */,
 				138A1A9320A1E6540049AF9E /* RlmSearchAttempt.swift in Sources */,
 				138A1A1E20A1AC2C0049AF9E /* MyLocalizedString.swift in Sources */,
-				13E1621620A330490061E30C /* SearchAttempt.swift in Sources */,
+				13E1621620A330490061E30C /* SearchAttemptDto.swift in Sources */,
 				138A1A5720A1AC590049AF9E /* RlmPost.swift in Sources */,
 				138A1A8020A1E52D0049AF9E /* BaseViewModel.swift in Sources */,
-				13E1620E20A321550061E30C /* Album+Realm.swift in Sources */,
-				138A1A9F20A2E5280049AF9E /* Photo+Network.swift in Sources */,
+				13E1620E20A321550061E30C /* AlbumDto+Realm.swift in Sources */,
+				138A1A9F20A2E5280049AF9E /* PhotoDto+Network.swift in Sources */,
 				138A1A3120A1AC330049AF9E /* NetworkServiceProtocol.swift in Sources */,
 				138A1A3020A1AC330049AF9E /* LocalDataStoreProtocol.swift in Sources */,
 				138A1A8220A1E52D0049AF9E /* PostViewModel.swift in Sources */,
@@ -1036,30 +1036,30 @@
 				138A1A3A20A1AC420049AF9E /* UIViewController+LoadingView.swift in Sources */,
 				138A1A3220A1AC330049AF9E /* NetworkService.swift in Sources */,
 				138A1A2220A1AC2C0049AF9E /* ApplicationConfigurator.swift in Sources */,
-				138A1A9D20A1EAD30049AF9E /* Photo.swift in Sources */,
-				13E1621420A3217E0061E30C /* Todo+Realm.swift in Sources */,
+				138A1A9D20A1EAD30049AF9E /* PhotoDto.swift in Sources */,
+				13E1621420A3217E0061E30C /* TodoDto+Realm.swift in Sources */,
 				138A1A8320A1E52D0049AF9E /* PhotoImageViewModel.swift in Sources */,
 				13E1622220A37FBC0061E30C /* BaseTableViewController.swift in Sources */,
-				138A1AAF20A309140049AF9E /* Album+Network.swift in Sources */,
+				138A1AAF20A309140049AF9E /* AlbumDto+Network.swift in Sources */,
 				138A1A8120A1E52D0049AF9E /* AllPostsViewModel.swift in Sources */,
 				138A1A8420A1E52D0049AF9E /* SearchViewModel.swift in Sources */,
 				138A1A2420A1AC2C0049AF9E /* EnvironmentProtocol.swift in Sources */,
 				138A1A1F20A1AC2C0049AF9E /* EnvironmentConfigurator.swift in Sources */,
 				138A1A8820A1E52D0049AF9E /* SearchResultViewModel.swift in Sources */,
-				138A1AB120A309240049AF9E /* User+Network.swift in Sources */,
-				138A1A5520A1AC590049AF9E /* Comment.swift in Sources */,
+				138A1AB120A309240049AF9E /* UserDto+Network.swift in Sources */,
+				138A1A5520A1AC590049AF9E /* CommentDto.swift in Sources */,
 				138A1A5220A1AC590049AF9E /* RealmMappableProtocol.swift in Sources */,
-				138A1AA320A2F2E80049AF9E /* Album.swift in Sources */,
-				138A1A5620A1AC590049AF9E /* Post.swift in Sources */,
+				138A1AA320A2F2E80049AF9E /* AlbumDto.swift in Sources */,
+				138A1A5620A1AC590049AF9E /* PostDto.swift in Sources */,
 				138A1A8920A1E52D0049AF9E /* SearchViewController.swift in Sources */,
 				138A19B920A18BD10049AF9E /* AppDelegate.swift in Sources */,
 				138A1AA120A2EABF0049AF9E /* FetchedResultsViewModel.swift in Sources */,
 				138A1A2020A1AC2C0049AF9E /* ThirdPartiesConfigurator.swift in Sources */,
 				138A1A8520A1E52D0049AF9E /* ImageViewModel.swift in Sources */,
 				138A1A6A20A1AC620049AF9E /* NetworkError.swift in Sources */,
-				138A1AA520A2F2F20049AF9E /* User.swift in Sources */,
-				138A1AAB20A2F3840049AF9E /* Geo.swift in Sources */,
-				138A1AAD20A2F3920049AF9E /* Company.swift in Sources */,
+				138A1AA520A2F2F20049AF9E /* UserDto.swift in Sources */,
+				138A1AAB20A2F3840049AF9E /* GeoDto.swift in Sources */,
+				138A1AAD20A2F3920049AF9E /* CompanyDto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

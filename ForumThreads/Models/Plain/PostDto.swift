@@ -1,5 +1,5 @@
 //
-//  Post.swift
+//  PostDto.swift
 //  ForumThreads
 //
 //  Created by aSqar on 08.05.2018.
@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct Post {
+struct PostDto {
     
     var userId: Int = 0
     var id: Int = 0
     var title: String!
     var body: String!
-    var user: User!
+    var user: UserDto!
     
     init() { }
     

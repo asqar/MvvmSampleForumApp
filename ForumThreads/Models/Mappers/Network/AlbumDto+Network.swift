@@ -1,5 +1,5 @@
 //
-//  Photo+Network.swift
+//  Album+Network.swift
 //  ForumThreads
 //
 //  Created by aSqar on 09.05.2018.
@@ -7,18 +7,18 @@
 //
 
 import ObjectMapper
-import Foundation
 
-extension Photo: StaticMappable {
+extension AlbumDto: StaticMappable {
+    
     static func objectForMapping(map: Map) -> BaseMappable? {
-        return Cache.default.load(byPK: map.JSON["id"]) as Photo
+        return Cache.default.load(byPK: map.JSON["id"]) as AlbumDto
     }
     
     mutating func mapping(map: Map) {
-        albumId <- map["albumId"]
+        userId <- map["userId"]
         id <- map["id"]
         title <- map["title"]
-        url <- map["url"]
-        thumbnailUrl <- map["thumbnailUrl"]
     }
+    
 }
+
