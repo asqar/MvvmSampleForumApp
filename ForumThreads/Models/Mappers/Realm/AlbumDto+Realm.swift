@@ -12,7 +12,9 @@ import RealmSwift
 
 extension AlbumDto: RealmMappableProtocol {
     
-    static func mapFromRealmObject(_ object: RlmAlbum) -> AlbumDto {
+    typealias RealmType = RlmAlbum
+    
+    static func mapFromRealmObject(_ object: RealmType) -> AlbumDto {
         var model = AlbumDto()
         
         model.userId = object.userId
@@ -22,8 +24,8 @@ extension AlbumDto: RealmMappableProtocol {
         return model
     }
     
-    func mapToRealmObject() -> RlmAlbum {
-        let model = RlmAlbum()
+    func mapToRealmObject() -> RealmType {
+        let model = RealmType()
         
         model.userId = userId
         model.id = id

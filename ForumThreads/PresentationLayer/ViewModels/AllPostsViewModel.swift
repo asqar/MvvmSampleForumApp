@@ -31,55 +31,22 @@ class AllPostsViewModel : FetchedResultsViewModel<RlmPost> {
     
     override func fetchData(updating:Bool)
     {
-        NetworkService().fetchPosts(completion: self.completion())
+        CachedNetworkService().fetchPosts(completion: self.completion())
     }
     
-    override func processDownloadedResults(results: [Any]) {
-
-        let newItems = results.map { (i : Any) -> RlmPost in
-            return (i as! PostDto).mapToRealmObject()
-        }
+    override func processDownloadedResults(results: [RlmPost]) {
 
         do {
             try self.realm().write {
-                self.realm().add(newItems, update: true)
+                self.realm().add(results, update: true)
             }
         } catch let error {
             print(error)
-        }
-        
-        for i in results {
-            var item = i as! PostDto
-            if item.user == nil
-            {
-                NetworkService().fetchUser(id: item.userId, completion: { (resultUser) in
-                    
-                    let user = resultUser.value
-                    item.user = user
-                    
-                    self.assignPostAuthor(user: user!, post: item)
-                })
-            }
         }
     }
 
     override func objectAtIndexPath(indexPath:IndexPath!) -> PostViewModel! {
         let post:RlmPost = self.fetchedResultsController.objectAtIndexPath(indexPath)!
         return PostViewModel(post: PostDto.mapFromRealmObject(post))
-    }
-    
-    func assignPostAuthor(user: UserDto, post: PostDto)
-    {
-        let realmUser = user.mapToRealmObject()
-        let realmPost = post.mapToRealmObject()
-
-        do {
-            try self.realm().write {
-                self.realm().add(realmUser, update: true)
-                realmPost.user = realmUser
-            }
-        } catch let error {
-            print(error)
-        }
     }
 }

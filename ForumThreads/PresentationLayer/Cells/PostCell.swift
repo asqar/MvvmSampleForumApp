@@ -16,10 +16,18 @@ class PostCell: BaseTableViewCell<PostViewModel> {
     @IBOutlet fileprivate weak var txtUserName: UILabel?
     
     override func setViewModel(viewModel: PostViewModel!) {
-        self.viewModel = viewModel
-     
+        super.setViewModel(viewModel: viewModel)
+    }
+    
+    override func refresh(){
         self.txtTitle?.text = viewModel.post.title
         self.txtBody?.text = viewModel.post.body
-        self.txtUserName?.text = viewModel.post.user?.name
+        
+        if viewModel.user.id == 0 {
+            self.txtUserName?.text = "loading...".localized
+        } else {
+            let userName = String(format: "%@ %@, %@ %@", "by".localized, viewModel.user.name, "from".localized, viewModel.user.address?.city ?? "unknown place".localized)
+            self.txtUserName?.text = userName
+        }
     }
 }

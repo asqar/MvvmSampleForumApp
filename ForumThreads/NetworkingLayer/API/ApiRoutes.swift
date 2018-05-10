@@ -40,6 +40,14 @@ extension ApiRoutes {
         case photosOf(album: AlbumDto)
         case todosOf(user: UserDto)
     }
+    
+    enum Level3_getMultipleCached {
+        case postsOf(user: RlmUser)
+        case commentsOf(post: RlmPost)
+        case albumsOf(user: RlmUser)
+        case photosOf(album: RlmAlbum)
+        case todosOf(user: RlmUser)
+    }
 }
 
 
@@ -83,6 +91,23 @@ extension ApiRoutes.Level2_getSingle: ApiRequest {
 }
     
 extension ApiRoutes.Level3_getMultiple: ApiRequest {
+    var path: String {
+        switch self {
+        case .postsOf(let user):
+            return ApiRoutes.Level2_getSingle.userBy(id: user.id).path + "/posts"
+        case .commentsOf(let post):
+            return ApiRoutes.Level2_getSingle.postBy(id: post.id).path + "/comments"
+        case .albumsOf(let user):
+            return ApiRoutes.Level2_getSingle.userBy(id: user.id).path + "/albums"
+        case .photosOf(let album):
+            return ApiRoutes.Level2_getSingle.albumBy(id: album.id).path + "/photos"
+        case .todosOf(let user):
+            return ApiRoutes.Level2_getSingle.userBy(id: user.id).path + "/todos"
+        }
+    }
+}
+
+extension ApiRoutes.Level3_getMultipleCached: ApiRequest {
     var path: String {
         switch self {
         case .postsOf(let user):

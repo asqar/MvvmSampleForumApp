@@ -11,7 +11,9 @@ import RealmSwift
 
 extension PostDto: RealmMappableProtocol {
     
-    static func mapFromRealmObject(_ object: RlmPost) -> PostDto {
+    typealias RealmType = RlmPost
+    
+    static func mapFromRealmObject(_ object: RealmType) -> PostDto {
         var model = PostDto()
         
         model.userId = object.userId
@@ -19,15 +21,11 @@ extension PostDto: RealmMappableProtocol {
         model.title = object.title
         model.body = object.body
         
-        if object.user != nil {
-            model.user = UserDto.mapFromRealmObject(object.user)
-        }
-        
         return model
     }
     
-    func mapToRealmObject() -> RlmPost {
-        let model = RlmPost()
+    func mapToRealmObject() -> RealmType {
+        let model = RealmType()
         
         model.userId = userId
         model.id = id

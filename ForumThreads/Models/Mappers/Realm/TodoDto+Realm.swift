@@ -12,7 +12,9 @@ import RealmSwift
 
 extension TodoDto: RealmMappableProtocol {
     
-    static func mapFromRealmObject(_ object: RlmTodo) -> TodoDto {
+    typealias RealmType = RlmTodo
+    
+    static func mapFromRealmObject(_ object: RealmType) -> TodoDto {
         var model = TodoDto()
         
         model.userId = object.userId
@@ -23,8 +25,8 @@ extension TodoDto: RealmMappableProtocol {
         return model
     }
     
-    func mapToRealmObject() -> RlmTodo {
-        let model = RlmTodo()
+    func mapToRealmObject() -> RealmType {
+        let model = RealmType()
         
         model.userId = userId
         model.id = id

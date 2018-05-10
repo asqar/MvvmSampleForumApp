@@ -56,7 +56,7 @@ class SearchResultViewModel : FetchedResultsViewModel<RlmPost> {
         return String(format:"text=%@", encodedStr)
     }
 
-    override func processDownloadedResults(results: [Any]) {
+    override func processDownloadedResults(results: [RlmPost]) {
         
         self.realm().beginWrite()
         var orderIndex:Int = self.numberOfItemsInSection(section: 0) + 1

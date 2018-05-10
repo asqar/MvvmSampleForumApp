@@ -18,8 +18,17 @@ class RlmUser : RlmEntity, Mappable {
     @objc dynamic var phone: String!
     @objc dynamic var website: String!
     
-    var address: AddressDto!
-    var company: CompanyDto!
+    @objc dynamic var street: String!
+    @objc dynamic var suite: String!
+    @objc dynamic var city: String!
+    @objc dynamic var zipcode: String!
+    
+    @objc dynamic var lat: Float = 0
+    @objc dynamic var lng: Float = 0
+    
+    @objc dynamic var companyName: String!
+    @objc dynamic var catchPhrase: String!
+    @objc dynamic var bs: String!
     
     // MARK: - Mapping directly from JSON
     
@@ -32,9 +41,17 @@ class RlmUser : RlmEntity, Mappable {
         name <- map["name"]
         username <- map["username"]
         email <- map["email"]
-        address <- map["address"]
+        street <- map["address.street"]
+        suite <- map["address.suite"]
+        city <- map["address.city"]
+        zipcode <- map["address.zipcode"]
+        lat <- map["address.geo.lat"]
+        lng <- map["address.geo.lat"]
+        zipcode <- map["address.zipcode"]
         phone <- map["phone"]
         website <- map["website"]
-        company <- map["company"]
+        companyName <- map["company.name"]
+        catchPhrase <- map["catchPhrase"]
+        bs <- map["bs"]
     }
 }

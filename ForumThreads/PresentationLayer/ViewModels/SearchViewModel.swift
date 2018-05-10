@@ -12,8 +12,6 @@ import RealmSwift
 import SafeRealmObject
 
 class SearchViewModel : BaseViewModel, FetchedResultsControllerDelegate {
-
-    private(set) var updatedContentSignal:RACSignal!
     
     private var _fetchedResultsController:FetchedResultsController<RlmSearchAttempt>!
     var fetchedResultsController:FetchedResultsController<RlmSearchAttempt>! {
@@ -32,7 +30,7 @@ class SearchViewModel : BaseViewModel, FetchedResultsControllerDelegate {
     override init() {
         super.init()
         
-        self.updatedContentSignal = RACSubject()
+//        self.updatedContentSignal = RACSubject()
         self.updatedContentSignal.name = "SearchResultViewModel updatedContentSignal"
 
         self.didBecomeActiveSignal.subscribeNext({ (x) in

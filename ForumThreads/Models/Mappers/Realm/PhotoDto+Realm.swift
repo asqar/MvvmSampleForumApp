@@ -12,7 +12,9 @@ import RealmSwift
 
 extension PhotoDto: RealmMappableProtocol {
     
-    static func mapFromRealmObject(_ object: RlmPhoto) -> PhotoDto {
+    typealias RealmType = RlmPhoto
+    
+    static func mapFromRealmObject(_ object: RealmType) -> PhotoDto {
         var model = PhotoDto()
         
         model.albumId = object.albumId
@@ -24,8 +26,8 @@ extension PhotoDto: RealmMappableProtocol {
         return model
     }
     
-    func mapToRealmObject() -> RlmPhoto {
-        let model = RlmPhoto()
+    func mapToRealmObject() -> RealmType {
+        let model = RealmType()
         
         model.albumId = albumId
         model.id = id

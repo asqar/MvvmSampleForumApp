@@ -9,9 +9,13 @@
 import ObjectMapper
 
 extension UserDto: StaticMappable {
+        
+    static func objectById(id: Int) -> UserDto? {
+        return Cache.default.load(byPK: id) as UserDto
+    }
     
     static func objectForMapping(map: Map) -> BaseMappable? {
-        return Cache.default.load(byPK: map.JSON["id"]) as UserDto
+        return objectById(id: map.JSON["id"] as! Int)
     }
     
     mutating func mapping(map: Map) {

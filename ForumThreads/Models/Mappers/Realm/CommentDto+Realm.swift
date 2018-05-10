@@ -12,7 +12,9 @@ import RealmSwift
 
 extension CommentDto: RealmMappableProtocol {
     
-    static func mapFromRealmObject(_ object: RlmComment) -> CommentDto {
+    typealias RealmType = RlmComment
+    
+    static func mapFromRealmObject(_ object: RealmType) -> CommentDto {
         var model = CommentDto()
         
         model.postId = object.postId
@@ -24,8 +26,8 @@ extension CommentDto: RealmMappableProtocol {
         return model
     }
     
-    func mapToRealmObject() -> RlmComment {
-        let model = RlmComment()
+    func mapToRealmObject() -> RealmType {
+        let model = RealmType()
         
         model.postId = postId
         model.id = id

@@ -32,9 +32,25 @@ class AllPostsViewController : BaseTableViewController<RlmPost, AllPostsViewMode
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.destination is SearchViewController) {
-            let searchViewModel:SearchViewModel! = SearchViewModel()
-            let vc:SearchViewController! = segue.destination as! SearchViewController
+            let searchViewModel = SearchViewModel()
+            let vc = segue.destination as! SearchViewController
             vc.viewModel = searchViewModel
+        } else if segue.destination is PostCommentsViewController {
+            let postCommentsViewModel = PostCommentsViewModel()
+            let vc = segue.destination as! PostCommentsViewController
+            vc.viewModel = postCommentsViewModel
         }
+    }
+    
+    override func tableView(_ tableView:UITableView, heightForRowAt indexPath:IndexPath) -> CGFloat {
+        let vm:PostViewModel! = self.viewModel.objectAtIndexPath(indexPath: indexPath)
+        
+        let width:CGFloat = UIScreen.main.bounds.size.width - 0.0 * 2
+        
+        let height1:CGFloat = vm.post.body.boundingRect(with: CGSize(width:width, height:CGFloat(MAXFLOAT)), options:NSStringDrawingOptions(rawValue: NSStringDrawingOptions.usesLineFragmentOrigin.rawValue | NSStringDrawingOptions.usesFontLeading.rawValue), attributes:[kCTFontAttributeName as NSAttributedStringKey: UIFont(name: "HelveticaNeue", size:14.0) ?? UIFont.systemFont(ofSize: UIFont.systemFontSize)], context:nil).size.height
+        
+        let height2:CGFloat = vm.post.body.boundingRect(with: CGSize(width:width, height:CGFloat(MAXFLOAT)), options:NSStringDrawingOptions(rawValue: NSStringDrawingOptions.usesLineFragmentOrigin.rawValue | NSStringDrawingOptions.usesFontLeading.rawValue), attributes:[kCTFontAttributeName as NSAttributedStringKey: UIFont(name: "HelveticaNeue", size:12.0) ?? UIFont.systemFont(ofSize: UIFont.systemFontSize)], context:nil).size.height
+        
+        return 21.0 + height1 + height2
     }
 }

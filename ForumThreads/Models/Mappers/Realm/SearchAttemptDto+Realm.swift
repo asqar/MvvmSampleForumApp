@@ -11,7 +11,9 @@ import RealmSwift
 
 extension SearchAttemptDto: RealmMappableProtocol {
     
-    static func mapFromRealmObject(_ object: RlmSearchAttempt) -> SearchAttemptDto {
+    typealias RealmType = RlmSearchAttempt
+    
+    static func mapFromRealmObject(_ object: RealmType) -> SearchAttemptDto {
         var model = SearchAttemptDto()
         
         model.searchTerm = object.searchTerm
@@ -21,8 +23,8 @@ extension SearchAttemptDto: RealmMappableProtocol {
         return model
     }
     
-    func mapToRealmObject() -> RlmSearchAttempt {
-        let model = RlmSearchAttempt()
+    func mapToRealmObject() -> RealmType {
+        let model = RealmType()
         
         model.searchTerm = searchTerm
         model.dateSearched = dateSearched

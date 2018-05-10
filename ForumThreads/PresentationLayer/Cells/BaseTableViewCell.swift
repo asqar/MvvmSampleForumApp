@@ -15,6 +15,14 @@ class BaseTableViewCell<VM : BaseViewModel> : UITableViewCell {
     
     func setViewModel(viewModel:VM!) {
         self.viewModel = viewModel
+        
+        self.refresh()
+        
+        self.viewModel.updatedContentSignal.subscribeNext({ (x) in
+            self.refresh()
+        })
     }
+    
+    func refresh() { }
 }
 

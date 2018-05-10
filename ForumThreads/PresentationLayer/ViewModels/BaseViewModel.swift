@@ -8,6 +8,7 @@
 
 import ReactiveViewModel
 import RealmSwift
+import ReactiveCocoa
 
 protocol ViewModelHelper {
     associatedtype OwnerType : Any
@@ -16,6 +17,8 @@ protocol ViewModelHelper {
 }
 
 class BaseViewModel : RVMViewModel {
+    
+    private(set) var updatedContentSignal:RACSignal!
 
     func realm() -> Realm {
         return try! Realm()
@@ -23,5 +26,11 @@ class BaseViewModel : RVMViewModel {
     
     func dataStore() -> LocalDataStore! {
         return LocalDataStore()
+    }
+    
+    override init() {
+        super.init()
+        
+        self.updatedContentSignal = RACSubject()
     }
 }
