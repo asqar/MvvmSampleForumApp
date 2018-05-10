@@ -1,5 +1,5 @@
 //
-//  Comment+Network.swift
+//  CommentDto+Network.swift
 //  ForumThreads
 //
 //  Created by aSqar on 08.05.2018.

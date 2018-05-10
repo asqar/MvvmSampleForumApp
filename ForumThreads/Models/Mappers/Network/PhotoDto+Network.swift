@@ -1,5 +1,5 @@
 //
-//  Photo+Network.swift
+//  PhotoDto+Network.swift
 //  ForumThreads
 //
 //  Created by aSqar on 09.05.2018.

@@ -35,16 +35,15 @@ class AllPostsViewModel : FetchedResultsViewModel<RlmPost> {
     }
     
     override func processDownloadedResults(results: [Any]) {
-        
-        self.realm().beginWrite()
-        
+
         let newItems = results.map { (i : Any) -> RlmPost in
             return (i as! PostDto).mapToRealmObject()
         }
-        self.realm().add(newItems, update: true)
 
         do {
-            try self.realm().commitWrite()
+            try self.realm().write {
+                self.realm().add(newItems, update: true)
+            }
         } catch let error {
             print(error)
         }
@@ -73,14 +72,12 @@ class AllPostsViewModel : FetchedResultsViewModel<RlmPost> {
     {
         let realmUser = user.mapToRealmObject()
         let realmPost = post.mapToRealmObject()
-        
-        self.realm().beginWrite()
-        
-        self.realm().add(realmUser, update: true)
-        realmPost.user = realmUser
-        
+
         do {
-            try self.realm().commitWrite()
+            try self.realm().write {
+                self.realm().add(realmUser, update: true)
+                realmPost.user = realmUser
+            }
         } catch let error {
             print(error)
         }
