@@ -13,4 +13,5 @@ class RlmAlbum : RlmEntity {
     @objc dynamic var userId:Int = 0
     @objc dynamic var title: String!
     
+    @objc dynamic var user:RlmUser!
 }

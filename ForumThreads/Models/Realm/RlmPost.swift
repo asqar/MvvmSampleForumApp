@@ -16,5 +16,7 @@ class RlmPost : RlmEntity {
     @objc dynamic var body: String!
     
     @objc dynamic var searchAttempt:RlmSearchAttempt!
+    
+    @objc dynamic var user:RlmUser!
 }
 

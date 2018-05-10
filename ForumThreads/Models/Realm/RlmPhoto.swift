@@ -12,5 +12,7 @@ class RlmPhoto : RlmEntity {
     @objc dynamic var albumId: Int = 0
     @objc dynamic var title: String!
     @objc dynamic var url: String!
-    @objc dynamic var thumbnailUrl: String!    
+    @objc dynamic var thumbnailUrl: String!
+    
+    @objc dynamic var album:RlmAlbum!
 }

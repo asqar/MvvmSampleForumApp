@@ -19,6 +19,10 @@ extension Post: RealmMappableProtocol {
         model.title = object.title
         model.body = object.body
         
+        if object.user != nil {
+            model.user = User.mapFromRealmObject(object.user)
+        }
+        
         return model
     }
     
@@ -29,6 +33,10 @@ extension Post: RealmMappableProtocol {
         model.id = id
         model.title = title
         model.body = body
+        
+//        if user != nil {
+//            model.user = user.mapToRealmObject()
+//        }
         
         return model
     }

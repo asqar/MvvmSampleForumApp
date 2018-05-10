@@ -13,5 +13,6 @@ class RlmTodo : RlmEntity {
     @objc dynamic var userId: Int = 0
     @objc dynamic var title: String!
     @objc dynamic var completed: Bool = false
-    
+ 
+    @objc dynamic var user:RlmUser!
 }

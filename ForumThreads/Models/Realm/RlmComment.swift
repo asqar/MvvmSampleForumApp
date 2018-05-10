@@ -15,5 +15,6 @@ class RlmComment : RlmEntity {
     @objc dynamic var name: String!
     @objc dynamic var email: String!
     @objc dynamic var body: String!
-
+    
+    @objc dynamic var post:RlmPost!
 }

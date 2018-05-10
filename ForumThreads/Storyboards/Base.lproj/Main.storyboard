@@ -54,8 +54,18 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwF-78-QAF">
+                                            <rect key="frame" x="16" y="39" width="343" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="48a-Q2-zK9"/>
+                                                <constraint firstAttribute="height" constant="21" id="WY8-FS-RyI"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsc-Uq-MVe">
-                                            <rect key="frame" x="16" y="39" width="343" height="50"/>
+                                            <rect key="frame" x="16" y="67" width="343" height="22"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -66,14 +76,18 @@
                                         <constraint firstItem="zJt-EI-h26" firstAttribute="top" secondItem="UYv-D6-ZCe" secondAttribute="topMargin" id="1r5-8n-TAM"/>
                                         <constraint firstItem="tsc-Uq-MVe" firstAttribute="bottom" secondItem="UYv-D6-ZCe" secondAttribute="bottomMargin" id="2PM-a2-vSa"/>
                                         <constraint firstItem="zJt-EI-h26" firstAttribute="trailing" secondItem="UYv-D6-ZCe" secondAttribute="trailingMargin" id="FLF-My-OpL"/>
-                                        <constraint firstItem="tsc-Uq-MVe" firstAttribute="top" secondItem="zJt-EI-h26" secondAttribute="bottom" constant="7" id="hdf-Uu-Fs4"/>
+                                        <constraint firstItem="qwF-78-QAF" firstAttribute="leading" secondItem="UYv-D6-ZCe" secondAttribute="leadingMargin" id="LVt-kr-z5l"/>
+                                        <constraint firstItem="tsc-Uq-MVe" firstAttribute="top" secondItem="qwF-78-QAF" secondAttribute="bottom" constant="7" id="Top-O6-tqK"/>
+                                        <constraint firstItem="qwF-78-QAF" firstAttribute="trailing" secondItem="UYv-D6-ZCe" secondAttribute="trailingMargin" id="hET-V7-I7b"/>
                                         <constraint firstItem="tsc-Uq-MVe" firstAttribute="trailing" secondItem="UYv-D6-ZCe" secondAttribute="trailingMargin" id="jAt-w3-cj3"/>
+                                        <constraint firstItem="qwF-78-QAF" firstAttribute="top" secondItem="zJt-EI-h26" secondAttribute="bottom" constant="7" id="rsO-N8-J2a"/>
                                         <constraint firstItem="tsc-Uq-MVe" firstAttribute="leading" secondItem="UYv-D6-ZCe" secondAttribute="leadingMargin" id="u7I-Mm-F8A"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="txtBody" destination="tsc-Uq-MVe" id="yYF-cC-EBr"/>
                                     <outlet property="txtTitle" destination="zJt-EI-h26" id="Zsa-CG-shr"/>
+                                    <outlet property="txtUserName" destination="qwF-78-QAF" id="0b8-pa-pto"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
