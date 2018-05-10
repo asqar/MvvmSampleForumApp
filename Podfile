@@ -11,15 +11,15 @@ pod 'TwitterCore'
 pod 'Crashlytics'
 pod 'SVPullToRefresh'
 
-pod 'RBQFetchedResultsController', :git => 'https://github.com/asqar/RBQFetchedResultsController.git'
+#pod 'RBQFetchedResultsController', :git => 'https://github.com/asqar/RBQFetchedResultsController.git'
 pod 'SwiftFetchedResultsController', :git => 'https://github.com/asqar/RBQFetchedResultsController.git'
+#pod 'Realm+JSON', :git => 'https://github.com/asqar/Realm-JSON.git'
 
 def shared_pods
 
-  pod 'SAMKeychain'
   pod 'KVNProgress'
 
-  pod 'RBQFetchedResultsController', :git => 'https://github.com/asqar/RBQFetchedResultsController.git'
+#  pod 'RBQFetchedResultsController', :git => 'https://github.com/asqar/RBQFetchedResultsController.git'
   pod 'SwiftFetchedResultsController', :git => 'https://github.com/asqar/RBQFetchedResultsController.git'
 
   # Networking
@@ -48,6 +48,7 @@ def app_pods
   # UI Helpers
   pod 'TableKit'
   pod 'SVPullToRefresh'
+  pod 'SideMenu'
 
 end
 
