@@ -34,6 +34,10 @@ class PostCommentsViewModel: FetchedResultsViewModel<RlmComment> {
     
     override var fieldsToSearch: [String] { get { return ["name", "body"] } }
     
+    override func sortDescriptors() -> [SortDescriptor]! {
+        return [ SortDescriptor(keyPath:"id", ascending:false) ]
+    }
+    
     override func fetchData(updating:Bool)
     {
         CachedNetworkService().fetchComments(post: self.post.mapToRealmObject(), completion: self.completion())

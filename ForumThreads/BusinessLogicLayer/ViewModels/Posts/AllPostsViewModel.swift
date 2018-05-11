@@ -19,6 +19,10 @@ class AllPostsViewModel : FetchedResultsViewModel<RlmPost> {
     }
     
     override var fieldsToSearch: [String] { get { return ["title", "body"] } }
+    
+    override func sortDescriptors() -> [SortDescriptor]! {
+        return [ SortDescriptor(keyPath:"id", ascending:true) ]
+    }
 
     override var serviceUrl : String! {
         return ""

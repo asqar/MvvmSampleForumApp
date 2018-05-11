@@ -11,8 +11,6 @@ import Realm
 import RealmSwift
 import SwiftFetchedResultsController
 import ReactiveCocoa
-
-// These dependencies show that the abstraction leaks
 import Alamofire
 import ObjectMapper
 
@@ -76,11 +74,13 @@ class FetchedResultsViewModel<EntityType:Object> : BaseViewModel, FetchedResults
         }
     }
     
+    func sortDescriptors() -> [SortDescriptor]! {
+        return [ SortDescriptor(keyPath:"id", ascending:true) ]
+    }
+    
     func newFetchRequest(predicate: NSPredicate?) -> FetchRequest<EntityType>! {
-        let sd1:SortDescriptor! = SortDescriptor(keyPath:"id", ascending:true)
-        let sortDescriptors:[SortDescriptor]! = [ sd1 ]
         let fetchRequest:FetchRequest! = FetchRequest<EntityType>(realm: self.realm(), predicate:predicate)
-        fetchRequest.sortDescriptors = sortDescriptors
+        fetchRequest.sortDescriptors = self.sortDescriptors()
         return fetchRequest
     }
     
