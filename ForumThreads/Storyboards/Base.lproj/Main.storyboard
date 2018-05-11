@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,7 +28,7 @@
             </objects>
             <point key="canvasLocation" x="-561" y="336.99999999999994"/>
         </scene>
-        <!--Hello-->
+        <!--Posts-->
         <scene sceneID="H4h-Q9-mgE">
             <objects>
                 <tableViewController id="3nw-5O-U7u" customClass="AllPostsViewController" customModule="ForumThreads" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,9 +36,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search posts..." id="s8c-DK-Zb5">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="3nw-5O-U7u" id="KUf-2T-ieh"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="100" id="wzO-GU-YWd" customClass="PostCell" customModule="ForumThreads" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wzO-GU-YWd" id="UYv-D6-ZCe">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
@@ -97,7 +104,7 @@
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" title="Hello" id="Cm2-vi-SAJ">
+                    <navigationItem key="navigationItem" title="Posts" id="Cm2-vi-SAJ">
                         <barButtonItem key="backBarButtonItem" title=" " id="G7b-Fu-HCr"/>
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="ocf-76-gpR">
                             <connections>
@@ -105,6 +112,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mySearchBar" destination="s8c-DK-Zb5" id="Sin-uR-o0F"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmL-hI-z6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,36 +137,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gEV-EA-p3q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="961.875" y="698.23943661971828"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="2v3-g9-Wy0">
-            <objects>
-                <viewController id="INO-k1-2ya" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="iza-aD-IWC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.094117647060000004" green="0.82745098039999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="v8Y-7I-WJq"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZGu-xm-1pV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="969" y="1386"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Xhj-fx-yc7">
-            <objects>
-                <viewController id="Dcg-EN-Kl3" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7h0-N1-gBy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <viewLayoutGuide key="safeArea" id="SPN-2T-REx"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Af-DJ-gHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1640" y="1386"/>
         </scene>
         <!--Side Menu View Controller-->
         <scene sceneID="rKZ-z7-b1i">
@@ -287,9 +267,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search comments..." id="Znh-Ax-Vf5">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="ydw-Lg-GMs" id="Ieo-HG-JrV"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="100" id="Vea-C6-wIb" customClass="CommentCell" customModule="ForumThreads" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vea-C6-wIb" id="tzj-av-qnZ">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
@@ -355,6 +343,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="mySearchBar" destination="Znh-Ax-Vf5" id="Jnu-BO-mij"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qub-XD-WqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

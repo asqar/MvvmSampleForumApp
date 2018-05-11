@@ -15,17 +15,10 @@ class AllPostsViewModel : FetchedResultsViewModel<RlmPost> {
     typealias RealmType = RlmPost
     
     override var title : String! {
-        return "All Threads".localized
+        return "Posts".localized
     }
     
-    override var fetchRequest: FetchRequest<RealmType>!
-    {
-        let sd1:SortDescriptor! = SortDescriptor(keyPath:"id", ascending:true)
-        let sortDescriptors:[SortDescriptor]! = [ sd1 ]
-        let fetchRequest:FetchRequest! = FetchRequest<RealmType>(realm: self.realm(), predicate:nil)
-        fetchRequest.sortDescriptors = sortDescriptors
-        return fetchRequest
-    }
+    override var fieldsToSearch: [String] { get { return ["title", "body"] } }
 
     override var serviceUrl : String! {
         return ""

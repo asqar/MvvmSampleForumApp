@@ -32,6 +32,8 @@ protocol FetchedResultsViewModelProtocol : FetchedResultsControllerDelegate {
     func fetchData(updating:Bool)
     func selectObjectAtIndexPath(indexPath:IndexPath!) -> BaseViewModel!
     
+    var searchTerm : String! { get set }
+    
     init()
 }
 
@@ -53,9 +55,38 @@ class FetchedResultsViewModel<EntityType:Object> : BaseViewModel, FetchedResults
     var title : String! { // virtual
         return ""
     }
-
-    var fetchRequest : FetchRequest<EntityType>!{ // virtual
-        return nil
+    
+    var fieldsToSearch: [String] { get { return [] } }
+    
+    var searchTerm:String! {
+        didSet {
+            if self.searchTerm.count > 0 {
+                
+                let subpredicates = fieldsToSearch.map { property in
+                    return NSPredicate(format: "%K CONTAINS[c] %@", property, searchTerm)
+                }
+                let predicate = NSCompoundPredicate(orPredicateWithSubpredicates: subpredicates)
+                let fetchRequest = self.newFetchRequest(predicate: predicate)
+                self.fetchedResultsController.updateFetchRequest(fetchRequest!, sectionNameKeyPath: nil, performFetch: true)
+                (self.updatedContentSignal as! RACSubject).sendNext({ (x:Any!) in })
+            } else {
+                self.fetchedResultsController.updateFetchRequest(self.fetchRequest, sectionNameKeyPath: nil, performFetch: true)
+                (self.updatedContentSignal as! RACSubject).sendNext({ (x:Any!) in })
+            }
+        }
+    }
+    
+    func newFetchRequest(predicate: NSPredicate?) -> FetchRequest<EntityType>! {
+        let sd1:SortDescriptor! = SortDescriptor(keyPath:"id", ascending:true)
+        let sortDescriptors:[SortDescriptor]! = [ sd1 ]
+        let fetchRequest:FetchRequest! = FetchRequest<EntityType>(realm: self.realm(), predicate:predicate)
+        fetchRequest.sortDescriptors = sortDescriptors
+        return fetchRequest
+    }
+    
+    var fetchRequest: FetchRequest<EntityType>!
+    {
+        return newFetchRequest(predicate: nil)
     }
     
     private var _fetchedResultsController:FetchedResultsController<EntityType>!

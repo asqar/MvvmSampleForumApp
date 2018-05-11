@@ -53,15 +53,9 @@
 		138A1A8120A1E52D0049AF9E /* AllPostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A6E20A1E52C0049AF9E /* AllPostsViewModel.swift */; };
 		138A1A8220A1E52D0049AF9E /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A6F20A1E52C0049AF9E /* PostViewModel.swift */; };
 		138A1A8320A1E52D0049AF9E /* PhotoImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A7020A1E52C0049AF9E /* PhotoImageViewModel.swift */; };
-		138A1A8420A1E52D0049AF9E /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A7120A1E52C0049AF9E /* SearchViewModel.swift */; };
 		138A1A8520A1E52D0049AF9E /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A7220A1E52C0049AF9E /* ImageViewModel.swift */; };
-		138A1A8620A1E52D0049AF9E /* SearchAttemptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A7320A1E52C0049AF9E /* SearchAttemptViewModel.swift */; };
-		138A1A8820A1E52D0049AF9E /* SearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A7520A1E52C0049AF9E /* SearchResultViewModel.swift */; };
-		138A1A8920A1E52D0049AF9E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A7B20A1E52D0049AF9E /* SearchViewController.swift */; };
-		138A1A8A20A1E52D0049AF9E /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A7C20A1E52D0049AF9E /* SearchResultViewController.swift */; };
 		138A1A8B20A1E52D0049AF9E /* AllPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A7D20A1E52D0049AF9E /* AllPostsViewController.swift */; };
 		138A1A8D20A1E52D0049AF9E /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A7F20A1E52D0049AF9E /* BaseCollectionViewController.swift */; };
-		138A1A9020A1E5820049AF9E /* SearchAttemptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A8E20A1E5820049AF9E /* SearchAttemptCell.swift */; };
 		138A1A9120A1E5820049AF9E /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A8F20A1E5820049AF9E /* ImageCell.swift */; };
 		138A1A9320A1E6540049AF9E /* RlmSearchAttempt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A9220A1E6530049AF9E /* RlmSearchAttempt.swift */; };
 		138A1A9920A1E9D50049AF9E /* RlmPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A9820A1E9D40049AF9E /* RlmPhoto.swift */; };
@@ -177,15 +171,9 @@
 		138A1A6E20A1E52C0049AF9E /* AllPostsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPostsViewModel.swift; sourceTree = "<group>"; };
 		138A1A6F20A1E52C0049AF9E /* PostViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		138A1A7020A1E52C0049AF9E /* PhotoImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoImageViewModel.swift; sourceTree = "<group>"; };
-		138A1A7120A1E52C0049AF9E /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		138A1A7220A1E52C0049AF9E /* ImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
-		138A1A7320A1E52C0049AF9E /* SearchAttemptViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAttemptViewModel.swift; sourceTree = "<group>"; };
-		138A1A7520A1E52C0049AF9E /* SearchResultViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewModel.swift; sourceTree = "<group>"; };
-		138A1A7B20A1E52D0049AF9E /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		138A1A7C20A1E52D0049AF9E /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		138A1A7D20A1E52D0049AF9E /* AllPostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPostsViewController.swift; sourceTree = "<group>"; };
 		138A1A7F20A1E52D0049AF9E /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
-		138A1A8E20A1E5820049AF9E /* SearchAttemptCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAttemptCell.swift; sourceTree = "<group>"; };
 		138A1A8F20A1E5820049AF9E /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		138A1A9220A1E6530049AF9E /* RlmSearchAttempt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RlmSearchAttempt.swift; sourceTree = "<group>"; };
 		138A1A9820A1E9D40049AF9E /* RlmPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RlmPhoto.swift; sourceTree = "<group>"; };
@@ -380,7 +368,6 @@
 				138A1A7820A1E52C0049AF9E /* Cells */,
 				138A1A7620A1E52C0049AF9E /* Common */,
 				138A1A7720A1E52C0049AF9E /* PostList */,
-				138A1A7920A1E52D0049AF9E /* Search */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -616,7 +603,6 @@
 			isa = PBXGroup;
 			children = (
 				13E1624120A58C2B0061E30C /* Photos */,
-				13E1624020A58C1E0061E30C /* Search */,
 				13E1623F20A58C0F0061E30C /* Comments */,
 				13E1623E20A58C030061E30C /* Posts */,
 				13E1623D20A58BEF0061E30C /* Common */,
@@ -647,20 +633,10 @@
 			isa = PBXGroup;
 			children = (
 				138A1A8F20A1E5820049AF9E /* ImageCell.swift */,
-				138A1A8E20A1E5820049AF9E /* SearchAttemptCell.swift */,
 				13E1622520A439A10061E30C /* PostCell.swift */,
 				13E1623520A50F3B0061E30C /* CommentCell.swift */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		138A1A7920A1E52D0049AF9E /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				138A1A7B20A1E52D0049AF9E /* SearchViewController.swift */,
-				138A1A7C20A1E52D0049AF9E /* SearchResultViewController.swift */,
-			);
-			path = Search;
 			sourceTree = "<group>";
 		};
 		13E1623B20A58B250061E30C /* SideMenu */ = {
@@ -708,16 +684,6 @@
 				13E1624220A58D230061E30C /* NewCommentViewModel.swift */,
 			);
 			path = Comments;
-			sourceTree = "<group>";
-		};
-		13E1624020A58C1E0061E30C /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				138A1A7120A1E52C0049AF9E /* SearchViewModel.swift */,
-				138A1A7320A1E52C0049AF9E /* SearchAttemptViewModel.swift */,
-				138A1A7520A1E52C0049AF9E /* SearchResultViewModel.swift */,
-			);
-			path = Search;
 			sourceTree = "<group>";
 		};
 		13E1624120A58C2B0061E30C /* Photos */ = {
@@ -1059,12 +1025,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				138A1A8620A1E52D0049AF9E /* SearchAttemptViewModel.swift in Sources */,
 				138A1AA720A2F2FA0049AF9E /* TodoDto.swift in Sources */,
 				138A1A2120A1AC2C0049AF9E /* ConfiguratorProtocol.swift in Sources */,
 				13E1622820A48D730061E30C /* Networking+Mappable.swift in Sources */,
 				138A1A2F20A1AC330049AF9E /* LocalDataStore.swift in Sources */,
-				138A1A9020A1E5820049AF9E /* SearchAttemptCell.swift in Sources */,
 				138A1A3B20A1AC420049AF9E /* UIStoryboard+Instantiate.swift in Sources */,
 				13E1621220A321700061E30C /* PhotoDto+Realm.swift in Sources */,
 				13E1622B20A4ED300061E30C /* CachedNetworkService.swift in Sources */,
@@ -1090,7 +1054,6 @@
 				138A1A5920A1AC590049AF9E /* RlmEntity.swift in Sources */,
 				138A1A6520A1AC620049AF9E /* Networking+BaseMappable.swift in Sources */,
 				138A1A6720A1AC620049AF9E /* ApiRequest.swift in Sources */,
-				138A1A8A20A1E52D0049AF9E /* SearchResultViewController.swift in Sources */,
 				138A1A5020A1AC590049AF9E /* CommentDto+Network.swift in Sources */,
 				13E1622420A380950061E30C /* BaseTableViewCell.swift in Sources */,
 				138A1A8B20A1E52D0049AF9E /* AllPostsViewController.swift in Sources */,
@@ -1123,17 +1086,14 @@
 				13E1622220A37FBC0061E30C /* BaseTableViewController.swift in Sources */,
 				138A1AAF20A309140049AF9E /* AlbumDto+Network.swift in Sources */,
 				138A1A8120A1E52D0049AF9E /* AllPostsViewModel.swift in Sources */,
-				138A1A8420A1E52D0049AF9E /* SearchViewModel.swift in Sources */,
 				13E1624520A58D6D0061E30C /* NewCommentViewController.swift in Sources */,
 				138A1A2420A1AC2C0049AF9E /* EnvironmentProtocol.swift in Sources */,
 				138A1A1F20A1AC2C0049AF9E /* EnvironmentConfigurator.swift in Sources */,
-				138A1A8820A1E52D0049AF9E /* SearchResultViewModel.swift in Sources */,
 				138A1AB120A309240049AF9E /* UserDto+Network.swift in Sources */,
 				138A1A5520A1AC590049AF9E /* CommentDto.swift in Sources */,
 				138A1A5220A1AC590049AF9E /* RealmMappableProtocol.swift in Sources */,
 				138A1AA320A2F2E80049AF9E /* AlbumDto.swift in Sources */,
 				138A1A5620A1AC590049AF9E /* PostDto.swift in Sources */,
-				138A1A8920A1E52D0049AF9E /* SearchViewController.swift in Sources */,
 				138A19B920A18BD10049AF9E /* AppDelegate.swift in Sources */,
 				138A1AA120A2EABF0049AF9E /* FetchedResultsViewModel.swift in Sources */,
 				138A1A2020A1AC2C0049AF9E /* ThirdPartiesConfigurator.swift in Sources */,

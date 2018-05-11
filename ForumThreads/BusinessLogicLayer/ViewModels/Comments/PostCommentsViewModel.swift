@@ -28,18 +28,11 @@ class PostCommentsViewModel: FetchedResultsViewModel<RlmComment> {
         return "Comments".localized
     }
     
-    override var fetchRequest: FetchRequest<RealmType>!
-    {
-        let sd1:SortDescriptor! = SortDescriptor(keyPath:"id", ascending:true)
-        let sortDescriptors:[SortDescriptor]! = [ sd1 ]
-        let fetchRequest:FetchRequest! = FetchRequest<RealmType>(realm: self.realm(), predicate:nil)
-        fetchRequest.sortDescriptors = sortDescriptors
-        return fetchRequest
-    }
-    
     override var serviceUrl : String! {
         return ""
     }
+    
+    override var fieldsToSearch: [String] { get { return ["name", "body"] } }
     
     override func fetchData(updating:Bool)
     {

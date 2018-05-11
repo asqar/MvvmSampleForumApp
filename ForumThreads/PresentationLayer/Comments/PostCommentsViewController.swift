@@ -10,6 +10,14 @@ import Foundation
 import UIKit
 
 class PostCommentsViewController: BaseTableViewController<RlmComment, PostCommentsViewModel> {
+    
+    @IBOutlet weak var mySearchBar: UISearchBar?
+    
+    override var searchBar: UISearchBar?
+    {
+        return mySearchBar
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

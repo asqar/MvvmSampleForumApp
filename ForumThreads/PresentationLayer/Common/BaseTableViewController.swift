@@ -12,7 +12,11 @@ import SVPullToRefresh
 import ReactiveCocoa
 import RealmSwift
 
-class BaseTableViewController<RealmType : Object, VM: FetchedResultsViewModelProtocol> : UITableViewController, ViewModelHelper {
+class BaseTableViewController<RealmType : Object, VM: FetchedResultsViewModelProtocol> : UITableViewController, ViewModelHelper, UISearchBarDelegate {
+    
+    var searchBar: UISearchBar? {
+        return nil
+    }
     
     typealias OwnerType = UITableViewCell
     typealias ViewModelType = BaseViewModel
@@ -113,5 +117,20 @@ class BaseTableViewController<RealmType : Object, VM: FetchedResultsViewModelPro
         self.tableView?.deselectRow(at: indexPath, animated: true)
     }
     
+    // MARK :- Search
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.viewModel.searchTerm = searchText
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if searchBar.text?.count == 0
+        {
+            return
+        }
+        searchBar.endEditing(true)
+        
+        self.searchBar?.text = ""
+    }
 }
 

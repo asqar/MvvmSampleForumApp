@@ -10,6 +10,13 @@ import UIKit
 
 class AllPostsViewController : BaseTableViewController<RlmPost, AllPostsViewModel> {
     
+    @IBOutlet weak var mySearchBar: UISearchBar?
+    
+    override var searchBar: UISearchBar?
+    {
+        return mySearchBar
+    }
+    
     override func viewDidLoad() {
         self.viewModel = AllPostsViewModel()
         super.viewDidLoad()
@@ -31,11 +38,6 @@ class AllPostsViewController : BaseTableViewController<RlmPost, AllPostsViewMode
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.destination is SearchViewController) {
-            let searchViewModel = SearchViewModel()
-            let vc = segue.destination as! SearchViewController
-            vc.viewModel = searchViewModel
-        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
