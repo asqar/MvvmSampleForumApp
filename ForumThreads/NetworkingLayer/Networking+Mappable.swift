@@ -11,7 +11,7 @@ import Alamofire
 import ObjectMapper
 
 extension Networking
-{
+{    
     static func fetchSingleItem<ResultType : Mappable>(_ request: URLRequestConvertible, completion: @escaping (Result<ResultType>) -> Void) {
         
         requestJSON(request) { (result: Result<ResultType>) in

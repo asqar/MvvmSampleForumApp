@@ -29,7 +29,15 @@ class PostCommentsViewController: BaseTableViewController<RlmComment, PostCommen
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        if (segue.destination is NewCommentViewController) {
+            let vm = self.viewModel.createNewComment()
+            let vc = segue.destination as! NewCommentViewController
+            vc.viewModel = vm
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        super.tableView(tableView, didSelectRowAt: indexPath)
     }
     
     override func tableView(_ tableView:UITableView, heightForRowAt indexPath:IndexPath) -> CGFloat {

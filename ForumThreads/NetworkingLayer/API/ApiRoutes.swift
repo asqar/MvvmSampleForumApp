@@ -48,6 +48,15 @@ extension ApiRoutes {
         case photosOf(album: RlmAlbum)
         case todosOf(user: RlmUser)
     }
+    
+    enum Level1_postNew {
+        case post(item: PostDto)
+        case comment(item: CommentDto)
+        case album(item: AlbumDto)
+        case photo(item: PhotoDto)
+        case user(item: UserDto)
+        case todo(item: TodoDto)
+    }
 }
 
 
@@ -122,4 +131,46 @@ extension ApiRoutes.Level3_getMultipleCached: ApiRequest {
             return ApiRoutes.Level2_getSingle.userBy(id: user.id).path + "/todos"
         }
     }
+}
+
+extension ApiRoutes.Level1_postNew: ApiRequest {
+    
+    var method: HTTPMethod {
+        return .post
+    }
+    
+    var path: String {
+        switch self {
+        case .post:
+            return AppDelegate.currentEnvironment.baseUrl + "/posts"
+        case .comment:
+            return AppDelegate.currentEnvironment.baseUrl + "/comments"
+        case .album:
+            return AppDelegate.currentEnvironment.baseUrl + "/albums"
+        case .photo:
+            return AppDelegate.currentEnvironment.baseUrl + "/photos"
+        case .user:
+            return AppDelegate.currentEnvironment.baseUrl + "/users"
+        case .todo:
+            return AppDelegate.currentEnvironment.baseUrl + "/todos"
+        }
+    }
+    
+    var params: Parameters? {
+        switch self {
+        case .post(let item):
+            return item.toJSON()
+        case .comment(let item):
+            return item.toJSON()
+        case .album(let item):
+            return item.toJSON()
+        case .photo(let item):
+            return item.toJSON()
+        case .user(let item):
+            return item.toJSON()
+        case .todo(let item):
+            return item.toJSON()
+        }
+    }
+    
 }

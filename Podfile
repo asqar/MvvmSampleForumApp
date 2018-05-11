@@ -50,6 +50,7 @@ def app_pods
   pod 'TableKit'
   pod 'SVPullToRefresh'
   pod 'SideMenu'
+  pod 'FormToolbar'
 
 end
 

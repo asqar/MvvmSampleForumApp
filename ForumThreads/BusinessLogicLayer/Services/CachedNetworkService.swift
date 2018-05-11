@@ -75,4 +75,9 @@ class CachedNetworkService: CachedNetworkServiceProtocol {
     {
         Networking.fetchSingleItem(ApiRoutes.Level2_getSingle.todoBy(id: id), completion: completion);
     }
+    
+    func createComment(comment: CommentDto, completion: @escaping (Result<RlmComment>) -> Void)
+    {
+        Networking.fetchSingleItem(ApiRoutes.Level1_postNew.comment(item: comment), completion: completion);
+    }
 }

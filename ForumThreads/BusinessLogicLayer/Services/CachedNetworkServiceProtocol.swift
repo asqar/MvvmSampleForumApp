@@ -21,4 +21,6 @@ protocol CachedNetworkServiceProtocol {
     func fetchPhoto(id: Int, completion: @escaping (Result<RlmPhoto>) -> Void)
     func fetchUser(id: Int, completion: @escaping (Result<RlmUser>) -> Void)
     func fetchTodo(id: Int, completion: @escaping (Result<RlmTodo>) -> Void)
+    
+    func createComment(comment: CommentDto, completion: @escaping (Result<RlmComment>) -> Void)
 }
