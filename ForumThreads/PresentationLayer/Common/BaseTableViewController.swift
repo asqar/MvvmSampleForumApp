@@ -76,7 +76,6 @@ class BaseTableViewController<RealmType : Object, VM: FetchedResultsViewModelPro
         })
         
         self.showSpinner()
-        self.viewModel.fetchData(updating: true)
     }
     
     func showSpinner() {
@@ -86,6 +85,8 @@ class BaseTableViewController<RealmType : Object, VM: FetchedResultsViewModelPro
     override func viewWillAppear(_ animated:Bool) {
         super.viewWillAppear(animated)
         self.viewModel.isActive = true
+        
+        self.viewModel.fetchData(updating: true)
     }
     
     override func viewDidDisappear(_ animated:Bool) {

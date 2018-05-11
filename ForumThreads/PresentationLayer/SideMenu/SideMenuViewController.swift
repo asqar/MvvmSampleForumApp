@@ -7,19 +7,23 @@
 //
 
 import Foundation
-import SideMenu
+import RESideMenu
 
-class SideMenuViewController: UITableViewController {
+enum MenuItems : Int {
+    case posts = 0
+    case albums
+    case users
+    case photos
+    case todos
+}
+
+class SideMenuViewController: UITableViewController, RESideMenuDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         // refresh cell blur effect in case it changed
         tableView.reloadData()
-        
-        guard SideMenuManager.default.menuBlurEffectStyle == nil else {
-            return
-        }
         
         // Set up a cool background image for demo purposes
         let imageView = UIImageView(image: UIImage(named: "saturn"))
@@ -28,12 +32,26 @@ class SideMenuViewController: UITableViewController {
         tableView.backgroundView = imageView
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = super.tableView(tableView, cellForRowAt: indexPath) as! UITableViewVibrantCell
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        cell.blurEffectStyle = SideMenuManager.default.menuBlurEffectStyle
+        let menu = MenuItems(rawValue: indexPath.row)
+        switch menu! {
+        case .posts:
+            self.sideMenuViewController.contentViewController = UIStoryboard(name: "Posts", bundle: nil).instantiateInitialViewController()
+            break
+        case .albums:
+            break
+        case .users:
+            self.sideMenuViewController.contentViewController = UIStoryboard(name: "Users", bundle: nil).instantiateInitialViewController()
+            break
+        case .photos:
+            break
+        case .todos:
+            break
+        }
+        self.sideMenuViewController.hideViewController()
         
-        return cell
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }

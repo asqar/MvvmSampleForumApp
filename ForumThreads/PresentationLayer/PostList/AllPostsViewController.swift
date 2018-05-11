@@ -23,6 +23,11 @@ class AllPostsViewController : BaseTableViewController<RlmPost, AllPostsViewMode
         setupSideMenu()
     }
     
+    @IBAction func showMenu()
+    {
+        self.openSideMenu()
+    }
+    
     override var cellIdentifier : String {
         return "PostCell"
     }
@@ -44,7 +49,7 @@ class AllPostsViewController : BaseTableViewController<RlmPost, AllPostsViewMode
         super.tableView(tableView, didSelectRowAt: indexPath)
         
         let vm = self.viewModel.selectObjectAtIndexPath(indexPath: indexPath) as! PostCommentsViewModel
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PostCommentsViewController") as! PostCommentsViewController
+        let vc = UIStoryboard(name: "Comments", bundle: nil).instantiateViewController(withIdentifier: "PostCommentsViewController") as! PostCommentsViewController
         vc.viewModel = vm
         self.navigationController?.pushViewController(vc, animated: true)
     }

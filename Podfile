@@ -28,7 +28,6 @@ def shared_pods
   pod 'AlamofireNetworkActivityIndicator', '~> 2.0'
   pod 'ObjectMapper'
   pod 'SDWebImage'
-  pod 'AFNetworking'
 
   pod 'ReactiveCocoa'
   pod 'ReactiveViewModel'
@@ -49,7 +48,7 @@ def app_pods
   # UI Helpers
   pod 'TableKit'
   pod 'SVPullToRefresh'
-  pod 'SideMenu'
+  pod 'RESideMenu'
   pod 'FormToolbar'
 
 end
