@@ -27,6 +27,8 @@ class BaseCollectionViewController<RealmType : Object, VM: FetchedResultsViewMod
     var cellIdentifier : String {
         return "BaseCell"
     }
+    
+    var useInfiniteScrollingView : Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,13 +39,17 @@ class BaseCollectionViewController<RealmType : Object, VM: FetchedResultsViewMod
         self.collectionView?.addPullToRefresh(actionHandler: {
             self.viewModel.fetchData(updating: true)
         })
-        self.collectionView?.addInfiniteScrolling(actionHandler: {
-            self.viewModel.fetchData(updating: false)
-        })
+        if useInfiniteScrollingView {
+            self.collectionView?.addInfiniteScrolling(actionHandler: {
+                self.viewModel.fetchData(updating: false)
+            })
+        }
         self.viewModel.updatedContentSignal.subscribeNext({ (x) in
             self.collectionView?.reloadData()
             self.collectionView?.pullToRefreshView.stopAnimating()
-            self.collectionView?.infiniteScrollingView.stopAnimating()
+            if self.useInfiniteScrollingView {
+                self.collectionView?.infiniteScrollingView.stopAnimating()
+            }
             })
         self.viewModel.dismissLoadingSignal.subscribeNext({ (x) in
             self.hideLoadingView()

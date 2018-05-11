@@ -30,12 +30,13 @@ protocol FetchedResultsViewModelProtocol : FetchedResultsControllerDelegate {
     func numberOfItemsInSection(section:Int) -> Int
     func objectAtIndexPath(indexPath:IndexPath!) -> BaseViewModel!
     func fetchData(updating:Bool)
+    func selectObjectAtIndexPath(indexPath:IndexPath!) -> BaseViewModel!
     
     init()
 }
 
 class FetchedResultsViewModel<EntityType:Object> : BaseViewModel, FetchedResultsControllerDelegate, FetchedResultsViewModelProtocol {
-    
+
     typealias ViewModelType = FetchedResultsViewModel
     
     private(set) var startLoadingSignal:RACSignal!
@@ -99,7 +100,12 @@ class FetchedResultsViewModel<EntityType:Object> : BaseViewModel, FetchedResults
 
     // to be overriden
     func objectAtIndexPath(indexPath:IndexPath!) -> BaseViewModel! {
-        return nil
+        preconditionFailure("This method must be overridden")
+    }
+    
+    // to be overriden
+    func selectObjectAtIndexPath(indexPath: IndexPath!) -> BaseViewModel! {
+        preconditionFailure("This method must be overridden")
     }
 
     func processDownloadedResults(results:[EntityType]) {}

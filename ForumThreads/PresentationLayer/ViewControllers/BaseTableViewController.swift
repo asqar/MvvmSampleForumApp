@@ -38,6 +38,8 @@ class BaseTableViewController<RealmType : Object, VM: FetchedResultsViewModelPro
         return "BaseCell"
     }
     
+    var useInfiniteScrollingView : Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -47,13 +49,17 @@ class BaseTableViewController<RealmType : Object, VM: FetchedResultsViewModelPro
         self.tableView?.addPullToRefresh(actionHandler: {
             self.viewModel.fetchData(updating: true)
         })
-        self.tableView?.addInfiniteScrolling(actionHandler: {
-            self.viewModel.fetchData(updating: false)
-        })
+        if useInfiniteScrollingView {
+            self.tableView?.addInfiniteScrolling(actionHandler: {
+                self.viewModel.fetchData(updating: false)
+            })
+        }
         self.viewModel.updatedContentSignal.subscribeNext({ (x) in
             self.tableView?.reloadData()
             self.tableView?.pullToRefreshView.stopAnimating()
-            self.tableView?.infiniteScrollingView.stopAnimating()
+            if self.useInfiniteScrollingView {
+                self.tableView?.infiniteScrollingView.stopAnimating()
+            }
         })
         self.viewModel.dismissLoadingSignal.subscribeNext({ (x) in
             self.hideLoadingView()
@@ -102,7 +108,7 @@ class BaseTableViewController<RealmType : Object, VM: FetchedResultsViewModelPro
         self.setViewModelOwner(owner: cell, viewModel: self.viewModel.objectAtIndexPath(indexPath: indexPath) as BaseViewModel?)
         return cell
     }
-    
+        
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView?.deselectRow(at: indexPath, animated: true)
     }

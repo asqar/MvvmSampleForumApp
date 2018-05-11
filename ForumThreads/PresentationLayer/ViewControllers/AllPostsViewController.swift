@@ -35,11 +35,16 @@ class AllPostsViewController : BaseTableViewController<RlmPost, AllPostsViewMode
             let searchViewModel = SearchViewModel()
             let vc = segue.destination as! SearchViewController
             vc.viewModel = searchViewModel
-        } else if segue.destination is PostCommentsViewController {
-            let postCommentsViewModel = PostCommentsViewModel()
-            let vc = segue.destination as! PostCommentsViewController
-            vc.viewModel = postCommentsViewModel
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        super.tableView(tableView, didSelectRowAt: indexPath)
+        
+        let vm = self.viewModel.selectObjectAtIndexPath(indexPath: indexPath) as! PostCommentsViewModel
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PostCommentsViewController") as! PostCommentsViewController
+        vc.viewModel = vm
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     override func tableView(_ tableView:UITableView, heightForRowAt indexPath:IndexPath) -> CGFloat {

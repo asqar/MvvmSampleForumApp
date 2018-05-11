@@ -279,5 +279,78 @@
             </objects>
             <point key="canvasLocation" x="1691.25" y="698.23943661971828"/>
         </scene>
+        <!--Post Comments View Controller-->
+        <scene sceneID="62P-TB-Odm">
+            <objects>
+                <tableViewController storyboardIdentifier="PostCommentsViewController" id="ydw-Lg-GMs" customClass="PostCommentsViewController" customModule="ForumThreads" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xdn-Ug-5Bv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="100" id="Vea-C6-wIb" customClass="CommentCell" customModule="ForumThreads" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vea-C6-wIb" id="tzj-av-qnZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVq-FW-aNg">
+                                            <rect key="frame" x="16" y="11" width="343" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="Eol-6v-BB6"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwv-A7-JMu">
+                                            <rect key="frame" x="16" y="39" width="343" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="aiE-6M-iJm"/>
+                                                <constraint firstAttribute="height" constant="21" id="ndE-wK-Mbb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6Y-gB-hkl">
+                                            <rect key="frame" x="16" y="67" width="343" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="p6Y-gB-hkl" firstAttribute="top" secondItem="fwv-A7-JMu" secondAttribute="bottom" constant="7" id="09G-IE-QbF"/>
+                                        <constraint firstItem="p6Y-gB-hkl" firstAttribute="trailing" secondItem="tzj-av-qnZ" secondAttribute="trailingMargin" id="2mP-oR-1yR"/>
+                                        <constraint firstItem="fwv-A7-JMu" firstAttribute="trailing" secondItem="tzj-av-qnZ" secondAttribute="trailingMargin" id="46y-ut-c2F"/>
+                                        <constraint firstItem="p6Y-gB-hkl" firstAttribute="leading" secondItem="tzj-av-qnZ" secondAttribute="leadingMargin" id="7NA-Zu-9Oq"/>
+                                        <constraint firstItem="wVq-FW-aNg" firstAttribute="leading" secondItem="tzj-av-qnZ" secondAttribute="leadingMargin" id="A7U-If-9kW"/>
+                                        <constraint firstItem="fwv-A7-JMu" firstAttribute="leading" secondItem="tzj-av-qnZ" secondAttribute="leadingMargin" id="BxF-SO-GLY"/>
+                                        <constraint firstItem="wVq-FW-aNg" firstAttribute="trailing" secondItem="tzj-av-qnZ" secondAttribute="trailingMargin" id="bye-of-KAd"/>
+                                        <constraint firstItem="p6Y-gB-hkl" firstAttribute="bottom" secondItem="tzj-av-qnZ" secondAttribute="bottomMargin" id="eM2-CA-Sld"/>
+                                        <constraint firstItem="fwv-A7-JMu" firstAttribute="top" secondItem="wVq-FW-aNg" secondAttribute="bottom" constant="7" id="qZR-Od-RqG"/>
+                                        <constraint firstItem="wVq-FW-aNg" firstAttribute="top" secondItem="tzj-av-qnZ" secondAttribute="topMargin" id="tNq-Of-Cch"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="txtBody" destination="p6Y-gB-hkl" id="MiX-hz-AHB"/>
+                                    <outlet property="txtEmail" destination="fwv-A7-JMu" id="IYb-dX-V3l"/>
+                                    <outlet property="txtName" destination="wVq-FW-aNg" id="QTY-7f-pLV"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ydw-Lg-GMs" id="VqI-Y1-BbQ"/>
+                            <outlet property="delegate" destination="ydw-Lg-GMs" id="p1C-Eg-WAg"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qub-XD-WqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="-61"/>
+        </scene>
     </scenes>
 </document>

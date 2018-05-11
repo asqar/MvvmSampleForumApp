@@ -97,6 +97,8 @@
 		13E1622C20A4ED300061E30C /* NetworkServiceProtocol+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1622A20A4ED300061E30C /* NetworkServiceProtocol+Realm.swift */; };
 		13E1622E20A503090061E30C /* PostCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1622D20A503090061E30C /* PostCommentsViewController.swift */; };
 		13E1623020A503590061E30C /* PostCommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1622F20A503590061E30C /* PostCommentsViewModel.swift */; };
+		13E1623620A50F3B0061E30C /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1623520A50F3B0061E30C /* CommentCell.swift */; };
+		13E1623820A50F6A0061E30C /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1623720A50F6A0061E30C /* CommentViewModel.swift */; };
 		1DE0EBC55ABEBC68521109B8 /* Pods_ForumThreads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01EE585944DDD2F6E72AFBB /* Pods_ForumThreads.framework */; };
 		48A599A066CB6E5BA347CF14 /* Pods_ForumThreadsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14CC460C79F78F3E73B39247 /* Pods_ForumThreadsUITests.framework */; };
 		99BBF307B8816944745EF007 /* Pods_ForumThreadsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60DAF5CAD75B3C972FEB72D /* Pods_ForumThreadsTests.framework */; };
@@ -217,6 +219,8 @@
 		13E1622A20A4ED300061E30C /* NetworkServiceProtocol+Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkServiceProtocol+Realm.swift"; sourceTree = "<group>"; };
 		13E1622D20A503090061E30C /* PostCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentsViewController.swift; sourceTree = "<group>"; };
 		13E1622F20A503590061E30C /* PostCommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentsViewModel.swift; sourceTree = "<group>"; };
+		13E1623520A50F3B0061E30C /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		13E1623720A50F6A0061E30C /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		14CC460C79F78F3E73B39247 /* Pods_ForumThreadsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForumThreadsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F288382FA9CB015662EA0E /* Pods-ForumThreadsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForumThreadsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ForumThreadsTests/Pods-ForumThreadsTests.release.xcconfig"; sourceTree = "<group>"; };
 		62741B4A14E20551279CF6EB /* Pods-ForumThreadsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForumThreadsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ForumThreadsUITests/Pods-ForumThreadsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -616,6 +620,7 @@
 				138A1A7320A1E52C0049AF9E /* SearchAttemptViewModel.swift */,
 				138A1A7520A1E52C0049AF9E /* SearchResultViewModel.swift */,
 				13E1622F20A503590061E30C /* PostCommentsViewModel.swift */,
+				13E1623720A50F6A0061E30C /* CommentViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -642,6 +647,7 @@
 				138A1A8E20A1E5820049AF9E /* SearchAttemptCell.swift */,
 				13E1622320A380950061E30C /* BaseTableViewCell.swift */,
 				13E1622520A439A10061E30C /* PostCell.swift */,
+				13E1623520A50F3B0061E30C /* CommentCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1012,8 +1018,10 @@
 				138A1AA920A2F3700049AF9E /* AddressDto.swift in Sources */,
 				138A1A5320A1AC590049AF9E /* PostDto+Realm.swift in Sources */,
 				138A1A9120A1E5820049AF9E /* ImageCell.swift in Sources */,
+				13E1623620A50F3B0061E30C /* CommentCell.swift in Sources */,
 				13E1621C20A36D000061E30C /* SearchAttemptDto+Realm.swift in Sources */,
 				138A1A9920A1E9D50049AF9E /* RlmPhoto.swift in Sources */,
+				13E1623820A50F6A0061E30C /* CommentViewModel.swift in Sources */,
 				13E1622020A3776A0061E30C /* SideMenu.swift in Sources */,
 				138A1AB920A30FA60049AF9E /* RlmAlbum.swift in Sources */,
 				13E1621E20A3771C0061E30C /* SideMenuViewController.swift in Sources */,

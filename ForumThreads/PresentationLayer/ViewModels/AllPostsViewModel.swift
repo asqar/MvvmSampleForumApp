@@ -12,15 +12,17 @@ import RealmSwift
 
 class AllPostsViewModel : FetchedResultsViewModel<RlmPost> {
 
+    typealias RealmType = RlmPost
+    
     override var title : String! {
         return "All Threads".localized
     }
     
-    override var fetchRequest: FetchRequest<RlmPost>!
+    override var fetchRequest: FetchRequest<RealmType>!
     {
         let sd1:SortDescriptor! = SortDescriptor(keyPath:"id", ascending:true)
         let sortDescriptors:[SortDescriptor]! = [ sd1 ]
-        let fetchRequest:FetchRequest! = FetchRequest<RlmPost>(realm: self.realm(), predicate:nil)
+        let fetchRequest:FetchRequest! = FetchRequest<RealmType>(realm: self.realm(), predicate:nil)
         fetchRequest.sortDescriptors = sortDescriptors
         return fetchRequest
     }
@@ -34,7 +36,7 @@ class AllPostsViewModel : FetchedResultsViewModel<RlmPost> {
         CachedNetworkService().fetchPosts(completion: self.completion())
     }
     
-    override func processDownloadedResults(results: [RlmPost]) {
+    override func processDownloadedResults(results: [RealmType]) {
 
         do {
             try self.realm().write {
@@ -46,7 +48,12 @@ class AllPostsViewModel : FetchedResultsViewModel<RlmPost> {
     }
 
     override func objectAtIndexPath(indexPath:IndexPath!) -> PostViewModel! {
-        let post:RlmPost = self.fetchedResultsController.objectAtIndexPath(indexPath)!
+        let post:RealmType = self.fetchedResultsController.objectAtIndexPath(indexPath)!
         return PostViewModel(post: PostDto.mapFromRealmObject(post))
+    }
+    
+    override func selectObjectAtIndexPath(indexPath: IndexPath!) -> BaseViewModel! {
+        let post:RealmType = self.fetchedResultsController.objectAtIndexPath(indexPath)!
+        return PostCommentsViewModel(post: PostDto.mapFromRealmObject(post))
     }
 }
