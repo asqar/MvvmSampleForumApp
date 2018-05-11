@@ -15,7 +15,15 @@ class UserViewController: UITableViewController, UITextFieldDelegate, UITextView
     
     @IBOutlet weak var lblName: UILabel?
     @IBOutlet weak var lblEmail: UILabel?
-    @IBOutlet weak var lblUsername: UITextView?
+    @IBOutlet weak var lblUsername: UILabel?
+    @IBOutlet weak var lblPhone: UILabel?
+    @IBOutlet weak var lblWebsite: UILabel?
+    @IBOutlet weak var lblStreet: UILabel?
+    @IBOutlet weak var lblCity: UILabel?
+    @IBOutlet weak var lblGeo: UILabel?
+    @IBOutlet weak var lblCompanyName: UILabel?
+    @IBOutlet weak var lblCatchPhrase: UILabel?
+    @IBOutlet weak var lblBs: UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +31,22 @@ class UserViewController: UITableViewController, UITextFieldDelegate, UITextView
         self.viewModel.updatedContentSignal.subscribeNext({ (x) in
             self.refresh()
         })
+        
+        self.refresh()
     }
     
     func refresh() {
         self.lblName?.text = self.viewModel.user.name
         self.lblEmail?.text = self.viewModel.user.email
         self.lblUsername?.text = self.viewModel.user.username
+        self.lblPhone?.text = self.viewModel.user.phone
+        self.lblWebsite?.text = self.viewModel.user.website
+        self.lblStreet?.text = String(format: "%@, %@",self.viewModel.user.address.street, self.viewModel.user.address.suite)
+        self.lblCity?.text = String(format: "%@, %@",self.viewModel.user.address.zipcode, self.viewModel.user.address.city)
+        self.lblGeo?.text = String(format: "%f,%f", self.viewModel.user.address.geo.lat, self.viewModel.user.address.geo.lng)
+        self.lblCompanyName?.text = self.viewModel.user.company.name
+        self.lblCatchPhrase?.text = self.viewModel.user.company.catchPhrase
+        self.lblBs?.text = self.viewModel.user.company.bs
     }
     
 }
