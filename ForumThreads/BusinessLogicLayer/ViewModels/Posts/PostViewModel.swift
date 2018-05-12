@@ -1,5 +1,5 @@
 //
-//  FeedImageViewModel.swift
+//  PostListViewModel.swift
 //  ForumThreads
 //
 //  Created by aSqar on 03.12.2017.
@@ -12,13 +12,13 @@ import ReactiveCocoa
 class PostViewModel : BaseViewModel {
     private(set) var post:PostDto {
         didSet {
-            (self.updatedContentSignal as! RACSubject).sendNext({ (x:Any!) in })
+            (self.updatedContentSignal as! RACSubject).sendNext(nil)
         }
     }
     
     var user : UserDto = UserDto() {
         didSet {
-            (self.updatedContentSignal as! RACSubject).sendNext({ (x:Any!) in })
+            (self.updatedContentSignal as! RACSubject).sendNext(nil)
         }
     }
     

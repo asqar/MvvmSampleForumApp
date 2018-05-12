@@ -8,4 +8,15 @@
 
 import Foundation
 
-class AllAlbumsViewController: AlbumListViewController<AlbumListViewModel> {}
+class AllAlbumsViewController: AlbumListViewController<AlbumListViewModel> {
+    override func viewDidLoad() {
+        self.viewModel = AlbumListViewModel()
+        super.viewDidLoad()
+        setupSideMenu()
+    }
+    
+    @IBAction func showMenu()
+    {
+        self.openSideMenu()
+    }
+}

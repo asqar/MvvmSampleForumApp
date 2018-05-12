@@ -48,6 +48,11 @@ class CachedNetworkService: CachedNetworkServiceProtocol {
     {
         Networking.fetchMultipleItems(ApiRoutes.Level3_getMultipleCached.albumsOf(user: user), completion: completion);
     }
+    
+    func fetchPosts(user : RlmUser, completion: @escaping (Result<[RlmPost]>) -> Void)
+    {
+        Networking.fetchMultipleItems(ApiRoutes.Level3_getMultipleCached.postsOf(user: user), completion: completion);
+    }
 
     // MARK: - Get entity by id
 
@@ -96,5 +101,10 @@ class CachedNetworkService: CachedNetworkServiceProtocol {
     func createAlbum(album: AlbumDto, completion: @escaping (Result<RlmAlbum>) -> Void)
     {
         Networking.fetchSingleItem(ApiRoutes.Level1_postNew.album(item: album), completion: completion);
+    }
+    
+    func createPost(post: PostDto, completion: @escaping (Result<RlmPost>) -> Void)
+    {
+        Networking.fetchSingleItem(ApiRoutes.Level1_postNew.post(item: post), completion: completion);
     }
 }

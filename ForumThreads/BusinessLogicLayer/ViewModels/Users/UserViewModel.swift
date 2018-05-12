@@ -12,7 +12,7 @@ import ReactiveCocoa
 class UserViewModel : BaseViewModel {
     private(set) var user:UserDto {
         didSet {
-            (self.updatedContentSignal as! RACSubject).sendNext({ (x:Any!) in })
+            (self.updatedContentSignal as! RACSubject).sendNext(nil)
         }
     }
     
@@ -29,7 +29,7 @@ class UserViewModel : BaseViewModel {
         return UserAlbumsViewModel(user: self.user)
     }
     
-    func openUserPosts() -> UserTodosViewModel! {
-        return UserTodosViewModel(user: self.user)
+    func openUserPosts() -> UserPostsViewModel! {
+        return UserPostsViewModel(user: self.user)
     }
 }

@@ -11,10 +11,9 @@ import RESideMenu
 
 enum MenuItems : Int {
     case posts = 0
-    case albums
     case users
+    case albums
     case photos
-    case todos
 }
 
 class SideMenuViewController: UITableViewController, RESideMenuDelegate {
@@ -39,15 +38,13 @@ class SideMenuViewController: UITableViewController, RESideMenuDelegate {
         case .posts:
             self.sideMenuViewController.contentViewController = UIStoryboard(name: "Posts", bundle: nil).instantiateInitialViewController()
             break
-        case .albums:
-            self.sideMenuViewController.contentViewController = UIStoryboard(name: "Albums", bundle: nil).instantiateInitialViewController()
-            break
         case .users:
             self.sideMenuViewController.contentViewController = UIStoryboard(name: "Users", bundle: nil).instantiateInitialViewController()
             break
-        case .photos:
+        case .albums:
+            self.sideMenuViewController.contentViewController = UIStoryboard(name: "Albums", bundle: nil).instantiateInitialViewController()
             break
-        case .todos:
+        case .photos:
             break
         }
         self.sideMenuViewController.hideViewController()

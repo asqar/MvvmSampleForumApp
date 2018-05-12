@@ -8,7 +8,6 @@
 
 import Foundation
 import SwiftFetchedResultsController
-import RealmSwift
 
 class UserAlbumsViewModel: AlbumListViewModel {
     
@@ -20,6 +19,11 @@ class UserAlbumsViewModel: AlbumListViewModel {
     }
     
     required init() {
+    }
+    
+    override var fetchRequest: FetchRequest<RlmAlbum>!
+    {
+        return newFetchRequest(predicate: NSPredicate(format: "userId == %d", self.user.id))
     }
     
     override func fetchData(updating:Bool)

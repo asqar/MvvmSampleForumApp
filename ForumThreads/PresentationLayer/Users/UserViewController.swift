@@ -70,11 +70,11 @@ class UserViewController: UITableViewController, UITextFieldDelegate, UITextView
             let vc = segue.destination as! UserAlbumsViewController
             vc.viewModel = vm!
         }
-//        if (segue.destination is UserPostsViewController) {
-//            let vm = self.viewModel.openUserPosts()()
-//            let vc = segue.destination as! UserPostsViewController
-//            vc.viewModel = vm
-//        }
+        if (segue.destination is UserPostsViewController) {
+            let vm = self.viewModel.openUserPosts()
+            let vc = segue.destination as! UserPostsViewController
+            vc.viewModel = vm!
+        }
     }
     
 }

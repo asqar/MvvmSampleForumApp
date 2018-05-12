@@ -12,7 +12,7 @@ import ReactiveCocoa
 class AlbumViewModel : BaseViewModel {
     private(set) var album:AlbumDto {
         didSet {
-            (self.updatedContentSignal as! RACSubject).sendNext({ (x:Any!) in })
+            (self.updatedContentSignal as! RACSubject).sendNext(nil)
         }
     }
     

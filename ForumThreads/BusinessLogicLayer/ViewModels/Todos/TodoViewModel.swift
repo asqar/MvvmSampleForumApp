@@ -12,7 +12,7 @@ import ReactiveCocoa
 class TodoViewModel : BaseViewModel {
     private(set) var todo:TodoDto {
         didSet {
-            (self.updatedContentSignal as! RACSubject).sendNext({ (x:Any!) in })
+            (self.updatedContentSignal as! RACSubject).sendNext(nil)
         }
     }
     

@@ -15,6 +15,7 @@ protocol CachedNetworkServiceProtocol {
     func fetchUsers(completion: @escaping (Result<[RlmUser]>) -> Void)
     func fetchTodos(user : RlmUser, completion: @escaping (Result<[RlmTodo]>) -> Void)
     func fetchAlbums(user : RlmUser, completion: @escaping (Result<[RlmAlbum]>) -> Void)
+    func fetchPosts(user : RlmUser, completion: @escaping (Result<[RlmPost]>) -> Void)
     
     func fetchPost(id: Int, completion: @escaping (Result<RlmPost>) -> Void)
     func fetchComment(id: Int, completion: @escaping (Result<RlmComment>) -> Void)
@@ -26,4 +27,5 @@ protocol CachedNetworkServiceProtocol {
     func createComment(comment: CommentDto, completion: @escaping (Result<RlmComment>) -> Void)
     func createTodo(todo: TodoDto, completion: @escaping (Result<RlmTodo>) -> Void)
     func createAlbum(album: AlbumDto, completion: @escaping (Result<RlmAlbum>) -> Void)
+    func createPost(post: PostDto, completion: @escaping (Result<RlmPost>) -> Void)
 }

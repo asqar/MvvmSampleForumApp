@@ -1,5 +1,5 @@
 //
-//  PopularFeedsViewModel.swift
+//  PostListViewModel.swift
 //  ForumThreads
 //
 //  Created by aSqar on 26.11.2017.
@@ -10,7 +10,7 @@ import ReactiveCocoa
 import SwiftFetchedResultsController
 import RealmSwift
 
-class AllPostsViewModel : FetchedResultsViewModel<RlmPost> {
+class PostListViewModel : FetchedResultsViewModel<RlmPost> {
 
     typealias RealmType = RlmPost
     

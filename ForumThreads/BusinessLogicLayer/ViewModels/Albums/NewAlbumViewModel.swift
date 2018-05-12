@@ -19,7 +19,7 @@ class NewAlbumViewModel : BaseViewModel {
     
     var album:AlbumDto! {
         didSet {
-            (self.updatedContentSignal as! RACSubject).sendNext({ (x:Any!) in })
+            (self.updatedContentSignal as! RACSubject).sendNext(nil)
         }
     }
     

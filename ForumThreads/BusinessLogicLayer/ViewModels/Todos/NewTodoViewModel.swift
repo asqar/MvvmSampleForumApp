@@ -19,7 +19,7 @@ class NewTodoViewModel : BaseViewModel {
     
     var todo:TodoDto! {
         didSet {
-            (self.updatedContentSignal as! RACSubject).sendNext({ (x:Any!) in })
+            (self.updatedContentSignal as! RACSubject).sendNext(nil)
         }
     }
     

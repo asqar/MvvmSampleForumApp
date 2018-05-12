@@ -12,7 +12,7 @@ import ReactiveCocoa
 class CommentViewModel : BaseViewModel {
     private(set) var comment:CommentDto {
         didSet {
-            (self.updatedContentSignal as! RACSubject).sendNext({ (x:Any!) in })
+            (self.updatedContentSignal as! RACSubject).sendNext(nil)
         }
     }
     

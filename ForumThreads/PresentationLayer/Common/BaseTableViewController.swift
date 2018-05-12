@@ -71,9 +71,14 @@ class BaseTableViewController<RealmType : Object, VM: FetchedResultsViewModelPro
         self.viewModel.startLoadingSignal.subscribeNext({ (x) in
             
         })
-        self.viewModel.errorMessageSignal.subscribeNext({ (x) in
-            KVNProgress.showError(withStatus: "Technical error. Try again later".localized)
-        })
+        self.viewModel.errorMessageSignal.subscribeError { (error:Error?) in
+            switch(error!){
+            case is NetworkError:
+                KVNProgress.showError(withStatus: (error! as! NetworkError).message)
+            default:
+                KVNProgress.showError(withStatus: error?.localizedDescription)
+            }
+        }
         
         self.showSpinner()
     }

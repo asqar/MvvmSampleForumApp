@@ -48,7 +48,7 @@
 		138A1A6920A1AC620049AF9E /* ApiRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A6120A1AC620049AF9E /* ApiRoutes.swift */; };
 		138A1A6A20A1AC620049AF9E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A6220A1AC620049AF9E /* NetworkError.swift */; };
 		138A1A8020A1E52D0049AF9E /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A6D20A1E52C0049AF9E /* BaseViewModel.swift */; };
-		138A1A8120A1E52D0049AF9E /* AllPostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A6E20A1E52C0049AF9E /* AllPostsViewModel.swift */; };
+		138A1A8120A1E52D0049AF9E /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A6E20A1E52C0049AF9E /* PostListViewModel.swift */; };
 		138A1A8220A1E52D0049AF9E /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A6F20A1E52C0049AF9E /* PostViewModel.swift */; };
 		138A1A8320A1E52D0049AF9E /* PhotoImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A7020A1E52C0049AF9E /* PhotoImageViewModel.swift */; };
 		138A1A8520A1E52D0049AF9E /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A7220A1E52C0049AF9E /* ImageViewModel.swift */; };
@@ -122,6 +122,11 @@
 		13E1628820A7220C0061E30C /* AlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1628720A7220C0061E30C /* AlbumListViewModel.swift */; };
 		13E1628A20A723900061E30C /* UserAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1628920A723900061E30C /* UserAlbumsViewController.swift */; };
 		13E1628C20A726A10061E30C /* AllAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1628B20A726A10061E30C /* AllAlbumsViewController.swift */; };
+		13E1628E20A727300061E30C /* UserPostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1628D20A727300061E30C /* UserPostsViewModel.swift */; };
+		13E1629220A727760061E30C /* UserPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1629120A727760061E30C /* UserPostsViewController.swift */; };
+		13E1629420A727830061E30C /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1629320A727830061E30C /* PostListViewController.swift */; };
+		13E1629620A728E20061E30C /* NewPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1629520A728E20061E30C /* NewPostViewModel.swift */; };
+		13E1629820A782FF0061E30C /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1629720A782FF0061E30C /* NewPostViewController.swift */; };
 		1DE0EBC55ABEBC68521109B8 /* Pods_ForumThreads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01EE585944DDD2F6E72AFBB /* Pods_ForumThreads.framework */; };
 		48A599A066CB6E5BA347CF14 /* Pods_ForumThreadsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14CC460C79F78F3E73B39247 /* Pods_ForumThreadsUITests.framework */; };
 		99BBF307B8816944745EF007 /* Pods_ForumThreadsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60DAF5CAD75B3C972FEB72D /* Pods_ForumThreadsTests.framework */; };
@@ -193,7 +198,7 @@
 		138A1A6120A1AC620049AF9E /* ApiRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRoutes.swift; sourceTree = "<group>"; };
 		138A1A6220A1AC620049AF9E /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		138A1A6D20A1E52C0049AF9E /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
-		138A1A6E20A1E52C0049AF9E /* AllPostsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPostsViewModel.swift; sourceTree = "<group>"; };
+		138A1A6E20A1E52C0049AF9E /* PostListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 		138A1A6F20A1E52C0049AF9E /* PostViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		138A1A7020A1E52C0049AF9E /* PhotoImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoImageViewModel.swift; sourceTree = "<group>"; };
 		138A1A7220A1E52C0049AF9E /* ImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
@@ -267,6 +272,11 @@
 		13E1628720A7220C0061E30C /* AlbumListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewModel.swift; sourceTree = "<group>"; };
 		13E1628920A723900061E30C /* UserAlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlbumsViewController.swift; sourceTree = "<group>"; };
 		13E1628B20A726A10061E30C /* AllAlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAlbumsViewController.swift; sourceTree = "<group>"; };
+		13E1628D20A727300061E30C /* UserPostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsViewModel.swift; sourceTree = "<group>"; };
+		13E1629120A727760061E30C /* UserPostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsViewController.swift; sourceTree = "<group>"; };
+		13E1629320A727830061E30C /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
+		13E1629520A728E20061E30C /* NewPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewModel.swift; sourceTree = "<group>"; };
+		13E1629720A782FF0061E30C /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		14CC460C79F78F3E73B39247 /* Pods_ForumThreadsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForumThreadsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F288382FA9CB015662EA0E /* Pods-ForumThreadsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForumThreadsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ForumThreadsTests/Pods-ForumThreadsTests.release.xcconfig"; sourceTree = "<group>"; };
 		62741B4A14E20551279CF6EB /* Pods-ForumThreadsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForumThreadsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ForumThreadsUITests/Pods-ForumThreadsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -692,6 +702,9 @@
 			children = (
 				13E1622520A439A10061E30C /* PostCell.swift */,
 				138A1A7D20A1E52D0049AF9E /* AllPostsViewController.swift */,
+				13E1629120A727760061E30C /* UserPostsViewController.swift */,
+				13E1629320A727830061E30C /* PostListViewController.swift */,
+				13E1629720A782FF0061E30C /* NewPostViewController.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -729,8 +742,10 @@
 		13E1623E20A58C030061E30C /* Posts */ = {
 			isa = PBXGroup;
 			children = (
-				138A1A6E20A1E52C0049AF9E /* AllPostsViewModel.swift */,
+				138A1A6E20A1E52C0049AF9E /* PostListViewModel.swift */,
 				138A1A6F20A1E52C0049AF9E /* PostViewModel.swift */,
+				13E1628D20A727300061E30C /* UserPostsViewModel.swift */,
+				13E1629520A728E20061E30C /* NewPostViewModel.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -1152,6 +1167,7 @@
 				138A1A2120A1AC2C0049AF9E /* ConfiguratorProtocol.swift in Sources */,
 				13E1626C20A70D3A0061E30C /* UserAlbumsViewModel.swift in Sources */,
 				13E1622820A48D730061E30C /* Networking+Mappable.swift in Sources */,
+				13E1629820A782FF0061E30C /* NewPostViewController.swift in Sources */,
 				13E1627D20A715D80061E30C /* AlbumViewModel.swift in Sources */,
 				13E1626920A70D180061E30C /* UserTodosViewModel.swift in Sources */,
 				138A1A2F20A1AC330049AF9E /* LocalDataStore.swift in Sources */,
@@ -1204,6 +1220,7 @@
 				138A1A1D20A1AC2C0049AF9E /* UserDefaults.swift in Sources */,
 				138A1A9320A1E6540049AF9E /* RlmSearchAttempt.swift in Sources */,
 				138A1A1E20A1AC2C0049AF9E /* MyLocalizedString.swift in Sources */,
+				13E1629420A727830061E30C /* PostListViewController.swift in Sources */,
 				13E1621620A330490061E30C /* SearchAttemptDto.swift in Sources */,
 				138A1A5720A1AC590049AF9E /* RlmPost.swift in Sources */,
 				138A1A8020A1E52D0049AF9E /* BaseViewModel.swift in Sources */,
@@ -1224,16 +1241,19 @@
 				138A1A8320A1E52D0049AF9E /* PhotoImageViewModel.swift in Sources */,
 				13E1622220A37FBC0061E30C /* BaseTableViewController.swift in Sources */,
 				138A1AAF20A309140049AF9E /* AlbumDto+Network.swift in Sources */,
-				138A1A8120A1E52D0049AF9E /* AllPostsViewModel.swift in Sources */,
+				13E1629620A728E20061E30C /* NewPostViewModel.swift in Sources */,
+				138A1A8120A1E52D0049AF9E /* PostListViewModel.swift in Sources */,
 				13E1627B20A715700061E30C /* NewAlbumViewModel.swift in Sources */,
 				13E1627520A711860061E30C /* TodoCell.swift in Sources */,
 				13E1624520A58D6D0061E30C /* NewCommentViewController.swift in Sources */,
+				13E1628E20A727300061E30C /* UserPostsViewModel.swift in Sources */,
 				13E1627720A712040061E30C /* NewTodoViewController.swift in Sources */,
 				138A1A2420A1AC2C0049AF9E /* EnvironmentProtocol.swift in Sources */,
 				138A1A1F20A1AC2C0049AF9E /* EnvironmentConfigurator.swift in Sources */,
 				13E1628520A719530061E30C /* AlbumListViewController.swift in Sources */,
 				138A1AB120A309240049AF9E /* UserDto+Network.swift in Sources */,
 				138A1A5520A1AC590049AF9E /* CommentDto.swift in Sources */,
+				13E1629220A727760061E30C /* UserPostsViewController.swift in Sources */,
 				138A1A5220A1AC590049AF9E /* RealmMappableProtocol.swift in Sources */,
 				138A1AA320A2F2E80049AF9E /* AlbumDto.swift in Sources */,
 				138A1A5620A1AC590049AF9E /* PostDto.swift in Sources */,

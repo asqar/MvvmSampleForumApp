@@ -66,10 +66,10 @@ class FetchedResultsViewModel<EntityType:Object> : BaseViewModel, FetchedResults
                 let predicate = NSCompoundPredicate(orPredicateWithSubpredicates: subpredicates)
                 let fetchRequest = self.newFetchRequest(predicate: predicate)
                 self.fetchedResultsController.updateFetchRequest(fetchRequest!, sectionNameKeyPath: nil, performFetch: true)
-                (self.updatedContentSignal as! RACSubject).sendNext({ (x:Any!) in })
+                (self.updatedContentSignal as! RACSubject).sendNext(nil)
             } else {
                 self.fetchedResultsController.updateFetchRequest(self.fetchRequest, sectionNameKeyPath: nil, performFetch: true)
-                (self.updatedContentSignal as! RACSubject).sendNext({ (x:Any!) in })
+                (self.updatedContentSignal as! RACSubject).sendNext(nil)
             }
         }
     }
@@ -97,7 +97,7 @@ class FetchedResultsViewModel<EntityType:Object> : BaseViewModel, FetchedResults
                 _fetchedResultsController.delegate = self
                 _ = _fetchedResultsController.performFetch()
 
-                (self.dismissLoadingSignal as! RACSubject).sendNext({ (x:Any!) in })
+                (self.dismissLoadingSignal as! RACSubject).sendNext(nil)
             }
 
             return _fetchedResultsController
@@ -147,14 +147,14 @@ class FetchedResultsViewModel<EntityType:Object> : BaseViewModel, FetchedResults
                 self.processDownloadedResults(results: result.value!)
                 
                 self._fetchedResultsController = nil
-                (self.updatedContentSignal as! RACSubject).sendNext({ (x:Any!) in })
+                (self.updatedContentSignal as! RACSubject).sendNext(nil)
             } else if result.isFailure
             {
-                (self.dismissLoadingSignal as! RACSubject).sendNext({ (x:Any!) in })
+                (self.dismissLoadingSignal as! RACSubject).sendNext(nil)
                 
                 #if DEBUG
                 debugPrint("%@", result.error ?? "no error description")
-                (self.errorMessageSignal as! RACSubject).sendNext({(x:Any!) in })
+                (self.errorMessageSignal as! RACSubject).sendError(result.error)
                 #endif
             }
         }
@@ -179,14 +179,14 @@ class FetchedResultsViewModel<EntityType:Object> : BaseViewModel, FetchedResults
     }
     
     func controller<RealmType>(_ controller: FetchedResultsController<RealmType>, didChangeObject anObject: SafeObject<RealmType>, atIndexPath indexPath: IndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) where RealmType : Object {
-        (self.updatedContentSignal as! RACSubject).sendNext({ (x:Any!) in })
+        (self.updatedContentSignal as! RACSubject).sendNext(nil)
     }
     
     func controllerDidChangeSection<RealmType>(_ controller: FetchedResultsController<RealmType>, section: FetchResultsSectionInfo<RealmType>, sectionIndex: UInt, changeType: NSFetchedResultsChangeType) where RealmType : Object {
-        (self.updatedContentSignal as! RACSubject).sendNext({ (x:Any!) in })
+        (self.updatedContentSignal as! RACSubject).sendNext(nil)
     }
     
     func controllerDidChangeContent<RealmType>(_ controller: FetchedResultsController<RealmType>) where RealmType : Object {
-        (self.updatedContentSignal as! RACSubject).sendNext({ (x:Any!) in })
+        (self.updatedContentSignal as! RACSubject).sendNext(nil)
     }
 }

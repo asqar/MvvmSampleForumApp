@@ -196,7 +196,11 @@
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Albums" id="o0C-kQ-7xp">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Ygy-9C-bLG"/>
+                        <barButtonItem key="leftBarButtonItem" title="Menu" image="menu" id="ZjB-OO-ifN">
+                            <connections>
+                                <action selector="showMenu" destination="x8O-jW-gma" id="oNd-cU-Hn8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -226,4 +230,7 @@
             <point key="canvasLocation" x="-55.200000000000003" y="-63.418290854572717"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu" width="19" height="13"/>
+    </resources>
 </document>

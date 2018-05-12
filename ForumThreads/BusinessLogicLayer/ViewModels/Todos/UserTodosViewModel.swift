@@ -38,6 +38,11 @@ class UserTodosViewModel: FetchedResultsViewModel<RlmTodo> {
         return [ SortDescriptor(keyPath:"id", ascending:true) ]
     }
     
+    override var fetchRequest: FetchRequest<RlmTodo>!
+    {
+        return newFetchRequest(predicate: NSPredicate(format: "userId == %d", self.user.id))
+    }
+    
     override func fetchData(updating:Bool)
     {
         CachedNetworkService().fetchTodos(user: self.user.mapToRealmObject(), completion: self.completion())
