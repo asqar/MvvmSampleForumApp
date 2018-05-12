@@ -20,6 +20,11 @@ class CachedNetworkService: CachedNetworkServiceProtocol {
     {
         Networking.fetchMultipleItems(ApiRoutes.Level1_getMultiple.albums, completion: completion);
     }
+    
+    func fetchPhotos(completion: @escaping (Result<[RlmPhoto]>) -> Void)
+    {
+        Networking.fetchMultipleItems(ApiRoutes.Level1_getMultiple.photos, completion: completion);
+    }
 
     func fetchUsers(completion: @escaping (Result<[RlmUser]>) -> Void)
     {
@@ -106,5 +111,10 @@ class CachedNetworkService: CachedNetworkServiceProtocol {
     func createPost(post: PostDto, completion: @escaping (Result<RlmPost>) -> Void)
     {
         Networking.fetchSingleItem(ApiRoutes.Level1_postNew.post(item: post), completion: completion);
+    }
+    
+    func createPhoto(photo: PhotoDto, completion: @escaping (Result<RlmPhoto>) -> Void)
+    {
+        Networking.fetchSingleItem(ApiRoutes.Level1_postNew.photo(item: photo), completion: completion);
     }
 }

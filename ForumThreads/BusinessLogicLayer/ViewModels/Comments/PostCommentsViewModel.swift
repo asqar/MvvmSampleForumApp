@@ -38,6 +38,11 @@ class PostCommentsViewModel: FetchedResultsViewModel<RlmComment> {
         return [ SortDescriptor(keyPath:"id", ascending:false) ]
     }
     
+    override var fetchRequest: FetchRequest<RlmComment>!
+    {
+        return newFetchRequest(predicate: NSPredicate(format: "postId == %d", self.post.id))
+    }
+    
     override func fetchData(updating:Bool)
     {
         CachedNetworkService().fetchComments(post: self.post.mapToRealmObject(), completion: self.completion())

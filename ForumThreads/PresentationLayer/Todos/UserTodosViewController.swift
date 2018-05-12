@@ -55,7 +55,7 @@ class UserTodosViewController: BaseTableViewController<RlmTodo, UserTodosViewMod
         
         let height:CGFloat = vm.todo.title.boundingRect(with: CGSize(width:width, height:CGFloat(MAXFLOAT)), options:NSStringDrawingOptions(rawValue: NSStringDrawingOptions.usesLineFragmentOrigin.rawValue | NSStringDrawingOptions.usesFontLeading.rawValue), attributes:[kCTFontAttributeName as NSAttributedStringKey: UIFont(name: "HelveticaNeue", size:14.0) ?? UIFont.systemFont(ofSize: UIFont.systemFontSize)], context:nil).size.height
         
-        return height
+        return height + 20
     }
     
 }

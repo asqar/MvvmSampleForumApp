@@ -45,6 +45,7 @@ class SideMenuViewController: UITableViewController, RESideMenuDelegate {
             self.sideMenuViewController.contentViewController = UIStoryboard(name: "Albums", bundle: nil).instantiateInitialViewController()
             break
         case .photos:
+            self.sideMenuViewController.contentViewController = UIStoryboard(name: "Photos", bundle: nil).instantiateInitialViewController()
             break
         }
         self.sideMenuViewController.hideViewController()

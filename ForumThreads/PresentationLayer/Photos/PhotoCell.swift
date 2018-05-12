@@ -9,18 +9,18 @@
 import UIKit
 import SDWebImage
 
-class ImageCell : BaseViewModel {
+class PhotoCell : BaseCollectionViewCell<PhotoViewModel> {
     
     @IBOutlet weak var imgPhoto: UIImageView?
     @IBOutlet weak var lblName: UILabel?
     @IBOutlet weak var progressView: UIProgressView?
+
+    override func setViewModel(viewModel: PhotoViewModel!) {
+        super.setViewModel(viewModel: viewModel)
+    }
     
-    var viewModel:ImageViewModel!
-
-    func setViewModel(viewModel:ImageViewModel!) {
-        self.viewModel = viewModel
-
-        imgPhoto?.sd_setImage(with: viewModel.url(isThumbnail:true), placeholderImage:UIImage(named: "placeholder.png"),
+    override func refresh(){
+        imgPhoto?.sd_setImage(with: URL(string: self.viewModel.photo.thumbnailUrl), placeholderImage:UIImage(named: "placeholder.png"),
                                     options:SDWebImageOptions(rawValue: 0), progress:{ (receivedSize,expectedSize,url) in
                                         DispatchQueue.main.async {
                                             self.progressView!.progress = Float(receivedSize / expectedSize)
@@ -29,6 +29,6 @@ class ImageCell : BaseViewModel {
             self.progressView!.isHidden = true
             })
 
-        lblName?.text = viewModel.caption
+        lblName?.text = self.viewModel.photo.title
     }
 }

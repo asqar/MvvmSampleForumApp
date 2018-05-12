@@ -38,6 +38,13 @@ class AlbumListViewController<VM : AlbumListViewModel>: BaseTableViewController<
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         super.tableView(tableView, didSelectRowAt: indexPath)
+        
+        let vm = self.viewModel.selectObjectAtIndexPath(indexPath: indexPath) as! AlbumPhotosViewModel
+        let vc = UIStoryboard(name: "Photos", bundle: nil).instantiateViewController(withIdentifier: "AlbumPhotosViewController") as! AlbumPhotosViewController
+        vc.viewModel = vm
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        self.tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func tableView(_ tableView:UITableView, heightForRowAt indexPath:IndexPath) -> CGFloat {
@@ -47,7 +54,7 @@ class AlbumListViewController<VM : AlbumListViewModel>: BaseTableViewController<
         
         let height:CGFloat = vm.album.title.boundingRect(with: CGSize(width:width, height:CGFloat(MAXFLOAT)), options:NSStringDrawingOptions(rawValue: NSStringDrawingOptions.usesLineFragmentOrigin.rawValue | NSStringDrawingOptions.usesFontLeading.rawValue), attributes:[kCTFontAttributeName as NSAttributedStringKey: UIFont(name: "HelveticaNeue", size:14.0) ?? UIFont.systemFont(ofSize: UIFont.systemFontSize)], context:nil).size.height
         
-        return height
+        return height + 20
     }
     
 }

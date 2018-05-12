@@ -12,12 +12,31 @@ import SVPullToRefresh
 import ReactiveCocoa
 import RealmSwift
 
-class BaseCollectionViewController<RealmType : Object, VM: FetchedResultsViewModelProtocol> : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class BaseCollectionViewController<RealmType : Object, VM: FetchedResultsViewModelProtocol> : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
+    
+    var searchBar: UISearchBar? {
+        return nil
+    }
+    
+    var collectionView: UICollectionView? {
+        return nil
+    }
 
-    @IBOutlet weak var collectionView: UICollectionView?
     @IBOutlet weak var pullToRefreshView: SVPullToRefreshView?
     
-    var viewModel:VM = FetchedResultsViewModel<RealmType>() as! VM
+    typealias OwnerType = UITableViewCell
+    typealias ViewModelType = BaseViewModel
+    
+    func setViewModelOwner(owner: UICollectionViewCell, viewModel: BaseViewModel!) {
+        
+    }
+    
+    var viewModel:VM
+    
+    required init?(coder aDecoder: NSCoder) {
+        viewModel = VM.init()
+        super.init(coder: aDecoder)
+    }
     
     deinit {
         self.collectionView?.delegate = nil;
@@ -77,6 +96,8 @@ class BaseCollectionViewController<RealmType : Object, VM: FetchedResultsViewMod
     override func viewWillAppear(_ animated:Bool) {
         super.viewWillAppear(animated)
         self.viewModel.isActive = true
+        
+        self.collectionView?.reloadData()
     }
 
     override func viewDidDisappear(_ animated:Bool) {
@@ -99,8 +120,8 @@ class BaseCollectionViewController<RealmType : Object, VM: FetchedResultsViewMod
     }
 
     func collectionView(_ collectionView:UICollectionView, cellForItemAt indexPath:IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellIdentifier, for: indexPath) as! BaseCollectionViewCell
-        cell.setViewModel(viewModel: self.viewModel.objectAtIndexPath(indexPath: indexPath) as BaseViewModel?)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellIdentifier, for: indexPath)
+        self.setViewModelOwner(owner: cell, viewModel: self.viewModel.objectAtIndexPath(indexPath: indexPath) as BaseViewModel?)
         return cell
     }
 
@@ -109,4 +130,19 @@ class BaseCollectionViewController<RealmType : Object, VM: FetchedResultsViewMod
         self.collectionView?.deselectItem(at: indexPath, animated:true)
     }
 
+    // MARK :- Search
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.viewModel.searchTerm = searchText
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if searchBar.text?.count == 0
+        {
+            return
+        }
+        searchBar.endEditing(true)
+        
+        self.searchBar?.text = ""
+    }
 }

@@ -1,5 +1,5 @@
 //
-//  AlbumsViewModel.swift
+//  PhotoListViewModel.swift
 //  ForumThreads
 //
 //  Created by aSqar on 12.05.2018.
@@ -10,12 +10,12 @@ import Foundation
 import SwiftFetchedResultsController
 import RealmSwift
 
-class AlbumListViewModel: FetchedResultsViewModel<RlmAlbum> {
+class PhotoListViewModel: FetchedResultsViewModel<RlmPhoto> {
     
-    typealias RealmType = RlmAlbum
+    typealias RealmType = RlmPhoto
     
     override var title : String! {
-        return "Albums".localized
+        return "Photos".localized
     }
     
     override var serviceUrl : String! {
@@ -30,7 +30,7 @@ class AlbumListViewModel: FetchedResultsViewModel<RlmAlbum> {
     
     override func fetchData(updating:Bool)
     {
-        CachedNetworkService().fetchAlbums(completion: self.completion())
+        CachedNetworkService().fetchPhotos(completion: self.completion())
     }
     
     override func processDownloadedResults(results: [RealmType]) {
@@ -44,13 +44,9 @@ class AlbumListViewModel: FetchedResultsViewModel<RlmAlbum> {
         }
     }
     
-    override func objectAtIndexPath(indexPath:IndexPath!) -> AlbumViewModel! {
-        let album:RealmType = self.fetchedResultsController.objectAtIndexPath(indexPath)!
-        return AlbumViewModel(album: AlbumDto.mapFromRealmObject(album))
-    }
-    
-    override func selectObjectAtIndexPath(indexPath: IndexPath!) -> BaseViewModel! {
-        let album:RealmType = self.fetchedResultsController.objectAtIndexPath(indexPath)!
-        return AlbumPhotosViewModel(album: AlbumDto.mapFromRealmObject(album))
+    override func objectAtIndexPath(indexPath:IndexPath!) -> PhotoViewModel! {
+        let photo:RealmType = self.fetchedResultsController.objectAtIndexPath(indexPath)!
+        return PhotoViewModel(photo: PhotoDto.mapFromRealmObject(photo))
     }
 }
+

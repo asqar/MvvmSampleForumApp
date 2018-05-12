@@ -20,6 +20,7 @@ class BaseTableViewController<RealmType : Object, VM: FetchedResultsViewModelPro
     
     typealias OwnerType = UITableViewCell
     typealias ViewModelType = BaseViewModel
+    
     func setViewModelOwner(owner: UITableViewCell, viewModel: BaseViewModel!) {
         
     }

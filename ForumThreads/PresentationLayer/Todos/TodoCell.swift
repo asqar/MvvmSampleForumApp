@@ -19,6 +19,7 @@ class TodoCell: BaseTableViewCell<TodoViewModel> {
     
     override func refresh(){
         self.txtTitle?.text = viewModel.todo.title
+        self.accessoryType = viewModel.todo.completed ? .checkmark : .none
     }
 }
 

@@ -27,7 +27,7 @@ def shared_pods
   pod 'Alamofire', '~> 4.0'
   pod 'AlamofireNetworkActivityIndicator', '~> 2.0'
   pod 'ObjectMapper'
-  pod 'SDWebImage'
+#  pod 'SDWebImage'
 
   pod 'ReactiveCocoa'
   pod 'ReactiveViewModel'
@@ -50,6 +50,7 @@ def app_pods
   pod 'SVPullToRefresh'
   pod 'RESideMenu'
   pod 'FormToolbar'
+  pod "MWPhotoBrowser", :podspec =>'https://raw.githubusercontent.com/moinku07/MWPhotoBrowser/master/MWPhotoBrowser.podspec'
 
 end
 
