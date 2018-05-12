@@ -13,17 +13,19 @@ class UserViewController: UITableViewController, UITextFieldDelegate, UITextView
     
     var viewModel : UserViewModel!
     
-    @IBOutlet weak var lblName: UILabel?
-    @IBOutlet weak var lblEmail: UILabel?
-    @IBOutlet weak var lblUsername: UILabel?
-    @IBOutlet weak var lblPhone: UILabel?
-    @IBOutlet weak var lblWebsite: UILabel?
-    @IBOutlet weak var lblStreet: UILabel?
-    @IBOutlet weak var lblCity: UILabel?
-    @IBOutlet weak var lblGeo: UILabel?
-    @IBOutlet weak var lblCompanyName: UILabel?
-    @IBOutlet weak var lblCatchPhrase: UILabel?
-    @IBOutlet weak var lblBs: UILabel?
+    // TODO: make proper UI
+    
+    @IBOutlet weak var cell1Name: UITableViewCell?
+    @IBOutlet weak var cell2Email: UITableViewCell?
+    @IBOutlet weak var cell3Username: UITableViewCell?
+    @IBOutlet weak var cell4Phone: UITableViewCell?
+    @IBOutlet weak var cell5Website: UITableViewCell?
+    @IBOutlet weak var cell6Street: UITableViewCell?
+    @IBOutlet weak var cell7City: UITableViewCell?
+    @IBOutlet weak var cell8Geo: UITableViewCell?
+    @IBOutlet weak var cell9CompanyName: UITableViewCell?
+    @IBOutlet weak var cell10CatchPhrase: UITableViewCell?
+    @IBOutlet weak var cell11Bs: UITableViewCell?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,17 +38,19 @@ class UserViewController: UITableViewController, UITextFieldDelegate, UITextView
     }
     
     func refresh() {
-        self.lblName?.text = self.viewModel.user.name
-        self.lblEmail?.text = self.viewModel.user.email
-        self.lblUsername?.text = self.viewModel.user.username
-        self.lblPhone?.text = self.viewModel.user.phone
-        self.lblWebsite?.text = self.viewModel.user.website
-        self.lblStreet?.text = String(format: "%@, %@",self.viewModel.user.address.street, self.viewModel.user.address.suite)
-        self.lblCity?.text = String(format: "%@, %@",self.viewModel.user.address.zipcode, self.viewModel.user.address.city)
-        self.lblGeo?.text = String(format: "%f,%f", self.viewModel.user.address.geo.lat, self.viewModel.user.address.geo.lng)
-        self.lblCompanyName?.text = self.viewModel.user.company.name
-        self.lblCatchPhrase?.text = self.viewModel.user.company.catchPhrase
-        self.lblBs?.text = self.viewModel.user.company.bs
+        self.cell1Name?.textLabel?.text = self.viewModel.user.name
+        self.cell2Email?.textLabel?.text = "email: " + self.viewModel.user.email
+        self.cell3Username?.textLabel?.text = "username: " + self.viewModel.user.username
+        self.cell4Phone?.textLabel?.text = "phone: " + self.viewModel.user.phone
+        self.cell5Website?.textLabel?.text = "website: " + self.viewModel.user.website
+        self.cell6Street?.textLabel?.text = String(format: "%@, %@",self.viewModel.user.address.street, self.viewModel.user.address.suite)
+        self.cell7City?.textLabel?.text = String(format: "%@, %@",self.viewModel.user.address.zipcode, self.viewModel.user.address.city)
+        self.cell8Geo?.textLabel?.text = String(format: "%f,%f", self.viewModel.user.address.geo.lat, self.viewModel.user.address.geo.lng)
+        self.cell9CompanyName?.textLabel?.text = "company: " + self.viewModel.user.company.name
+        self.cell10CatchPhrase?.textLabel?.text = self.viewModel.user.company.catchPhrase
+        self.cell11Bs?.textLabel?.text = self.viewModel.user.company.bs
+        
+        self.cell8Geo?.isHidden = self.viewModel.user.address.geo.lat == 0 || self.viewModel.user.address.geo.lng == 0
     }
     
 }

@@ -15,13 +15,13 @@ class AllUsersViewModel : FetchedResultsViewModel<RlmUser> {
     typealias RealmType = RlmUser
     
     override var title : String! {
-        return "Posts".localized
+        return "Users".localized
     }
     
-    override var fieldsToSearch: [String] { get { return ["name", "username", "email"] } }
+    override var fieldsToSearch: [String] { get { return ["name"] } }
     
     override func sortDescriptors() -> [SortDescriptor]! {
-        return [ SortDescriptor(keyPath:"id", ascending:true) ]
+        return [ SortDescriptor(keyPath:"name", ascending:true) ]
     }
     
     override var serviceUrl : String! {
