@@ -43,6 +43,11 @@ class CachedNetworkService: CachedNetworkServiceProtocol {
     {
         Networking.fetchMultipleItems(ApiRoutes.Level3_getMultipleCached.todosOf(user: user), completion: completion);
     }
+    
+    func fetchAlbums(user : RlmUser, completion: @escaping (Result<[RlmAlbum]>) -> Void)
+    {
+        Networking.fetchMultipleItems(ApiRoutes.Level3_getMultipleCached.albumsOf(user: user), completion: completion);
+    }
 
     // MARK: - Get entity by id
 
@@ -76,8 +81,20 @@ class CachedNetworkService: CachedNetworkServiceProtocol {
         Networking.fetchSingleItem(ApiRoutes.Level2_getSingle.todoBy(id: id), completion: completion);
     }
     
+    // MARK: - Post new entity
+    
     func createComment(comment: CommentDto, completion: @escaping (Result<RlmComment>) -> Void)
     {
         Networking.fetchSingleItem(ApiRoutes.Level1_postNew.comment(item: comment), completion: completion);
+    }
+    
+    func createTodo(todo: TodoDto, completion: @escaping (Result<RlmTodo>) -> Void)
+    {
+        Networking.fetchSingleItem(ApiRoutes.Level1_postNew.todo(item: todo), completion: completion);
+    }
+    
+    func createAlbum(album: AlbumDto, completion: @escaping (Result<RlmAlbum>) -> Void)
+    {
+        Networking.fetchSingleItem(ApiRoutes.Level1_postNew.album(item: album), completion: completion);
     }
 }

@@ -105,6 +105,20 @@
 		13E1626220A5F9210061E30C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1626120A5F9210061E30C /* RootViewController.swift */; };
 		13E1626420A5FA470061E30C /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13E1626320A5FA470061E30C /* Menu.storyboard */; };
 		13E1626620A5FC960061E30C /* UIViewController+SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1626520A5FC960061E30C /* UIViewController+SideMenu.swift */; };
+		13E1626920A70D180061E30C /* UserTodosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1626820A70D180061E30C /* UserTodosViewModel.swift */; };
+		13E1626C20A70D3A0061E30C /* UserAlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1626B20A70D3A0061E30C /* UserAlbumsViewModel.swift */; };
+		13E1626E20A70DF80061E30C /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1626D20A70DF80061E30C /* TodoViewModel.swift */; };
+		13E1627020A70E570061E30C /* NewTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1626F20A70E570061E30C /* NewTodoViewModel.swift */; };
+		13E1627320A711000061E30C /* UserTodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1627220A711000061E30C /* UserTodosViewController.swift */; };
+		13E1627520A711860061E30C /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1627420A711860061E30C /* TodoCell.swift */; };
+		13E1627720A712040061E30C /* NewTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1627620A712040061E30C /* NewTodoViewController.swift */; };
+		13E1627920A7128E0061E30C /* Todos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13E1627820A7128E0061E30C /* Todos.storyboard */; };
+		13E1627B20A715700061E30C /* NewAlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1627A20A715700061E30C /* NewAlbumViewModel.swift */; };
+		13E1627D20A715D80061E30C /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1627C20A715D80061E30C /* AlbumViewModel.swift */; };
+		13E1627F20A718C70061E30C /* Albums.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13E1627E20A718C70061E30C /* Albums.storyboard */; };
+		13E1628420A719530061E30C /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1628120A719530061E30C /* AlbumCell.swift */; };
+		13E1628520A719530061E30C /* UserAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1628220A719530061E30C /* UserAlbumsViewController.swift */; };
+		13E1628620A719530061E30C /* NewAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1628320A719530061E30C /* NewAlbumViewController.swift */; };
 		1DE0EBC55ABEBC68521109B8 /* Pods_ForumThreads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01EE585944DDD2F6E72AFBB /* Pods_ForumThreads.framework */; };
 		48A599A066CB6E5BA347CF14 /* Pods_ForumThreadsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14CC460C79F78F3E73B39247 /* Pods_ForumThreadsUITests.framework */; };
 		99BBF307B8816944745EF007 /* Pods_ForumThreadsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60DAF5CAD75B3C972FEB72D /* Pods_ForumThreadsTests.framework */; };
@@ -233,6 +247,20 @@
 		13E1626120A5F9210061E30C /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		13E1626320A5FA470061E30C /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		13E1626520A5FC960061E30C /* UIViewController+SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+SideMenu.swift"; sourceTree = "<group>"; };
+		13E1626820A70D180061E30C /* UserTodosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTodosViewModel.swift; sourceTree = "<group>"; };
+		13E1626B20A70D3A0061E30C /* UserAlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlbumsViewModel.swift; sourceTree = "<group>"; };
+		13E1626D20A70DF80061E30C /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
+		13E1626F20A70E570061E30C /* NewTodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoViewModel.swift; sourceTree = "<group>"; };
+		13E1627220A711000061E30C /* UserTodosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTodosViewController.swift; sourceTree = "<group>"; };
+		13E1627420A711860061E30C /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
+		13E1627620A712040061E30C /* NewTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoViewController.swift; sourceTree = "<group>"; };
+		13E1627820A7128E0061E30C /* Todos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Todos.storyboard; sourceTree = "<group>"; };
+		13E1627A20A715700061E30C /* NewAlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAlbumViewModel.swift; sourceTree = "<group>"; };
+		13E1627C20A715D80061E30C /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
+		13E1627E20A718C70061E30C /* Albums.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Albums.storyboard; sourceTree = "<group>"; };
+		13E1628120A719530061E30C /* AlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		13E1628220A719530061E30C /* UserAlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAlbumsViewController.swift; sourceTree = "<group>"; };
+		13E1628320A719530061E30C /* NewAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAlbumViewController.swift; sourceTree = "<group>"; };
 		14CC460C79F78F3E73B39247 /* Pods_ForumThreadsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForumThreadsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F288382FA9CB015662EA0E /* Pods-ForumThreadsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForumThreadsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ForumThreadsTests/Pods-ForumThreadsTests.release.xcconfig"; sourceTree = "<group>"; };
 		62741B4A14E20551279CF6EB /* Pods-ForumThreadsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForumThreadsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ForumThreadsUITests/Pods-ForumThreadsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -352,6 +380,8 @@
 				13E1625F20A5D8540061E30C /* Posts.storyboard */,
 				13E1625B20A5D6E60061E30C /* Users.storyboard */,
 				13E1625720A5D6C50061E30C /* Comments.storyboard */,
+				13E1627820A7128E0061E30C /* Todos.storyboard */,
+				13E1627E20A718C70061E30C /* Albums.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -387,12 +417,13 @@
 		138A19EC20A1A6C60049AF9E /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				13E1628020A719530061E30C /* Albums */,
+				13E1627120A710DC0061E30C /* Todos */,
 				13E1624820A5C8860061E30C /* Users */,
 				13E1623C20A58B4D0061E30C /* Comments */,
 				13E1623B20A58B250061E30C /* SideMenu */,
-				138A1A7820A1E52C0049AF9E /* Cells */,
 				138A1A7620A1E52C0049AF9E /* Common */,
-				138A1A7720A1E52C0049AF9E /* PostList */,
+				138A1A7720A1E52C0049AF9E /* Posts */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -627,6 +658,8 @@
 		138A1A6C20A1E52C0049AF9E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				13E1626A20A70D1F0061E30C /* Albums */,
+				13E1626720A70CE80061E30C /* Todos */,
 				13E1624B20A5C8D70061E30C /* Users */,
 				13E1624120A58C2B0061E30C /* Photos */,
 				13E1623F20A58C0F0061E30C /* Comments */,
@@ -639,6 +672,7 @@
 		138A1A7620A1E52C0049AF9E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				138A1A8F20A1E5820049AF9E /* ImageCell.swift */,
 				138A1A7F20A1E52D0049AF9E /* BaseCollectionViewController.swift */,
 				13E1622120A37FBC0061E30C /* BaseTableViewController.swift */,
 				13E1622320A380950061E30C /* BaseTableViewCell.swift */,
@@ -647,23 +681,13 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		138A1A7720A1E52C0049AF9E /* PostList */ = {
+		138A1A7720A1E52C0049AF9E /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				13E1622520A439A10061E30C /* PostCell.swift */,
 				138A1A7D20A1E52D0049AF9E /* AllPostsViewController.swift */,
 			);
-			path = PostList;
-			sourceTree = "<group>";
-		};
-		138A1A7820A1E52C0049AF9E /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				138A1A8F20A1E5820049AF9E /* ImageCell.swift */,
-				13E1622520A439A10061E30C /* PostCell.swift */,
-				13E1623520A50F3B0061E30C /* CommentCell.swift */,
-				13E1625220A5CB9C0061E30C /* UserCell.swift */,
-			);
-			path = Cells;
+			path = Posts;
 			sourceTree = "<group>";
 		};
 		13E1623B20A58B250061E30C /* SideMenu */ = {
@@ -679,6 +703,7 @@
 		13E1623C20A58B4D0061E30C /* Comments */ = {
 			isa = PBXGroup;
 			children = (
+				13E1623520A50F3B0061E30C /* CommentCell.swift */,
 				13E1622D20A503090061E30C /* PostCommentsViewController.swift */,
 				13E1624420A58D6D0061E30C /* NewCommentViewController.swift */,
 			);
@@ -725,6 +750,7 @@
 		13E1624820A5C8860061E30C /* Users */ = {
 			isa = PBXGroup;
 			children = (
+				13E1625220A5CB9C0061E30C /* UserCell.swift */,
 				13E1624920A5C8BD0061E30C /* AllUsersViewController.swift */,
 				13E1625020A5CABB0061E30C /* UserViewController.swift */,
 			);
@@ -738,6 +764,46 @@
 				13E1624E20A5C9420061E30C /* UserViewModel.swift */,
 			);
 			path = Users;
+			sourceTree = "<group>";
+		};
+		13E1626720A70CE80061E30C /* Todos */ = {
+			isa = PBXGroup;
+			children = (
+				13E1626820A70D180061E30C /* UserTodosViewModel.swift */,
+				13E1626D20A70DF80061E30C /* TodoViewModel.swift */,
+				13E1626F20A70E570061E30C /* NewTodoViewModel.swift */,
+			);
+			path = Todos;
+			sourceTree = "<group>";
+		};
+		13E1626A20A70D1F0061E30C /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				13E1626B20A70D3A0061E30C /* UserAlbumsViewModel.swift */,
+				13E1627A20A715700061E30C /* NewAlbumViewModel.swift */,
+				13E1627C20A715D80061E30C /* AlbumViewModel.swift */,
+			);
+			path = Albums;
+			sourceTree = "<group>";
+		};
+		13E1627120A710DC0061E30C /* Todos */ = {
+			isa = PBXGroup;
+			children = (
+				13E1627220A711000061E30C /* UserTodosViewController.swift */,
+				13E1627420A711860061E30C /* TodoCell.swift */,
+				13E1627620A712040061E30C /* NewTodoViewController.swift */,
+			);
+			path = Todos;
+			sourceTree = "<group>";
+		};
+		13E1628020A719530061E30C /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				13E1628120A719530061E30C /* AlbumCell.swift */,
+				13E1628220A719530061E30C /* UserAlbumsViewController.swift */,
+				13E1628320A719530061E30C /* NewAlbumViewController.swift */,
+			);
+			path = Albums;
 			sourceTree = "<group>";
 		};
 		E8344362FA8CD01D2E5DC97F /* Frameworks */ = {
@@ -866,12 +932,14 @@
 				13E1625E20A5D6E60061E30C /* Users.storyboard in Resources */,
 				13E1626420A5FA470061E30C /* Menu.storyboard in Resources */,
 				13E1625C20A5D6E60061E30C /* LaunchScreen.storyboard in Resources */,
+				13E1627920A7128E0061E30C /* Todos.storyboard in Resources */,
 				13E1625D20A5D6E60061E30C /* Main.storyboard in Resources */,
 				138A1A0320A1A88C0049AF9E /* Localizable.strings in Resources */,
 				138A19C220A18BD40049AF9E /* Assets.xcassets in Resources */,
 				13E1625820A5D6C50061E30C /* Comments.storyboard in Resources */,
 				138A1A0720A1A88C0049AF9E /* Localizable.strings in Resources */,
 				138A1A0E20A1AB4F0049AF9E /* Localizable.strings in Resources */,
+				13E1627F20A718C70061E30C /* Albums.storyboard in Resources */,
 				138A1A0820A1A88C0049AF9E /* InfoPlist.strings in Resources */,
 				138A1A0F20A1AB4F0049AF9E /* InfoPlist.strings in Resources */,
 				138A1A0420A1A88C0049AF9E /* InfoPlist.strings in Resources */,
@@ -1073,10 +1141,14 @@
 			files = (
 				138A1AA720A2F2FA0049AF9E /* TodoDto.swift in Sources */,
 				138A1A2120A1AC2C0049AF9E /* ConfiguratorProtocol.swift in Sources */,
+				13E1626C20A70D3A0061E30C /* UserAlbumsViewModel.swift in Sources */,
 				13E1622820A48D730061E30C /* Networking+Mappable.swift in Sources */,
+				13E1627D20A715D80061E30C /* AlbumViewModel.swift in Sources */,
+				13E1626920A70D180061E30C /* UserTodosViewModel.swift in Sources */,
 				138A1A2F20A1AC330049AF9E /* LocalDataStore.swift in Sources */,
 				138A1A3B20A1AC420049AF9E /* UIStoryboard+Instantiate.swift in Sources */,
 				13E1621220A321700061E30C /* PhotoDto+Realm.swift in Sources */,
+				13E1626E20A70DF80061E30C /* TodoViewModel.swift in Sources */,
 				13E1622B20A4ED300061E30C /* CachedNetworkService.swift in Sources */,
 				138A1A5820A1AC590049AF9E /* RlmComment.swift in Sources */,
 				138A1A5120A1AC590049AF9E /* PostDto+Network.swift in Sources */,
@@ -1091,6 +1163,7 @@
 				13E1623820A50F6A0061E30C /* CommentViewModel.swift in Sources */,
 				138A1AB920A30FA60049AF9E /* RlmAlbum.swift in Sources */,
 				13E1624A20A5C8BD0061E30C /* AllUsersViewController.swift in Sources */,
+				13E1627320A711000061E30C /* UserTodosViewController.swift in Sources */,
 				13E1626220A5F9210061E30C /* RootViewController.swift in Sources */,
 				13E1621E20A3771C0061E30C /* SideMenuViewController.swift in Sources */,
 				13E1621A20A368360061E30C /* BaseCollectionViewCell.swift in Sources */,
@@ -1100,7 +1173,10 @@
 				13E1622E20A503090061E30C /* PostCommentsViewController.swift in Sources */,
 				138A1AB520A30F890049AF9E /* RlmUser.swift in Sources */,
 				13E1624D20A5C8EA0061E30C /* AllUsersViewModel.swift in Sources */,
+				13E1627020A70E570061E30C /* NewTodoViewModel.swift in Sources */,
+				13E1628420A719530061E30C /* AlbumCell.swift in Sources */,
 				138A1A5920A1AC590049AF9E /* RlmEntity.swift in Sources */,
+				13E1628620A719530061E30C /* NewAlbumViewController.swift in Sources */,
 				138A1A6520A1AC620049AF9E /* Networking+BaseMappable.swift in Sources */,
 				138A1A6720A1AC620049AF9E /* ApiRequest.swift in Sources */,
 				138A1A5020A1AC590049AF9E /* CommentDto+Network.swift in Sources */,
@@ -1137,9 +1213,13 @@
 				13E1622220A37FBC0061E30C /* BaseTableViewController.swift in Sources */,
 				138A1AAF20A309140049AF9E /* AlbumDto+Network.swift in Sources */,
 				138A1A8120A1E52D0049AF9E /* AllPostsViewModel.swift in Sources */,
+				13E1627B20A715700061E30C /* NewAlbumViewModel.swift in Sources */,
+				13E1627520A711860061E30C /* TodoCell.swift in Sources */,
 				13E1624520A58D6D0061E30C /* NewCommentViewController.swift in Sources */,
+				13E1627720A712040061E30C /* NewTodoViewController.swift in Sources */,
 				138A1A2420A1AC2C0049AF9E /* EnvironmentProtocol.swift in Sources */,
 				138A1A1F20A1AC2C0049AF9E /* EnvironmentConfigurator.swift in Sources */,
+				13E1628520A719530061E30C /* UserAlbumsViewController.swift in Sources */,
 				138A1AB120A309240049AF9E /* UserDto+Network.swift in Sources */,
 				138A1A5520A1AC590049AF9E /* CommentDto.swift in Sources */,
 				138A1A5220A1AC590049AF9E /* RealmMappableProtocol.swift in Sources */,

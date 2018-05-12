@@ -27,6 +27,10 @@ class UserViewController: UITableViewController, UITextFieldDelegate, UITextView
     @IBOutlet weak var cell10CatchPhrase: UITableViewCell?
     @IBOutlet weak var cell11Bs: UITableViewCell?
     
+    @IBOutlet weak var cellTodos: UITableViewCell?
+    @IBOutlet weak var cellAlbums: UITableViewCell?
+    @IBOutlet weak var cellPosts: UITableViewCell?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +42,8 @@ class UserViewController: UITableViewController, UITextFieldDelegate, UITextView
     }
     
     func refresh() {
+        self.title = self.viewModel.user.name
+    
         self.cell1Name?.textLabel?.text = self.viewModel.user.name
         self.cell2Email?.textLabel?.text = "email: " + self.viewModel.user.email
         self.cell3Username?.textLabel?.text = "username: " + self.viewModel.user.username
@@ -51,6 +57,24 @@ class UserViewController: UITableViewController, UITextFieldDelegate, UITextView
         self.cell11Bs?.textLabel?.text = self.viewModel.user.company.bs
         
         self.cell8Geo?.isHidden = self.viewModel.user.address.geo.lat == 0 || self.viewModel.user.address.geo.lng == 0
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.destination is UserTodosViewController) {
+            let vm = self.viewModel.openUserTodos()
+            let vc = segue.destination as! UserTodosViewController
+            vc.viewModel = vm!
+        }
+        if (segue.destination is UserAlbumsViewController) {
+            let vm = self.viewModel.openUserAlbums()
+            let vc = segue.destination as! UserAlbumsViewController
+            vc.viewModel = vm!
+        }
+//        if (segue.destination is UserPostsViewController) {
+//            let vm = self.viewModel.openUserPosts()()
+//            let vc = segue.destination as! UserPostsViewController
+//            vc.viewModel = vm
+//        }
     }
     
 }

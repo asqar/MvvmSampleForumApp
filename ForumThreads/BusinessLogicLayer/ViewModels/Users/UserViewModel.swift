@@ -20,4 +20,16 @@ class UserViewModel : BaseViewModel {
         self.user = user
         super.init()
     }
+    
+    func openUserTodos() -> UserTodosViewModel! {
+        return UserTodosViewModel(user: self.user)
+    }
+    
+    func openUserAlbums() -> UserAlbumsViewModel! {
+        return UserAlbumsViewModel(user: self.user)
+    }
+    
+    func openUserPosts() -> UserTodosViewModel! {
+        return UserTodosViewModel(user: self.user)
+    }
 }
