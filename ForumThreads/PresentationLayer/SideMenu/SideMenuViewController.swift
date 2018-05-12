@@ -40,6 +40,7 @@ class SideMenuViewController: UITableViewController, RESideMenuDelegate {
             self.sideMenuViewController.contentViewController = UIStoryboard(name: "Posts", bundle: nil).instantiateInitialViewController()
             break
         case .albums:
+            self.sideMenuViewController.contentViewController = UIStoryboard(name: "Albums", bundle: nil).instantiateInitialViewController()
             break
         case .users:
             self.sideMenuViewController.contentViewController = UIStoryboard(name: "Users", bundle: nil).instantiateInitialViewController()

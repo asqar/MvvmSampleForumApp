@@ -10,7 +10,7 @@ import Foundation
 import SwiftFetchedResultsController
 import RealmSwift
 
-class UserAlbumsViewModel: FetchedResultsViewModel<RlmAlbum> {
+class UserAlbumsViewModel: AlbumListViewModel {
     
     private(set) var user:UserDto!
     
@@ -22,41 +22,9 @@ class UserAlbumsViewModel: FetchedResultsViewModel<RlmAlbum> {
     required init() {
     }
     
-    typealias RealmType = RlmAlbum
-    
-    override var title : String! {
-        return "Albums".localized
-    }
-    
-    override var serviceUrl : String! {
-        return ""
-    }
-    
-    override var fieldsToSearch: [String] { get { return ["title"] } }
-    
-    override func sortDescriptors() -> [SortDescriptor]! {
-        return [ SortDescriptor(keyPath:"id", ascending:true) ]
-    }
-    
     override func fetchData(updating:Bool)
     {
         CachedNetworkService().fetchAlbums(user: self.user.mapToRealmObject(), completion: self.completion())
-    }
-    
-    override func processDownloadedResults(results: [RealmType]) {
-        
-        do {
-            try self.realm().write {
-                self.realm().add(results, update: true)
-            }
-        } catch let error {
-            print(error)
-        }
-    }
-    
-    override func objectAtIndexPath(indexPath:IndexPath!) -> AlbumViewModel! {
-        let todo:RealmType = self.fetchedResultsController.objectAtIndexPath(indexPath)!
-        return AlbumViewModel(album: AlbumDto.mapFromRealmObject(todo))
     }
     
     func createNewAlbum() -> NewAlbumViewModel! {

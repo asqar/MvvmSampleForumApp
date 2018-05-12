@@ -117,8 +117,11 @@
 		13E1627D20A715D80061E30C /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1627C20A715D80061E30C /* AlbumViewModel.swift */; };
 		13E1627F20A718C70061E30C /* Albums.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13E1627E20A718C70061E30C /* Albums.storyboard */; };
 		13E1628420A719530061E30C /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1628120A719530061E30C /* AlbumCell.swift */; };
-		13E1628520A719530061E30C /* UserAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1628220A719530061E30C /* UserAlbumsViewController.swift */; };
+		13E1628520A719530061E30C /* AlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1628220A719530061E30C /* AlbumListViewController.swift */; };
 		13E1628620A719530061E30C /* NewAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1628320A719530061E30C /* NewAlbumViewController.swift */; };
+		13E1628820A7220C0061E30C /* AlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1628720A7220C0061E30C /* AlbumListViewModel.swift */; };
+		13E1628A20A723900061E30C /* UserAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1628920A723900061E30C /* UserAlbumsViewController.swift */; };
+		13E1628C20A726A10061E30C /* AllAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1628B20A726A10061E30C /* AllAlbumsViewController.swift */; };
 		1DE0EBC55ABEBC68521109B8 /* Pods_ForumThreads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01EE585944DDD2F6E72AFBB /* Pods_ForumThreads.framework */; };
 		48A599A066CB6E5BA347CF14 /* Pods_ForumThreadsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14CC460C79F78F3E73B39247 /* Pods_ForumThreadsUITests.framework */; };
 		99BBF307B8816944745EF007 /* Pods_ForumThreadsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60DAF5CAD75B3C972FEB72D /* Pods_ForumThreadsTests.framework */; };
@@ -259,8 +262,11 @@
 		13E1627C20A715D80061E30C /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
 		13E1627E20A718C70061E30C /* Albums.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Albums.storyboard; sourceTree = "<group>"; };
 		13E1628120A719530061E30C /* AlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
-		13E1628220A719530061E30C /* UserAlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAlbumsViewController.swift; sourceTree = "<group>"; };
+		13E1628220A719530061E30C /* AlbumListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumListViewController.swift; sourceTree = "<group>"; };
 		13E1628320A719530061E30C /* NewAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAlbumViewController.swift; sourceTree = "<group>"; };
+		13E1628720A7220C0061E30C /* AlbumListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewModel.swift; sourceTree = "<group>"; };
+		13E1628920A723900061E30C /* UserAlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlbumsViewController.swift; sourceTree = "<group>"; };
+		13E1628B20A726A10061E30C /* AllAlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAlbumsViewController.swift; sourceTree = "<group>"; };
 		14CC460C79F78F3E73B39247 /* Pods_ForumThreadsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForumThreadsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F288382FA9CB015662EA0E /* Pods-ForumThreadsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForumThreadsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ForumThreadsTests/Pods-ForumThreadsTests.release.xcconfig"; sourceTree = "<group>"; };
 		62741B4A14E20551279CF6EB /* Pods-ForumThreadsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForumThreadsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ForumThreadsUITests/Pods-ForumThreadsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -782,6 +788,7 @@
 				13E1626B20A70D3A0061E30C /* UserAlbumsViewModel.swift */,
 				13E1627A20A715700061E30C /* NewAlbumViewModel.swift */,
 				13E1627C20A715D80061E30C /* AlbumViewModel.swift */,
+				13E1628720A7220C0061E30C /* AlbumListViewModel.swift */,
 			);
 			path = Albums;
 			sourceTree = "<group>";
@@ -800,8 +807,10 @@
 			isa = PBXGroup;
 			children = (
 				13E1628120A719530061E30C /* AlbumCell.swift */,
-				13E1628220A719530061E30C /* UserAlbumsViewController.swift */,
+				13E1628220A719530061E30C /* AlbumListViewController.swift */,
 				13E1628320A719530061E30C /* NewAlbumViewController.swift */,
+				13E1628920A723900061E30C /* UserAlbumsViewController.swift */,
+				13E1628B20A726A10061E30C /* AllAlbumsViewController.swift */,
 			);
 			path = Albums;
 			sourceTree = "<group>";
@@ -1157,6 +1166,7 @@
 				13E1626620A5FC960061E30C /* UIViewController+SideMenu.swift in Sources */,
 				138A1A5320A1AC590049AF9E /* PostDto+Realm.swift in Sources */,
 				138A1A9120A1E5820049AF9E /* ImageCell.swift in Sources */,
+				13E1628C20A726A10061E30C /* AllAlbumsViewController.swift in Sources */,
 				13E1623620A50F3B0061E30C /* CommentCell.swift in Sources */,
 				13E1621C20A36D000061E30C /* SearchAttemptDto+Realm.swift in Sources */,
 				138A1A9920A1E9D50049AF9E /* RlmPhoto.swift in Sources */,
@@ -1171,11 +1181,13 @@
 				138A1A5420A1AC590049AF9E /* CommentDto+Realm.swift in Sources */,
 				138A1A3620A1AC3C0049AF9E /* Cache.swift in Sources */,
 				13E1622E20A503090061E30C /* PostCommentsViewController.swift in Sources */,
+				13E1628820A7220C0061E30C /* AlbumListViewModel.swift in Sources */,
 				138A1AB520A30F890049AF9E /* RlmUser.swift in Sources */,
 				13E1624D20A5C8EA0061E30C /* AllUsersViewModel.swift in Sources */,
 				13E1627020A70E570061E30C /* NewTodoViewModel.swift in Sources */,
 				13E1628420A719530061E30C /* AlbumCell.swift in Sources */,
 				138A1A5920A1AC590049AF9E /* RlmEntity.swift in Sources */,
+				13E1628A20A723900061E30C /* UserAlbumsViewController.swift in Sources */,
 				13E1628620A719530061E30C /* NewAlbumViewController.swift in Sources */,
 				138A1A6520A1AC620049AF9E /* Networking+BaseMappable.swift in Sources */,
 				138A1A6720A1AC620049AF9E /* ApiRequest.swift in Sources */,
@@ -1219,7 +1231,7 @@
 				13E1627720A712040061E30C /* NewTodoViewController.swift in Sources */,
 				138A1A2420A1AC2C0049AF9E /* EnvironmentProtocol.swift in Sources */,
 				138A1A1F20A1AC2C0049AF9E /* EnvironmentConfigurator.swift in Sources */,
-				13E1628520A719530061E30C /* UserAlbumsViewController.swift in Sources */,
+				13E1628520A719530061E30C /* AlbumListViewController.swift in Sources */,
 				138A1AB120A309240049AF9E /* UserDto+Network.swift in Sources */,
 				138A1A5520A1AC590049AF9E /* CommentDto.swift in Sources */,
 				138A1A5220A1AC590049AF9E /* RealmMappableProtocol.swift in Sources */,

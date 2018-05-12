@@ -385,26 +385,26 @@
             </objects>
             <point key="canvasLocation" x="869" y="999"/>
         </scene>
-        <!--Todos-->
+        <!--UserTodosViewController-->
         <scene sceneID="Dsu-p6-Zfv">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="UserTodosViewController" storyboardName="Todos" id="d3s-Pr-jDZ" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="UserTodosViewController" storyboardName="Todos" referencedIdentifier="UserTodosViewController" id="d3s-Pr-jDZ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hw2-rK-F1V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1449" y="916"/>
         </scene>
-        <!--Albums-->
+        <!--UserAlbumsViewController-->
         <scene sceneID="nRm-HP-WVk">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="UserAlbumsViewController" storyboardName="Albums" id="z46-jE-LZU" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="UserAlbumsViewController" storyboardName="Albums" referencedIdentifier="UserAlbumsViewController" id="z46-jE-LZU" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQn-ld-Nzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1458" y="999"/>
         </scene>
-        <!--Posts-->
+        <!--UserPostsViewController-->
         <scene sceneID="VAy-fU-tCT">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="UserPostsViewController" storyboardName="Posts" id="FTg-SG-d8I" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="UserPostsViewController" storyboardName="Posts" referencedIdentifier="UserPostsViewController" id="FTg-SG-d8I" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1En-t4-qW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1451" y="1064"/>
