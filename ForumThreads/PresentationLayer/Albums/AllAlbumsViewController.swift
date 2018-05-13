@@ -6,9 +6,17 @@
 //  Copyright © 2018 Askar Bakirov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class AllAlbumsViewController: AlbumListViewController<AlbumListViewModel> {
+    
+    @IBOutlet weak var mySearchBar: UISearchBar?
+    
+    override var searchBar: UISearchBar?
+    {
+        return mySearchBar
+    }
+    
     override func viewDidLoad() {
         self.viewModel = AlbumListViewModel()
         super.viewDidLoad()

@@ -31,6 +31,13 @@ class SideMenuViewController: UITableViewController, RESideMenuDelegate {
         tableView.backgroundView = imageView
     }
     
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
+        cell.selectedBackgroundView = UIView(frame: cell.bounds)
+        cell.selectedBackgroundView?.backgroundColor = UIColor.clear
+        return cell
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let menu = MenuItems(rawValue: indexPath.row)

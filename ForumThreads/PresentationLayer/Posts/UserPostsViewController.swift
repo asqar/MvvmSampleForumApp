@@ -10,6 +10,13 @@ import UIKit
 
 class UserPostsViewController : PostListViewController<UserPostsViewModel> {
     
+    @IBOutlet weak var mySearchBar: UISearchBar?
+    
+    override var searchBar: UISearchBar?
+    {
+        return mySearchBar
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.destination is NewPostViewController) {
             let vm = self.viewModel.createNewPost()

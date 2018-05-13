@@ -9,14 +9,7 @@
 import UIKit
 
 class PostListViewController<VM : PostListViewModel> : BaseTableViewController<RlmPost, VM> {
-    
-    @IBOutlet weak var mySearchBar: UISearchBar?
-    
-    override var searchBar: UISearchBar?
-    {
-        return mySearchBar
-    }
-    
+        
     override var cellIdentifier : String {
         return "PostCell"
     }

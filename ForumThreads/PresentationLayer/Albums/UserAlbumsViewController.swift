@@ -10,6 +10,13 @@ import UIKit
 
 class UserAlbumsViewController: AlbumListViewController<UserAlbumsViewModel> {
     
+    @IBOutlet weak var mySearchBar: UISearchBar?
+    
+    override var searchBar: UISearchBar?
+    {
+        return mySearchBar
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.destination is NewAlbumViewController) {
             let vm = self.viewModel.createNewAlbum()

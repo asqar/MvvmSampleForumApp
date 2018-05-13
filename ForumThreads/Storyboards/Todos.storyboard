@@ -18,12 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search todos..." id="3UF-Zx-1DO">
+                        <searchBar key="tableHeaderView" contentMode="redraw" misplaced="YES" searchBarStyle="minimal" placeholder="Search todos..." translucent="NO" id="niN-gM-3uG">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
-                                <outlet property="delegate" destination="iaz-qe-PeG" id="HCa-KU-Khv"/>
+                                <outlet property="delegate" destination="iaz-qe-PeG" id="jip-Ot-u7a"/>
                             </connections>
                         </searchBar>
                         <prototypes>
@@ -66,9 +68,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
-                        <outlet property="mySearchBar" destination="3UF-Zx-1DO" id="ewF-IZ-6SC"/>
+                        <outlet property="mySearchBar" destination="niN-gM-3uG" id="vmc-cU-3Ou"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B1O-iq-oEA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -80,7 +82,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="NewTodoViewController" id="h5R-jl-N17" customClass="NewTodoViewController" customModule="ForumThreads" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WRw-d9-Nk8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>

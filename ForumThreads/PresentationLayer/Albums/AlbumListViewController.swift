@@ -11,13 +11,6 @@ import UIKit
 
 class AlbumListViewController<VM : AlbumListViewModel>: BaseTableViewController<RlmAlbum, VM> {
     
-    @IBOutlet weak var mySearchBar: UISearchBar?
-    
-    override var searchBar: UISearchBar?
-    {
-        return mySearchBar
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

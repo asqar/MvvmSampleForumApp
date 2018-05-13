@@ -23,7 +23,7 @@ class PhotoListViewController<VM : PhotoListViewModel>: BaseCollectionViewContro
         get {
             if _photoBrowser == nil {
                 _photoBrowser = MWPhotoBrowser(delegate:self)
-                _photoBrowser.view.backgroundColor = UIColor.black
+                _photoBrowser.browserBackgroundColor = UIColor.groupTableViewBackground
                 _photoBrowser.displayActionButton = false
                 _photoBrowser.alwaysShowControls = true
                 _photoBrowser.zoomPhotosToFill = true
