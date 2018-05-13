@@ -11,6 +11,7 @@ import KVNProgress
 import SVPullToRefresh
 import ReactiveCocoa
 import RealmSwift
+import FormToolbar
 
 class BaseCollectionViewController<RealmType : Object, VM: FetchedResultsViewModelProtocol> : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
     
@@ -48,12 +49,19 @@ class BaseCollectionViewController<RealmType : Object, VM: FetchedResultsViewMod
     }
     
     var useInfiniteScrollingView : Bool = false
+    
+    var formToolbar: FormToolbar?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
         self.title = self.viewModel.title
+        
+        let searchTextField = self.searchBar?.subviews.last?.subviews[1]
+        if searchTextField is FormInput {
+            self.formToolbar = FormToolbar(inputs: [searchTextField as! FormInput])
+        }
         
         self.collectionView?.addPullToRefresh(actionHandler: {
             self.viewModel.fetchData(updating: true)
