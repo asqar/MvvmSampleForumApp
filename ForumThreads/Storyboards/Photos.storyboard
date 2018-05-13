@@ -102,6 +102,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="aay-n8-2gB" firstAttribute="top" secondItem="8OX-S3-bOY" secondAttribute="bottom" id="3dr-zU-8Et"/>
                             <constraint firstItem="8OX-S3-bOY" firstAttribute="leading" secondItem="UKK-Zu-Hec" secondAttribute="leading" id="6Mz-36-ku2"/>
@@ -229,6 +230,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="kCT-Y0-jf0" firstAttribute="top" secondItem="5ci-a5-uuh" secondAttribute="bottom" id="2m2-K5-XLn"/>
                             <constraint firstItem="5ci-a5-uuh" firstAttribute="leading" secondItem="4Tn-Ym-o56" secondAttribute="leading" id="5I4-rn-Sk4"/>
