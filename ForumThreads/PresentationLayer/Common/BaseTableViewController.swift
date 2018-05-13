@@ -11,6 +11,7 @@ import KVNProgress
 import SVPullToRefresh
 import ReactiveCocoa
 import RealmSwift
+import FormToolbar
 
 class BaseTableViewController<RealmType : Object, VM: FetchedResultsViewModelProtocol> : UITableViewController, ViewModelHelper, UISearchBarDelegate {
     
@@ -45,11 +46,18 @@ class BaseTableViewController<RealmType : Object, VM: FetchedResultsViewModelPro
     
     var useInfiniteScrollingView : Bool = false
     
+    var formToolbar: FormToolbar?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         self.title = self.viewModel.title
+        
+        let searchTextField = self.searchBar?.subviews.last?.subviews[1]
+        if searchTextField is FormInput {
+            self.formToolbar = FormToolbar(inputs: [searchTextField as! FormInput])
+        }
         
         self.tableView?.addPullToRefresh(actionHandler: {
             self.viewModel.fetchData(updating: true)

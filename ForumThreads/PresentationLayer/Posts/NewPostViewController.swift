@@ -30,6 +30,11 @@ class NewPostViewController: UITableViewController, UITextFieldDelegate, UITextV
         })
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.txtTitle?.becomeFirstResponder()
+    }
+    
     func refresh() {
         if viewModel.isSaved
         {

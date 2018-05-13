@@ -29,6 +29,11 @@ class NewAlbumViewController: UITableViewController, UITextFieldDelegate, UIText
         })
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.textTitle?.becomeFirstResponder()
+    }
+    
     func refresh() {
         if viewModel.isSaved
         {

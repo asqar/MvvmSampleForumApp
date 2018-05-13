@@ -31,6 +31,11 @@ class NewCommentViewController: UITableViewController, UITextFieldDelegate, UITe
         })
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.txtName?.becomeFirstResponder()
+    }
+    
     func refresh() {
         if viewModel.isSaved
         {
