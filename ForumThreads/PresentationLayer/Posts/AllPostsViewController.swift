@@ -19,7 +19,6 @@ class AllPostsViewController : PostListViewController<PostListViewModel> {
     
     override func viewDidLoad() {
         self.viewModel = PostListViewModel()
-        super.viewDidLoad()
         setupSideMenu()
     }
     

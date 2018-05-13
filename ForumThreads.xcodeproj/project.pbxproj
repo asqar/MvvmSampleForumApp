@@ -44,8 +44,6 @@
 		138A1A2420A1AC2C0049AF9E /* EnvironmentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A1B20A1AC2C0049AF9E /* EnvironmentProtocol.swift */; };
 		138A1A2F20A1AC330049AF9E /* LocalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A2820A1AC330049AF9E /* LocalDataStore.swift */; };
 		138A1A3020A1AC330049AF9E /* LocalDataStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A2920A1AC330049AF9E /* LocalDataStoreProtocol.swift */; };
-		138A1A3120A1AC330049AF9E /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A2D20A1AC330049AF9E /* NetworkServiceProtocol.swift */; };
-		138A1A3220A1AC330049AF9E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A2E20A1AC330049AF9E /* NetworkService.swift */; };
 		138A1A3620A1AC3C0049AF9E /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A3320A1AC3C0049AF9E /* Cache.swift */; };
 		138A1A3A20A1AC420049AF9E /* UIViewController+LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A3820A1AC420049AF9E /* UIViewController+LoadingView.swift */; };
 		138A1A3B20A1AC420049AF9E /* UIStoryboard+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A1A3920A1AC420049AF9E /* UIStoryboard+Instantiate.swift */; };
@@ -209,8 +207,6 @@
 		138A1A1B20A1AC2C0049AF9E /* EnvironmentProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentProtocol.swift; sourceTree = "<group>"; };
 		138A1A2820A1AC330049AF9E /* LocalDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataStore.swift; sourceTree = "<group>"; };
 		138A1A2920A1AC330049AF9E /* LocalDataStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataStoreProtocol.swift; sourceTree = "<group>"; };
-		138A1A2D20A1AC330049AF9E /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
-		138A1A2E20A1AC330049AF9E /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		138A1A3320A1AC3C0049AF9E /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		138A1A3820A1AC420049AF9E /* UIViewController+LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+LoadingView.swift"; sourceTree = "<group>"; };
 		138A1A3920A1AC420049AF9E /* UIStoryboard+Instantiate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Instantiate.swift"; sourceTree = "<group>"; };
@@ -619,8 +615,6 @@
 			children = (
 				13E1622920A4ED300061E30C /* CachedNetworkService.swift */,
 				13E1622A20A4ED300061E30C /* CachedNetworkServiceProtocol.swift */,
-				138A1A2D20A1AC330049AF9E /* NetworkServiceProtocol.swift */,
-				138A1A2E20A1AC330049AF9E /* NetworkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1287,7 +1281,6 @@
 				1355918C20A799AA00FCE934 /* AlbumPhotosViewController.swift in Sources */,
 				13E1620E20A321550061E30C /* AlbumDto+Realm.swift in Sources */,
 				138A1A9F20A2E5280049AF9E /* PhotoDto+Network.swift in Sources */,
-				138A1A3120A1AC330049AF9E /* NetworkServiceProtocol.swift in Sources */,
 				138A1A3020A1AC330049AF9E /* LocalDataStoreProtocol.swift in Sources */,
 				138A1A8220A1E52D0049AF9E /* PostViewModel.swift in Sources */,
 				138A1A8D20A1E52D0049AF9E /* BaseCollectionViewController.swift in Sources */,
@@ -1295,7 +1288,6 @@
 				138A1A3A20A1AC420049AF9E /* UIViewController+LoadingView.swift in Sources */,
 				13E1623020A503590061E30C /* PostCommentsViewModel.swift in Sources */,
 				13E1625120A5CABB0061E30C /* UserViewController.swift in Sources */,
-				138A1A3220A1AC330049AF9E /* NetworkService.swift in Sources */,
 				138A1A2220A1AC2C0049AF9E /* ApplicationConfigurator.swift in Sources */,
 				138A1A9D20A1EAD30049AF9E /* PhotoDto.swift in Sources */,
 				13E1621420A3217E0061E30C /* TodoDto+Realm.swift in Sources */,
